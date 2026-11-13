@@ -1,12 +1,5 @@
 <?php
-// Base URL configuration (works seamlessly on both localhost subfolders and root domain)
-if (!isset($base_url)) {
-    $script_dir = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME']));
-    $base_url = rtrim($script_dir, '/') . '/';
-}
-
-$portal_login_url    = $portal_login_url ?? 'https://portal.crownasia.io/login';
-$portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/register';
+require_once __DIR__ . '/config.php';
 ?>
 
 <footer class="footer">

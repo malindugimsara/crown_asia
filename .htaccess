@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^investment-opportunities/([a-z0-9\-]+)/?$ investment-opportunities/detail.php?slug=$1 [L,QSA]

@@ -195,6 +195,151 @@
         });
     }
 
+    // 6b. Floating Green Dots for Light/White Sections
+    function initFloatingGreenDots() {
+        if (reduceMotion) return;
+
+        const lightSections = document.querySelectorAll('.section-white, .section-light');
+        if (lightSections.length === 0) return;
+
+        lightSections.forEach(section => {
+            if (section.querySelector('.floating-dots-canvas')) return;
+
+            const canvas = document.createElement('canvas');
+            canvas.className = 'floating-dots-canvas';
+            canvas.setAttribute('aria-hidden', 'true');
+            canvas.style.position = 'absolute';
+            canvas.style.top = '0';
+            canvas.style.left = '0';
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+            canvas.style.pointerEvents = 'none';
+            canvas.style.zIndex = '1';
+            canvas.style.display = 'block';
+            section.prepend(canvas);
+
+            const ctx = canvas.getContext('2d');
+            let width = 0;
+            let height = 0;
+            let particles = [];
+            let isVisible = false;
+            let animFrameId = null;
+
+            function resize() {
+                width = canvas.width = section.clientWidth;
+                height = canvas.height = section.clientHeight;
+            }
+
+            function createParticles() {
+                // Adaptive count based on area (roughly 20-38 small dots per section)
+                const count = Math.min(38, Math.max(18, Math.floor((width * height) / 32000)));
+                particles = [];
+                for (let i = 0; i < count; i++) {
+                    const radius = Math.random() * 1.8 + 1.2; // 1.2px to 3.0px
+                    particles.push({
+                        x: Math.random() * width,
+                        y: Math.random() * height,
+                        baseX: Math.random() * width,
+                        radius: radius,
+                        // Upward float speed
+                        speedY: Math.random() * 0.45 + 0.22,
+                        // Gentle horizontal sway
+                        swaySpeed: Math.random() * 0.015 + 0.008,
+                        swayDistance: Math.random() * 22 + 8,
+                        phase: Math.random() * Math.PI * 2,
+                        // Opacity & Color
+                        alpha: Math.random() * 0.38 + 0.32,
+                        isBright: Math.random() > 0.45,
+                        pulseSpeed: Math.random() * 0.02 + 0.01,
+                        pulsePhase: Math.random() * Math.PI * 2
+                    });
+                }
+            }
+
+            function draw() {
+                if (!isVisible) return;
+                ctx.clearRect(0, 0, width, height);
+
+                particles.forEach(p => {
+                    p.y -= p.speedY;
+                    p.phase += p.swaySpeed;
+                    p.pulsePhase += p.pulseSpeed;
+                    p.x = p.baseX + Math.sin(p.phase) * p.swayDistance;
+
+                    const currentAlpha = Math.max(0.12, p.alpha + Math.sin(p.pulsePhase) * 0.14);
+
+                    // Reset if drifted past top
+                    if (p.y < -15) {
+                        p.y = height + 15;
+                        p.baseX = Math.random() * width;
+                        p.x = p.baseX;
+                    }
+                    // Handle edge wrap horizontally
+                    if (p.x < -20) p.baseX += width;
+                    if (p.x > width + 20) p.baseX -= width;
+
+                    // Draw soft glowing green dot
+                    const glowRadius = p.radius * 2.4;
+                    const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, glowRadius);
+                    const colorRgb = p.isBright ? '29, 185, 84' : '15, 157, 88';
+
+                    grad.addColorStop(0, `rgba(${colorRgb}, ${currentAlpha.toFixed(2)})`);
+                    grad.addColorStop(0.45, `rgba(${colorRgb}, ${(currentAlpha * 0.55).toFixed(2)})`);
+                    grad.addColorStop(1, `rgba(${colorRgb}, 0)`);
+
+                    ctx.fillStyle = grad;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, glowRadius, 0, Math.PI * 2);
+                    ctx.fill();
+
+                    // Sharp core center
+                    ctx.fillStyle = `rgba(${colorRgb}, ${(currentAlpha * 0.95).toFixed(2)})`;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius * 0.75, 0, Math.PI * 2);
+                    ctx.fill();
+                });
+
+                animFrameId = requestAnimationFrame(draw);
+            }
+
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    resize();
+                    createParticles();
+                }, 150);
+            }, { passive: true });
+
+            resize();
+            createParticles();
+
+            // IntersectionObserver: Only animate when visible on screen
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if (!isVisible) {
+                            isVisible = true;
+                            cancelAnimationFrame(animFrameId);
+                            animFrameId = requestAnimationFrame(draw);
+                        }
+                    } else {
+                        isVisible = false;
+                        cancelAnimationFrame(animFrameId);
+                    }
+                });
+            }, { threshold: 0.05 });
+
+            observer.observe(section);
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initFloatingGreenDots);
+    } else {
+        initFloatingGreenDots();
+    }
+
     // 7. Animated Statistics Counters
     const counters = document.querySelectorAll('.stat-num');
     if (counters.length > 0) {

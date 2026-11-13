@@ -1,15 +1,6 @@
 <?php
-// Base URL configuration (works seamlessly on both localhost subfolders and root domain)
-if (!isset($base_url)) {
-    $script_dir = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME']));
-    $base_url = rtrim($script_dir, '/') . '/';
-}
-
+require_once __DIR__ . '/config.php';
 $current_uri = $_SERVER['REQUEST_URI'] ?? '/';
-
-// Investor Portal Links (Crown Asia Portal)
-$portal_login_url    = $portal_login_url ?? 'https://portal.crownasia.io/login';
-$portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/register';
 ?>
 
 <nav class="navbar navbar-expand-lg" id="mainNav">
@@ -47,14 +38,14 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
                     <ul class="dropdown-menu dropdown-menu-dark custom-dropdown" aria-labelledby="industriesDropdown">
                         <li><a class="dropdown-item fw-semibold text-success" href="<?= $base_url ?>industries/"><i class="bi bi-grid-fill me-2"></i>All 8 Industries</a></li>
                         <li><hr class="dropdown-divider border-secondary opacity-25"></li>
-                        <li><a class="dropdown-item" href="<?= $base_url ?>industries/forex-trading/">Forex Trading</a></li>
-                        <li><a class="dropdown-item" href="<?= $base_url ?>industries/real-estate/">Real Estate Investment</a></li>
-                        <li><a class="dropdown-item" href="<?= $base_url ?>industries/research-and-development/">Research &amp; Development</a></li>
-                        <li><a class="dropdown-item" href="<?= $base_url ?>industries/technology-and-communications/">Technology &amp; Communications</a></li>
-                        <li><a class="dropdown-item" href="<?= $base_url ?>industries/import-export/">Trading, Import &amp; Export</a></li>
-                        <li><a class="dropdown-item" href="<?= $base_url ?>industries/ecommerce/">E-Commerce</a></li>
-                        <li><a class="dropdown-item" href="<?= $base_url ?>industries/gems-and-gemstones/">Gems &amp; Gemstones</a></li>
-                        <li><a class="dropdown-item" href="<?= $base_url ?>industries/agriculture-and-plantation/">Agriculture &amp; Plantation</a></li>
+                        <li><a class="dropdown-item <?= (strpos($current_uri, '/industries/forex-trading') !== false) ? 'active text-success' : '' ?>" href="<?= $base_url ?>industries/forex-trading/">Forex Trading</a></li>
+                        <li><a class="dropdown-item <?= (strpos($current_uri, '/industries/real-estate') !== false) ? 'active text-success' : '' ?>" href="<?= $base_url ?>industries/real-estate/">Real Estate Investment</a></li>
+                        <li><a class="dropdown-item <?= (strpos($current_uri, '/industries/research-and-development') !== false) ? 'active text-success' : '' ?>" href="<?= $base_url ?>industries/research-and-development/">Research &amp; Development</a></li>
+                        <li><a class="dropdown-item <?= (strpos($current_uri, '/industries/technology-and-communications') !== false) ? 'active text-success' : '' ?>" href="<?= $base_url ?>industries/technology-and-communications/">Technology &amp; Communications</a></li>
+                        <li><a class="dropdown-item <?= (strpos($current_uri, '/industries/import-export') !== false) ? 'active text-success' : '' ?>" href="<?= $base_url ?>industries/import-export/">Trading, Import &amp; Export</a></li>
+                        <li><a class="dropdown-item <?= (strpos($current_uri, '/industries/ecommerce') !== false) ? 'active text-success' : '' ?>" href="<?= $base_url ?>industries/ecommerce/">E-Commerce</a></li>
+                        <li><a class="dropdown-item <?= (strpos($current_uri, '/industries/gems-and-gemstones') !== false) ? 'active text-success' : '' ?>" href="<?= $base_url ?>industries/gems-and-gemstones/">Gems &amp; Gemstones</a></li>
+                        <li><a class="dropdown-item <?= (strpos($current_uri, '/industries/agriculture-and-plantation') !== false) ? 'active text-success' : '' ?>" href="<?= $base_url ?>industries/agriculture-and-plantation/">Agriculture &amp; Plantation</a></li>
                     </ul>
                 </li>
 

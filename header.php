@@ -1,9 +1,5 @@
 <?php
-// Base URL configuration (works seamlessly on both localhost subfolders and root domain)
-if (!isset($base_url)) {
-    $script_dir = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME']));
-    $base_url = rtrim($script_dir, '/') . '/';
-}
+require_once __DIR__ . '/config.php';
 
 $page_title = $page_title ?? 'Crown Asia | Diversified Investment & Business Solutions';
 $page_desc  = $page_desc  ?? 'Crown Asia LLC - A diversified investment company based in Albuquerque, New Mexico, operating across eight strategic business sectors.';
@@ -38,5 +34,4 @@ $page_desc  = $page_desc  ?? 'Crown Asia LLC - A diversified investment company 
     </div>
 
     <!-- Main Navigation Bar -->
-    <?php include_once __DIR__ . '/navbar.php'; ?>
-
+    <?php include_once ROOT_PATH . 'navbar.php'; ?>
