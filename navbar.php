@@ -22,8 +22,9 @@ $current_uri = $_SERVER['REQUEST_URI'] ?? '/';
         <!-- Navigation Links -->
         <div class="collapse navbar-collapse justify-content-end" id="navMenu">
             <ul class="navbar-nav align-items-lg-center">
+               
                 <li class="nav-item">
-                    <a class="nav-link <?= ($current_uri == $base_url || $current_uri == $base_url . 'index.php' || strpos($current_uri, 'index.php') !== false || $current_uri == '/') ? 'active' : '' ?>" href="<?= $base_url ?>">Home</a>
+                    <a class="nav-link <?= (strpos($current_uri, '/how-it-works') !== false) ? 'active' : '' ?>" href="<?= $base_url ?>how-it-works/">How It Works</a>
                 </li>
                 
                 <li class="nav-item">
@@ -50,19 +51,11 @@ $current_uri = $_SERVER['REQUEST_URI'] ?? '/';
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link <?= (strpos($current_uri, '/how-it-works') !== false) ? 'active' : '' ?>" href="<?= $base_url ?>how-it-works/">How It Works</a>
-                </li>
-
-                <li class="nav-item">
                     <a class="nav-link <?= (strpos($current_uri, '/about') !== false) ? 'active' : '' ?>" href="<?= $base_url ?>about/">About Us</a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link <?= (strpos($current_uri, '/blog') !== false) ? 'active' : '' ?>" href="<?= $base_url ?>blog/">Blog</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link <?= (strpos($current_uri, '/contact') !== false) ? 'active' : '' ?>" href="<?= $base_url ?>contact/">Contact</a>
                 </li>
 
                 <!-- Header Action Buttons (Investor Login & Register Now) -->

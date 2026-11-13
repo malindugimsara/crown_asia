@@ -57,8 +57,12 @@ include_once ROOT_PATH . 'header.php';
     </section>
 
     <!-- Stats Counter Bar -->
-    <section class="stats-section">
-        <div class="container">
+    <section class="stats-section position-relative overflow-hidden">
+        <video class="stats-bg-video" autoplay loop muted playsinline preload="auto">
+            <source src="<?= $base_url ?>assets/video/countup-bg.webm" type="video/webm">
+        </video>
+        <div class="stats-video-overlay"></div>
+        <div class="container position-relative" style="z-index: 2;">
             <div class="row g-4">
                 <div class="col-6 col-md-3" data-aos="fade-up">
                     <div class="stat-box">
@@ -560,126 +564,195 @@ include_once ROOT_PATH . 'header.php';
         </div>
     </section>
 
-    <!-- Eight Industries Showcase Section -->
-    <section class="section section-light" id="industries-showcase">
-        <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <span class="topic-badge-pill">OUR PORTFOLIO</span>
-                <h2 class="section-title">Eight Strategic Industries</h2>
-                <p class="section-subtitle mx-auto">Explore each individual business division backed by real-world operations, verified assets, and dedicated teams.</p>
+    <!-- 4. Eight Industries / Services Section (Styled like demo index-4.html Project Section) -->
+    <section class="tj-project-section-4 section-gap" id="services">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="sec-heading style-4 text-center" data-aos="fade-up">
+                        <span class="sub-title"><i class="bi bi-grid-3x3-gap-fill me-1"></i>Diversified Portfolio</span>
+                        <h2 class="sec-title">Eight Strategic Industries</h2>
+                        <p class="sec-desc">Explore dedicated sector briefings, operational strategies, and risk governance across our eight core business divisions.</p>
+                    </div>
+                </div>
             </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="project-wrapper" data-aos="fade-up" data-aos-delay="150">
+                        <div class="swiper project-slider-3">
+                            <div class="swiper-wrapper">
+                                <!-- 1. Forex Trading -->
+                                <div class="swiper-slide">
+                                    <div class="project-item h4-project-item">
+                                        <div class="project-content">
+                                            <span class="categories"><a href="<?= $base_url ?>industries/forex-trading/">Foreign Exchange</a></span>
+                                            <div class="project-text">
+                                                <h4 class="title"><a href="<?= $base_url ?>industries/forex-trading/">Forex Trading</a></h4>
+                                                <a class="tji-icon-btn" href="<?= $base_url ?>industries/forex-trading/" aria-label="Explore Forex Trading">
+                                                    <i class="bi bi-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                            <p class="project-desc">Disciplined foreign exchange operations, liquid market participation, and proactive risk and currency management strategies.</p>
+                                        </div>
+                                        <div class="project-img">
+                                            <a href="<?= $base_url ?>industries/forex-trading/">
+                                                <img src="<?= $base_url ?>assets/images/forex-hero.webp" alt="Forex Trading">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
 
-            <div class="row g-4">
-                <!-- 1. Forex Trading -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up">
-                    <article class="sector-card">
-                        <div class="sector-media">
-                            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Forex Trading">
-                        </div>
-                        <div class="sector-body">
-                            <div class="sector-icon"><i class="bi bi-currency-exchange"></i></div>
-                            <h4><a href="<?= $base_url ?>industries/forex-trading/" class="stretched-link text-decoration-none text-reset">Forex Trading</a></h4>
-                            <p>Disciplined foreign exchange operations, liquid market participation, and proactive currency management strategies.</p>
-                        </div>
-                    </article>
-                </div>
+                                <!-- 2. Real Estate Investment -->
+                                <div class="swiper-slide">
+                                    <div class="project-item h4-project-item">
+                                        <div class="project-content">
+                                            <span class="categories"><a href="<?= $base_url ?>industries/real-estate/">Real Estate</a></span>
+                                            <div class="project-text">
+                                                <h4 class="title"><a href="<?= $base_url ?>industries/real-estate/">Real Estate</a></h4>
+                                                <a class="tji-icon-btn" href="<?= $base_url ?>industries/real-estate/" aria-label="Explore Real Estate Investment">
+                                                    <i class="bi bi-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                            <p class="project-desc">Property development and land investments across priority markets including Dubai, Maldives, Sri Lanka, Thailand, and the USA.</p>
+                                        </div>
+                                        <div class="project-img">
+                                            <a href="<?= $base_url ?>industries/real-estate/">
+                                                <img src="<?= $base_url ?>assets/images/real-state.webp" alt="Real Estate Investment">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
 
-                <!-- 2. Real Estate Investment -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="60">
-                    <article class="sector-card">
-                        <div class="sector-media">
-                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Real Estate Investment">
-                        </div>
-                        <div class="sector-body">
-                            <div class="sector-icon"><i class="bi bi-houses"></i></div>
-                            <h4><a href="<?= $base_url ?>industries/real-estate/" class="stretched-link text-decoration-none text-reset">Real Estate</a></h4>
-                            <p>Property development and land investments across priority markets including Dubai, Sri Lanka, Thailand, and the USA.</p>
-                        </div>
-                    </article>
-                </div>
+                                <!-- 3. Research & Development -->
+                                <div class="swiper-slide">
+                                    <div class="project-item h4-project-item">
+                                        <div class="project-content">
+                                            <span class="categories"><a href="<?= $base_url ?>industries/research-and-development/">Innovation &amp; AI</a></span>
+                                            <div class="project-text">
+                                                <h4 class="title"><a href="<?= $base_url ?>industries/research-and-development/">Research &amp; Dev</a></h4>
+                                                <a class="tji-icon-btn" href="<?= $base_url ?>industries/research-and-development/" aria-label="Explore Research and Development">
+                                                    <i class="bi bi-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                            <p class="project-desc">IoT, robotics, and applied AI initiatives, pioneering next-generation devices and high-impact commercial applications.</p>
+                                        </div>
+                                        <div class="project-img">
+                                            <a href="<?= $base_url ?>industries/research-and-development/">
+                                                <img src="<?= $base_url ?>assets/images/rd.webp" alt="Research and Development">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
 
-                <!-- 3. Research & Development -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="120">
-                    <article class="sector-card">
-                        <div class="sector-media">
-                            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Research and Development">
-                        </div>
-                        <div class="sector-body">
-                            <div class="sector-icon"><i class="bi bi-cpu"></i></div>
-                            <h4><a href="<?= $base_url ?>industries/research-and-development/" class="stretched-link text-decoration-none text-reset">Research &amp; Dev</a></h4>
-                            <p>IoT, robotics, and applied AI initiatives, pioneering next-generation devices and high-impact commercial applications.</p>
-                        </div>
-                    </article>
-                </div>
+                                <!-- 4. Technology & Communications -->
+                                <div class="swiper-slide">
+                                    <div class="project-item h4-project-item">
+                                        <div class="project-content">
+                                            <span class="categories"><a href="<?= $base_url ?>industries/technology-and-communications/">Telecom &amp; Cloud</a></span>
+                                            <div class="project-text">
+                                                <h4 class="title"><a href="<?= $base_url ?>industries/technology-and-communications/">Technology &amp; Comms</a></h4>
+                                                <a class="tji-icon-btn" href="<?= $base_url ?>industries/technology-and-communications/" aria-label="Explore Technology and Communications">
+                                                    <i class="bi bi-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                            <p class="project-desc">2030 focus on scalable AI and cloud technology infrastructure, enterprise digital services, and robust telecom systems.</p>
+                                        </div>
+                                        <div class="project-img">
+                                            <a href="<?= $base_url ?>industries/technology-and-communications/">
+                                                <img src="<?= $base_url ?>assets/images/technology.webp" alt="Technology and Communications">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
 
-                <!-- 4. Technology & Communications -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="180">
-                    <article class="sector-card">
-                        <div class="sector-media">
-                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Technology and Communications">
-                        </div>
-                        <div class="sector-body">
-                            <div class="sector-icon"><i class="bi bi-broadcast"></i></div>
-                            <h4><a href="<?= $base_url ?>industries/technology-and-communications/" class="stretched-link text-decoration-none text-reset">Technology &amp; Comms</a></h4>
-                            <p>2030 focus on scalable cloud technology infrastructure, enterprise digital services, and robust telecom systems.</p>
-                        </div>
-                    </article>
-                </div>
+                                <!-- 5. Trading, Import & Export -->
+                                <div class="swiper-slide">
+                                    <div class="project-item h4-project-item">
+                                        <div class="project-content">
+                                            <span class="categories"><a href="<?= $base_url ?>industries/import-export/">Global Trade</a></span>
+                                            <div class="project-text">
+                                                <h4 class="title"><a href="<?= $base_url ?>industries/import-export/">Import &amp; Export</a></h4>
+                                                <a class="tji-icon-btn" href="<?= $base_url ?>industries/import-export/" aria-label="Explore Import and Export">
+                                                    <i class="bi bi-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                            <p class="project-desc">Sourcing and global distribution of coconuts, spices, rubber, value-added goods, and quality apparel products.</p>
+                                        </div>
+                                        <div class="project-img">
+                                            <a href="<?= $base_url ?>industries/import-export/">
+                                                <img src="<?= $base_url ?>assets/images/import_export.webp" alt="Trading, Import and Export">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
 
-                <!-- 5. Trading, Import & Export -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up">
-                    <article class="sector-card">
-                        <div class="sector-media">
-                            <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Trading, Import & Export">
-                        </div>
-                        <div class="sector-body">
-                            <div class="sector-icon"><i class="bi bi-arrow-left-right"></i></div>
-                            <h4><a href="<?= $base_url ?>industries/import-export/" class="stretched-link text-decoration-none text-reset">Import &amp; Export</a></h4>
-                            <p>Sourcing and global distribution of agricultural commodities, spices, rubber, and high-grade commercial supplies.</p>
-                        </div>
-                    </article>
-                </div>
+                                <!-- 6. E-Commerce -->
+                                <div class="swiper-slide">
+                                    <div class="project-item h4-project-item">
+                                        <div class="project-content">
+                                            <span class="categories"><a href="<?= $base_url ?>industries/ecommerce/">Digital Commerce</a></span>
+                                            <div class="project-text">
+                                                <h4 class="title"><a href="<?= $base_url ?>industries/ecommerce/">E-Commerce</a></h4>
+                                                <a class="tji-icon-btn" href="<?= $base_url ?>industries/ecommerce/" aria-label="Explore E-Commerce">
+                                                    <i class="bi bi-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                            <p class="project-desc">Digital commerce platforms, logistics management, modern fulfillment space, and smart secure warehousing solutions.</p>
+                                        </div>
+                                        <div class="project-img">
+                                            <a href="<?= $base_url ?>industries/ecommerce/">
+                                                <img src="<?= $base_url ?>assets/images/ecom.webp" alt="E-Commerce">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
 
-                <!-- 6. E-Commerce -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="60">
-                    <article class="sector-card">
-                        <div class="sector-media">
-                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="E-Commerce">
-                        </div>
-                        <div class="sector-body">
-                            <div class="sector-icon"><i class="bi bi-cart4"></i></div>
-                            <h4><a href="<?= $base_url ?>industries/ecommerce/" class="stretched-link text-decoration-none text-reset">E-Commerce</a></h4>
-                            <p>Digital commerce platforms, logistics management, modern fulfillment space, and smart secure warehousing solutions.</p>
-                        </div>
-                    </article>
-                </div>
+                                <!-- 7. Gems & Gemstones -->
+                                <div class="swiper-slide">
+                                    <div class="project-item h4-project-item">
+                                        <div class="project-content">
+                                            <span class="categories"><a href="<?= $base_url ?>industries/gems-and-gemstones/">Precious Minerals</a></span>
+                                            <div class="project-text">
+                                                <h4 class="title"><a href="<?= $base_url ?>industries/gems-and-gemstones/">Gems &amp; Gemstones</a></h4>
+                                                <a class="tji-icon-btn" href="<?= $base_url ?>industries/gems-and-gemstones/" aria-label="Explore Gems and Gemstones">
+                                                    <i class="bi bi-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                            <p class="project-desc">Ethical sourcing, grading, certification, and trading of precious and semi-precious stones across international markets.</p>
+                                        </div>
+                                        <div class="project-img">
+                                            <a href="<?= $base_url ?>industries/gems-and-gemstones/">
+                                                <img src="<?= $base_url ?>assets/images/gem.webp" alt="Gems and Gemstones">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
 
-                <!-- 7. Gems & Gemstones -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="120">
-                    <article class="sector-card">
-                        <div class="sector-media">
-                            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Gems and Gemstones">
+                                <!-- 8. Agriculture & Plantation -->
+                                <div class="swiper-slide">
+                                    <div class="project-item h4-project-item">
+                                        <div class="project-content">
+                                            <span class="categories"><a href="<?= $base_url ?>industries/agriculture-and-plantation/">Agro &amp; Sustainability</a></span>
+                                            <div class="project-text">
+                                                <h4 class="title"><a href="<?= $base_url ?>industries/agriculture-and-plantation/">Agriculture &amp; Plantation</a></h4>
+                                                <a class="tji-icon-btn" href="<?= $base_url ?>industries/agriculture-and-plantation/" aria-label="Explore Agriculture and Plantation">
+                                                    <i class="bi bi-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                            <p class="project-desc">Large-scale agricultural crop production, sustainable plantation management, and development of value-added food products.</p>
+                                        </div>
+                                        <div class="project-img">
+                                            <a href="<?= $base_url ?>industries/agriculture-and-plantation/">
+                                                <img src="<?= $base_url ?>assets/images/agriculture.webp" alt="Agriculture and Plantation">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Swiper Pagination -->
+                            <div class="swiper-pagination-area"></div>
                         </div>
-                        <div class="sector-body">
-                            <div class="sector-icon"><i class="bi bi-gem"></i></div>
-                            <h4><a href="<?= $base_url ?>industries/gems-and-gemstones/" class="stretched-link text-decoration-none text-reset">Gems &amp; Gemstones</a></h4>
-                            <p>Ethical sourcing, grading, certification, and trading of precious and semi-precious stones across international markets.</p>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- 8. Agriculture & Plantation -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="180">
-                    <article class="sector-card">
-                        <div class="sector-media">
-                            <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Agriculture and Plantation">
-                        </div>
-                        <div class="sector-body">
-                            <div class="sector-icon"><i class="bi bi-tree"></i></div>
-                            <h4><a href="<?= $base_url ?>industries/agriculture-and-plantation/" class="stretched-link text-decoration-none text-reset">Agriculture &amp; Plantation</a></h4>
-                            <p>Large-scale agricultural crop production, sustainable plantation management, and development of value-added food products.</p>
-                        </div>
-                    </article>
+                    </div>
                 </div>
             </div>
         </div>

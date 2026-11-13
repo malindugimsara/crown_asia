@@ -28,39 +28,22 @@ include_once ROOT_PATH . 'header.php';
                     </div>
                 </div>
 
-                <!-- Right Side Quick Platform Overview Card -->
+               <!-- Right Column: Visual Hero Media -->
                 <div class="col-lg-5" data-aos="fade-left">
-                    <div class="hero-summary-card">
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <span class="topic-badge-pill dark mb-0">PORTAL ALLOCATION DESK</span>
-                            <span class="small text-success fw-semibold"><span class="live-dot pulse d-inline-block me-1"></span> Live</span>
-                        </div>
-                        <h4 class="text-white mb-3" style="font-size: 20px;">Offering Highlights</h4>
-
-                        <div class="hero-summary-row">
-                            <span class="text-white-50">Settlement Currency</span>
-                            <span class="text-white fw-semibold">USDT (TRC20 / ERC20 / BEP20)</span>
-                        </div>
-                        <div class="hero-summary-row">
-                            <span class="text-white-50">Minimum Entry</span>
-                            <span class="text-success fw-semibold">From 500 USDT</span>
-                        </div>
-                        <div class="hero-summary-row">
-                            <span class="text-white-50">Underlying Sectors</span>
-                            <span class="text-white fw-semibold">8 Diversified Industries</span>
-                        </div>
-                        <div class="hero-summary-row">
-                            <span class="text-white-50">Verification Requirement</span>
-                            <span class="text-white fw-semibold">KYC Approved Accounts</span>
-                        </div>
-
-                        <div class="mt-4 pt-2 d-flex gap-2">
-                            <a href="<?= $portal_login_url ?>" target="_blank" rel="noopener" class="btn-green w-100 text-center py-2" style="font-size: 12px;">
-                                <i class="bi bi-box-arrow-in-right me-1"></i> Investor Login
-                            </a>
-                            <a href="<?= $base_url ?>how-it-works/" class="btn-ghost w-100 text-center py-2 px-2" style="font-size: 12px;">
-                                How It Works
-                            </a>
+                    <div class="sector-hero-visual">
+                        <div class="hero-image-frame">
+                            <img src="<?= $base_url ?>assets/images/opportunities.jfif" alt="Crown Asia Investor Journey &amp; Portal Execution" class="img-fluid">
+                            <div class="hero-live-pill">
+                                <span class="live-dot pulse"></span>
+                                <span>Verified USDT Portal Active</span>
+                            </div>
+                            <div class="hero-floating-stat">
+                                <div class="stat-icon"><i class="bi bi-shield-check"></i></div>
+                                <div>
+                                    <div class="stat-title">USDT Capital Deployment</div>
+                                    <div class="stat-sub">5-Stage Structured Workflow</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

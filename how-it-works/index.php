@@ -17,6 +17,10 @@ include_once ROOT_PATH . 'header.php';
                         <span class="active">How It Works</span>
                     </nav>
 
+                    <span class="topic-badge-pill dark mb-3 d-inline-flex align-items-center">
+                        <i class="bi bi-shield-lock-fill me-2 text-success"></i>INVESTOR WORKFLOW &amp; ONBOARDING
+                    </span>
+
                     <h1 class="inner-hero-title">How Investing Works on<br><span class="accent">Crown Asia</span></h1>
                     <p class="inner-hero-lead mb-4">
                         Our public platform provides full visibility into our eight industries, offering terms, and risk disclosures. Account registration, identity verification, USDT funding, investment confirmations, and withdrawals take place securely inside the Crown Asia Investor Portal.
@@ -28,40 +32,22 @@ include_once ROOT_PATH . 'header.php';
                     </div>
                 </div>
 
-                <!-- Right Column: Portal Execution Summary -->
+                <!-- Right Column: Visual Hero Media -->
                 <div class="col-lg-5" data-aos="fade-left">
-                    <div class="hero-summary-card">
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <span class="topic-badge-pill dark mb-0">INVESTOR WORKFLOW</span>
-                            <span class="small text-success fw-semibold"><i class="bi bi-shield-lock-fill me-1"></i> Portal Secured</span>
-                        </div>
-                        <h4 class="text-white mb-3" style="font-size: 20px;">End-to-End Lifecycle</h4>
-
-                        <div class="hero-summary-row">
-                            <span class="text-white-50">01. Onboarding</span>
-                            <span class="text-white fw-semibold">Registration &amp; KYC Verification</span>
-                        </div>
-                        <div class="hero-summary-row">
-                            <span class="text-white-50">02. Capital Rail</span>
-                            <span class="text-success fw-semibold">USDT Multi-Network Funding</span>
-                        </div>
-                        <div class="hero-summary-row">
-                            <span class="text-white-50">03. Allocation</span>
-                            <span class="text-white fw-semibold">Choose &amp; Confirm Offering</span>
-                        </div>
-                        <div class="hero-summary-row">
-                            <span class="text-white-50">04. Monitoring</span>
-                            <span class="text-white fw-semibold">Live Dashboard &amp; Milestones</span>
-                        </div>
-                        <div class="hero-summary-row">
-                            <span class="text-white-50">05. Settlement</span>
-                            <span class="text-white fw-semibold">Redemption &amp; USDT Withdrawal</span>
-                        </div>
-
-                        <div class="mt-4 pt-2">
-                            <a href="<?= $base_url ?>how-it-works/usdt-deposits-withdrawals/" class="btn-green w-100 text-center py-2" style="font-size: 12px;">
-                                <i class="bi bi-wallet2 me-1"></i> Read USDT Funding &amp; Withdrawal Guide
-                            </a>
+                    <div class="sector-hero-visual">
+                        <div class="hero-image-frame">
+                            <img src="<?= $base_url ?>assets/images/how-it-works-hero.webp" alt="Crown Asia Investor Journey &amp; Portal Execution" class="img-fluid">
+                            <div class="hero-live-pill">
+                                <span class="live-dot pulse"></span>
+                                <span>Verified USDT Portal Active</span>
+                            </div>
+                            <div class="hero-floating-stat">
+                                <div class="stat-icon"><i class="bi bi-shield-check"></i></div>
+                                <div>
+                                    <div class="stat-title">USDT Capital Deployment</div>
+                                    <div class="stat-sub">5-Stage Structured Workflow</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

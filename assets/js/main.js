@@ -400,5 +400,49 @@
             this.reset();
         });
     }
+
+    // 10. Project / Eight Industries Slider (Index-4.html Project Section style)
+    const projectSlider = document.querySelector('.project-slider-3');
+    if (projectSlider && typeof Swiper !== 'undefined') {
+        new Swiper('.project-slider-3', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            centeredSlides: false,
+            loop: true,
+            grabCursor: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            speed: 1200,
+            pagination: {
+                el: '.swiper-pagination-area',
+                clickable: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 15,
+                },
+                576: {
+                    slidesPerView: 1.4,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                992: {
+                    slidesPerView: 2.4,
+                    spaceBetween: 25,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            },
+        });
+    }
 })();
 

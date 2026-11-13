@@ -246,8 +246,8 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
         </div>
     </section>
 
-    <!-- 3. How Investing Works Section (NEW) -->
-    <section class="strategy-section-dark" id="how-it-works">
+    <!-- 3. How Investing Works Section (Modern Working Process Style from Demo Index-5) -->
+    <section class="investor-journey-section" id="how-it-works">
         <div class="strategy-grid-bg"></div>
         <div class="strategy-glow-blob top-right"></div>
         <div class="strategy-glow-blob bottom-left"></div>
@@ -261,260 +261,384 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
                 </p>
             </div>
 
-            <div class="row g-4 mt-4">
-                <!-- Step 01 -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up">
-                    <div class="pillar-glass-card">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="pillar-tag-glow mb-0">Step 01</span>
-                            <i class="bi bi-person-check-fill text-success fs-4"></i>
+            <div class="journey-process-inner">
+                <div class="journey-process-wrapper">
+                    <!-- Step 01 -->
+                    <div class="journey-process-item" data-aos="fade-up" data-aos-delay="50">
+                        <span class="journey-step-indicator">Step 01</span>
+                        <div class="journey-step-head">
+                            <span class="journey-big-num">01</span>
+                            <div class="journey-step-icon">
+                                <i class="bi bi-person-check-fill"></i>
+                            </div>
                         </div>
-                        <h3 class="pillar-card-title mb-3">REGISTER &amp;<br>VERIFY KYC</h3>
-                        <p class="pillar-body-text">
+                        <h3 class="journey-card-title">REGISTER &amp;<br>VERIFY KYC</h3>
+                        <p class="journey-card-desc">
                             Create your account on the Crown Asia Investor Portal and complete identity and eligibility verification.
                         </p>
                     </div>
-                </div>
 
-                <!-- Step 02 -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="80">
-                    <div class="pillar-glass-card">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="pillar-tag-glow mb-0">Step 02</span>
-                            <i class="bi bi-wallet2 text-success fs-4"></i>
+                    <!-- Step 02 -->
+                    <div class="journey-process-item" data-aos="fade-up" data-aos-delay="150">
+                        <span class="journey-step-indicator">Step 02</span>
+                        <div class="journey-step-head">
+                            <span class="journey-big-num">02</span>
+                            <div class="journey-step-icon">
+                                <i class="bi bi-wallet2"></i>
+                            </div>
                         </div>
-                        <h3 class="pillar-card-title mb-3">FUND VIA<br>USDT NETWORK</h3>
-                        <p class="pillar-body-text">
+                        <h3 class="journey-card-title">FUND VIA<br>USDT NETWORK</h3>
+                        <p class="journey-card-desc">
                             Deposit USDT securely using supported blockchain networks with automated on-chain confirmation tracking.
                         </p>
                     </div>
-                </div>
 
-                <!-- Step 03 -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="160">
-                    <div class="pillar-glass-card">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="pillar-tag-glow mb-0">Step 03</span>
-                            <i class="bi bi-layers-fill text-success fs-4"></i>
+                    <!-- Step 03 -->
+                    <div class="journey-process-item" data-aos="fade-up" data-aos-delay="250">
+                        <span class="journey-step-indicator">Step 03</span>
+                        <div class="journey-step-head">
+                            <span class="journey-big-num">03</span>
+                            <div class="journey-step-icon">
+                                <i class="bi bi-layers-fill"></i>
+                            </div>
                         </div>
-                        <h3 class="pillar-card-title mb-3">SELECT AN<br>OFFERING</h3>
-                        <p class="pillar-body-text">
+                        <h3 class="journey-card-title">SELECT AN<br>OFFERING</h3>
+                        <p class="journey-card-desc">
                             Review offering memoranda, terms, and risk disclosures across our eight sectors and confirm your allocation.
                         </p>
                     </div>
-                </div>
 
-                <!-- Step 04 -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="240">
-                    <div class="pillar-glass-card">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="pillar-tag-glow mb-0">Step 04</span>
-                            <i class="bi bi-graph-up-arrow text-success fs-4"></i>
+                    <!-- Step 04 -->
+                    <div class="journey-process-item" data-aos="fade-up" data-aos-delay="350">
+                        <span class="journey-step-indicator">Step 04</span>
+                        <div class="journey-step-head">
+                            <span class="journey-big-num">04</span>
+                            <div class="journey-step-icon">
+                                <i class="bi bi-graph-up-arrow"></i>
+                            </div>
                         </div>
-                        <h3 class="pillar-card-title mb-3">TRACK &amp;<br>WITHDRAW USDT</h3>
-                        <p class="pillar-body-text">
+                        <h3 class="journey-card-title">TRACK &amp;<br>WITHDRAW USDT</h3>
+                        <p class="journey-card-desc">
                             Monitor performance milestones inside your dashboard and request USDT withdrawals upon distribution or redemption.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="text-center mt-5 d-flex flex-wrap justify-content-center gap-3" data-aos="fade-up">
+            <div class="text-center mt-5 d-flex flex-wrap justify-content-center gap-3 position-relative" style="z-index: 2;" data-aos="fade-up">
                 <a href="<?= $base_url ?>how-it-works/" class="btn-green">Complete Investor Guide</a>
                 <a href="<?= $base_url ?>how-it-works/usdt-deposits-withdrawals/" class="btn-ghost">USDT Deposits &amp; Withdrawals</a>
             </div>
         </div>
     </section>
 
-    <!-- 4. Eight Industries / Services Section (Updated with Clear Sector Links) -->
-    <section class="section section-light" id="services">
-        <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <span class="topic-badge-pill light">DIVERSIFIED PORTFOLIO</span>
-                <h2 class="section-title">Eight Strategic Industries</h2>
-                <p class="section-subtitle mx-auto">Explore dedicated sector briefings, operational strategies, and risk governance across our eight core business divisions.</p>
+    <!-- 4. Eight Industries / Services Section (Styled like demo index-4.html Project Section) -->
+    <section class="tj-project-section-4 section-gap" id="services">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="sec-heading style-4 text-center" data-aos="fade-up">
+                        <span class="sub-title"><i class="bi bi-grid-3x3-gap-fill me-1"></i>Diversified Portfolio</span>
+                        <h2 class="sec-title">Eight Strategic Industries</h2>
+                        <p class="sec-desc">Explore dedicated sector briefings, operational strategies, and risk governance across our eight core business divisions.</p>
+                    </div>
+                </div>
             </div>
-            <div class="row g-4">
-                <!-- 1. Forex Trading -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up">
-                    <article class="sector-card d-flex flex-column">
-                        <div class="sector-media">
-                            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Forex Trading">
+            <div class="row">
+                <div class="col-12">
+                    <div class="project-wrapper" data-aos="fade-up" data-aos-delay="150">
+                        <div class="swiper project-slider-3">
+                            <div class="swiper-wrapper">
+                                <!-- 1. Forex Trading -->
+                                <div class="swiper-slide">
+                                    <div class="project-item h4-project-item">
+                                        <div class="project-content">
+                                            <span class="categories"><a href="<?= $base_url ?>industries/forex-trading/">Foreign Exchange</a></span>
+                                            <div class="project-text">
+                                                <h4 class="title"><a href="<?= $base_url ?>industries/forex-trading/">Forex Trading</a></h4>
+                                                <a class="tji-icon-btn" href="<?= $base_url ?>industries/forex-trading/" aria-label="Explore Forex Trading">
+                                                    <i class="bi bi-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                            <p class="project-desc">Disciplined foreign exchange operations, liquid market participation, and proactive risk and currency management strategies.</p>
+                                        </div>
+                                        <div class="project-img">
+                                            <a href="<?= $base_url ?>industries/forex-trading/">
+                                                <img src="<?= $base_url ?>assets/images/forex-hero.webp" alt="Forex Trading">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 2. Real Estate Investment -->
+                                <div class="swiper-slide">
+                                    <div class="project-item h4-project-item">
+                                        <div class="project-content">
+                                            <span class="categories"><a href="<?= $base_url ?>industries/real-estate/">Real Estate</a></span>
+                                            <div class="project-text">
+                                                <h4 class="title"><a href="<?= $base_url ?>industries/real-estate/">Real Estate</a></h4>
+                                                <a class="tji-icon-btn" href="<?= $base_url ?>industries/real-estate/" aria-label="Explore Real Estate Investment">
+                                                    <i class="bi bi-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                            <p class="project-desc">Property development and land investments across priority markets including Dubai, Maldives, Sri Lanka, Thailand, and the USA.</p>
+                                        </div>
+                                        <div class="project-img">
+                                            <a href="<?= $base_url ?>industries/real-estate/">
+                                                <img src="<?= $base_url ?>assets/images/real-state.webp" alt="Real Estate Investment">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 3. Research & Development -->
+                                <div class="swiper-slide">
+                                    <div class="project-item h4-project-item">
+                                        <div class="project-content">
+                                            <span class="categories"><a href="<?= $base_url ?>industries/research-and-development/">Innovation &amp; AI</a></span>
+                                            <div class="project-text">
+                                                <h4 class="title"><a href="<?= $base_url ?>industries/research-and-development/">Research &amp; Dev</a></h4>
+                                                <a class="tji-icon-btn" href="<?= $base_url ?>industries/research-and-development/" aria-label="Explore Research and Development">
+                                                    <i class="bi bi-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                            <p class="project-desc">IoT, robotics, and applied AI initiatives, pioneering next-generation devices and high-impact commercial applications.</p>
+                                        </div>
+                                        <div class="project-img">
+                                            <a href="<?= $base_url ?>industries/research-and-development/">
+                                                <img src="<?= $base_url ?>assets/images/rd.webp" alt="Research and Development">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 4. Technology & Communications -->
+                                <div class="swiper-slide">
+                                    <div class="project-item h4-project-item">
+                                        <div class="project-content">
+                                            <span class="categories"><a href="<?= $base_url ?>industries/technology-and-communications/">Telecom &amp; Cloud</a></span>
+                                            <div class="project-text">
+                                                <h4 class="title"><a href="<?= $base_url ?>industries/technology-and-communications/">Technology &amp; Comms</a></h4>
+                                                <a class="tji-icon-btn" href="<?= $base_url ?>industries/technology-and-communications/" aria-label="Explore Technology and Communications">
+                                                    <i class="bi bi-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                            <p class="project-desc">2030 focus on scalable AI and cloud technology infrastructure, enterprise digital services, and robust telecom systems.</p>
+                                        </div>
+                                        <div class="project-img">
+                                            <a href="<?= $base_url ?>industries/technology-and-communications/">
+                                                <img src="<?= $base_url ?>assets/images/technology.webp" alt="Technology and Communications">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 5. Trading, Import & Export -->
+                                <div class="swiper-slide">
+                                    <div class="project-item h4-project-item">
+                                        <div class="project-content">
+                                            <span class="categories"><a href="<?= $base_url ?>industries/import-export/">Global Trade</a></span>
+                                            <div class="project-text">
+                                                <h4 class="title"><a href="<?= $base_url ?>industries/import-export/">Import &amp; Export</a></h4>
+                                                <a class="tji-icon-btn" href="<?= $base_url ?>industries/import-export/" aria-label="Explore Import and Export">
+                                                    <i class="bi bi-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                            <p class="project-desc">Sourcing and global distribution of coconuts, spices, rubber, value-added goods, and quality apparel products.</p>
+                                        </div>
+                                        <div class="project-img">
+                                            <a href="<?= $base_url ?>industries/import-export/">
+                                                <img src="<?= $base_url ?>assets/images/import_export.webp" alt="Trading, Import and Export">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 6. E-Commerce -->
+                                <div class="swiper-slide">
+                                    <div class="project-item h4-project-item">
+                                        <div class="project-content">
+                                            <span class="categories"><a href="<?= $base_url ?>industries/ecommerce/">Digital Commerce</a></span>
+                                            <div class="project-text">
+                                                <h4 class="title"><a href="<?= $base_url ?>industries/ecommerce/">E-Commerce</a></h4>
+                                                <a class="tji-icon-btn" href="<?= $base_url ?>industries/ecommerce/" aria-label="Explore E-Commerce">
+                                                    <i class="bi bi-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                            <p class="project-desc">Digital commerce platforms, logistics management, modern fulfillment space, and smart secure warehousing solutions.</p>
+                                        </div>
+                                        <div class="project-img">
+                                            <a href="<?= $base_url ?>industries/ecommerce/">
+                                                <img src="<?= $base_url ?>assets/images/ecom.webp" alt="E-Commerce">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 7. Gems & Gemstones -->
+                                <div class="swiper-slide">
+                                    <div class="project-item h4-project-item">
+                                        <div class="project-content">
+                                            <span class="categories"><a href="<?= $base_url ?>industries/gems-and-gemstones/">Precious Minerals</a></span>
+                                            <div class="project-text">
+                                                <h4 class="title"><a href="<?= $base_url ?>industries/gems-and-gemstones/">Gems &amp; Gemstones</a></h4>
+                                                <a class="tji-icon-btn" href="<?= $base_url ?>industries/gems-and-gemstones/" aria-label="Explore Gems and Gemstones">
+                                                    <i class="bi bi-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                            <p class="project-desc">Ethical sourcing, grading, certification, and trading of precious and semi-precious stones across international markets.</p>
+                                        </div>
+                                        <div class="project-img">
+                                            <a href="<?= $base_url ?>industries/gems-and-gemstones/">
+                                                <img src="<?= $base_url ?>assets/images/gem.webp" alt="Gems and Gemstones">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 8. Agriculture & Plantation -->
+                                <div class="swiper-slide">
+                                    <div class="project-item h4-project-item">
+                                        <div class="project-content">
+                                            <span class="categories"><a href="<?= $base_url ?>industries/agriculture-and-plantation/">Agro &amp; Sustainability</a></span>
+                                            <div class="project-text">
+                                                <h4 class="title"><a href="<?= $base_url ?>industries/agriculture-and-plantation/">Agriculture &amp; Plantation</a></h4>
+                                                <a class="tji-icon-btn" href="<?= $base_url ?>industries/agriculture-and-plantation/" aria-label="Explore Agriculture and Plantation">
+                                                    <i class="bi bi-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                            <p class="project-desc">Large-scale agricultural crop production, sustainable plantation management, and development of value-added food products.</p>
+                                        </div>
+                                        <div class="project-img">
+                                            <a href="<?= $base_url ?>industries/agriculture-and-plantation/">
+                                                <img src="<?= $base_url ?>assets/images/agriculture.webp" alt="Agriculture and Plantation">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Swiper Pagination -->
+                            <div class="swiper-pagination-area"></div>
                         </div>
-                        <div class="sector-body d-flex flex-column flex-grow-1">
-                            <div class="sector-icon"><i class="bi bi-currency-exchange"></i></div>
-                            <h4><a href="<?= $base_url ?>industries/forex-trading/" class="stretched-link text-decoration-none text-reset">Forex Trading</a></h4>
-                            <p class="mb-3">Disciplined foreign exchange operations, liquid market participation, and proactive risk and currency management strategies.</p>
-                            <span class="mt-auto small fw-semibold text-success">Explore Sector &amp; Strategy <i class="bi bi-arrow-right ms-1"></i></span>
-                        </div>
-                    </article>
-                </div>
-                <!-- 2. Real Estate Investment -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="60">
-                    <article class="sector-card d-flex flex-column">
-                        <div class="sector-media">
-                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Real Estate Investment">
-                        </div>
-                        <div class="sector-body d-flex flex-column flex-grow-1">
-                            <div class="sector-icon"><i class="bi bi-houses"></i></div>
-                            <h4><a href="<?= $base_url ?>industries/real-estate/" class="stretched-link text-decoration-none text-reset">Real Estate</a></h4>
-                            <p class="mb-3">Property development and land investments across priority markets including Dubai, Maldives, Sri Lanka, Thailand, and the USA.</p>
-                            <span class="mt-auto small fw-semibold text-success">Explore Sector &amp; Markets <i class="bi bi-arrow-right ms-1"></i></span>
-                        </div>
-                    </article>
-                </div>
-                <!-- 3. Research & Development -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="120">
-                    <article class="sector-card d-flex flex-column">
-                        <div class="sector-media">
-                            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Research and Development">
-                        </div>
-                        <div class="sector-body d-flex flex-column flex-grow-1">
-                            <div class="sector-icon"><i class="bi bi-cpu"></i></div>
-                            <h4><a href="<?= $base_url ?>industries/research-and-development/" class="stretched-link text-decoration-none text-reset">Research &amp; Dev</a></h4>
-                            <p class="mb-3">IoT, robotics, and applied AI initiatives, pioneering next-generation devices and high-impact commercial applications.</p>
-                            <span class="mt-auto small fw-semibold text-success">Explore Sector &amp; Lab <i class="bi bi-arrow-right ms-1"></i></span>
-                        </div>
-                    </article>
-                </div>
-                <!-- 4. Technology & Communications -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="180">
-                    <article class="sector-card d-flex flex-column">
-                        <div class="sector-media">
-                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Technology and Communications">
-                        </div>
-                        <div class="sector-body d-flex flex-column flex-grow-1">
-                            <div class="sector-icon"><i class="bi bi-broadcast"></i></div>
-                            <h4><a href="<?= $base_url ?>industries/technology-and-communications/" class="stretched-link text-decoration-none text-reset">Technology &amp; Comms</a></h4>
-                            <p class="mb-3">2030 focus on scalable AI and cloud technology infrastructure, enterprise digital services, and robust telecom systems.</p>
-                            <span class="mt-auto small fw-semibold text-success">Explore 2030 Roadmap <i class="bi bi-arrow-right ms-1"></i></span>
-                        </div>
-                    </article>
-                </div>
-                <!-- 5. Trading, Import & Export -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up">
-                    <article class="sector-card d-flex flex-column">
-                        <div class="sector-media">
-                            <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Trading, Import &amp; Export">
-                        </div>
-                        <div class="sector-body d-flex flex-column flex-grow-1">
-                            <div class="sector-icon"><i class="bi bi-arrow-left-right"></i></div>
-                            <h4><a href="<?= $base_url ?>industries/import-export/" class="stretched-link text-decoration-none text-reset">Import &amp; Export</a></h4>
-                            <p class="mb-3">Sourcing and global distribution of coconuts, spices, rubber, value-added goods, and quality apparel products.</p>
-                            <span class="mt-auto small fw-semibold text-success">Explore Trade Corridors <i class="bi bi-arrow-right ms-1"></i></span>
-                        </div>
-                    </article>
-                </div>
-                <!-- 6. E-Commerce -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="60">
-                    <article class="sector-card d-flex flex-column">
-                        <div class="sector-media">
-                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="E-Commerce">
-                        </div>
-                        <div class="sector-body d-flex flex-column flex-grow-1">
-                            <div class="sector-icon"><i class="bi bi-cart4"></i></div>
-                            <h4><a href="<?= $base_url ?>industries/ecommerce/" class="stretched-link text-decoration-none text-reset">E-Commerce</a></h4>
-                            <p class="mb-3">Digital commerce platforms, logistics management, modern fulfillment space, and smart secure warehousing solutions.</p>
-                            <span class="mt-auto small fw-semibold text-success">Explore Fulfillment Hubs <i class="bi bi-arrow-right ms-1"></i></span>
-                        </div>
-                    </article>
-                </div>
-                <!-- 7. Gems & Gemstones -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="120">
-                    <article class="sector-card d-flex flex-column">
-                        <div class="sector-media">
-                            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Gems and Gemstones">
-                        </div>
-                        <div class="sector-body d-flex flex-column flex-grow-1">
-                            <div class="sector-icon"><i class="bi bi-gem"></i></div>
-                            <h4><a href="<?= $base_url ?>industries/gems-and-gemstones/" class="stretched-link text-decoration-none text-reset">Gems &amp; Gemstones</a></h4>
-                            <p class="mb-3">Ethical sourcing, grading, certification, and trading of precious and semi-precious stones across international markets.</p>
-                            <span class="mt-auto small fw-semibold text-success">Explore Gem Operations <i class="bi bi-arrow-right ms-1"></i></span>
-                        </div>
-                    </article>
-                </div>
-                <!-- 8. Agriculture & Plantation -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="180">
-                    <article class="sector-card d-flex flex-column">
-                        <div class="sector-media">
-                            <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Agriculture and Plantation">
-                        </div>
-                        <div class="sector-body d-flex flex-column flex-grow-1">
-                            <div class="sector-icon"><i class="bi bi-tree"></i></div>
-                            <h4><a href="<?= $base_url ?>industries/agriculture-and-plantation/" class="stretched-link text-decoration-none text-reset">Agriculture &amp; Plantation</a></h4>
-                            <p class="mb-3">Large-scale agricultural crop production, sustainable plantation management, and development of value-added food products.</p>
-                            <span class="mt-auto small fw-semibold text-success">Explore Agro Projects <i class="bi bi-arrow-right ms-1"></i></span>
-                        </div>
-                    </article>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 5. About Crown Asia Section -->
-    <section class="section section-white" id="about">
+    <section class="section section-white about-section" id="about">
         <div class="container">
             <div class="row align-items-center g-5">
+                <!-- Visual Media Column -->
                 <div class="col-lg-5" data-aos="fade-right">
-                    <div class="about-visual">
-                        <div class="about-frame"></div>
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Crown Asia office">
-                        <div class="since-badge">
-                            <div class="yr">2022</div>
-                            <div class="lb">Since</div>
+                    <div class="about-visual-wrap">
+                        <div class="about-visual">
+                            <div class="about-visual-inner">
+                                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Crown Asia Head Office">
+                                <div class="about-visual-overlay"></div>
+                            </div>
+                            <div class="about-frame"></div>
+                            
+                            <!-- Floating Since 2022 Badge -->
+                            <div class="since-badge">
+                                <div class="since-icon-wrap">
+                                    <i class="bi bi-shield-fill-check"></i>
+                                </div>
+                                <div class="since-text">
+                                    <div class="yr">2022</div>
+                                    <div class="lb">Operating Since</div>
+                                </div>
+                            </div>
+
+                            <!-- Floating Trust & Compliance Card -->
+                            <div class="about-trust-card" data-aos="fade-up" data-aos-delay="200">
+                                <div class="trust-icon">
+                                    <i class="bi bi-award-fill"></i>
+                                </div>
+                                <div class="trust-info">
+                                    <span class="trust-title">Registered in USA</span>
+                                    <span class="trust-desc">New Mexico &middot; Tax Compliant</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Content & Features Column -->
                 <div class="col-lg-7" data-aos="fade-left">
-                    <div class="ps-lg-3">
-                        <div class="section-label">Who We Are</div>
-                        <div class="green-line"></div>
-                        <h2 class="section-title">A Trusted American<br>Business Conglomerate</h2>
-                        <p class="about-copy mb-3">
-                            Crown Asia LLC is a legally registered and tax-compliant limited liability company based in Albuquerque, New Mexico, USA. With continuous operations, we have established ourselves as a diversified business group operating across eight high-growth sectors.
+                    <div class="ps-lg-4">
+                        <div class="sec-heading style-4 mb-4 text-start">
+                            <span class="sub-title"><i class="bi bi-patch-check-fill me-1"></i>Who We Are</span>
+                            <h2 class="sec-title mt-2 mb-3">A Trusted American<br><span class="accent-title">Business Conglomerate</span></h2>
+                        </div>
+                        
+                        <p class="about-lead">
+                            <strong>Crown Asia LLC</strong> is a legally registered and tax-compliant limited liability company based in Albuquerque, New Mexico, USA. With continuous operations, we have established ourselves as a diversified business group operating across eight high-growth sectors.
                         </p>
                         <p class="about-copy mb-4">
                             Our company is built on the principles of transparency, integrity, and sustainable growth. Every sector is backed by tangible assets, verified operations, and experienced management.
                         </p>
-                        <div class="row mb-3">
+                        
+                        <div class="row g-3 mb-4 pb-2">
+                            <!-- Feature 1 -->
                             <div class="col-sm-6">
-                                <div class="about-detail">
-                                    <div class="about-icon"><i class="bi bi-shield-check"></i></div>
-                                    <div>
+                                <div class="about-feature-card">
+                                    <div class="about-feature-icon">
+                                        <i class="bi bi-shield-check"></i>
+                                    </div>
+                                    <div class="about-feature-content">
                                         <h5>Legally Registered</h5>
                                         <p>Registered LLC in New Mexico, United States</p>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Feature 2 -->
                             <div class="col-sm-6">
-                                <div class="about-detail">
-                                    <div class="about-icon"><i class="bi bi-graph-up-arrow"></i></div>
-                                    <div>
+                                <div class="about-feature-card">
+                                    <div class="about-feature-icon">
+                                        <i class="bi bi-graph-up-arrow"></i>
+                                    </div>
+                                    <div class="about-feature-content">
                                         <h5>Asset-Backed</h5>
                                         <p>Real business operations across 8 sectors</p>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Feature 3 -->
                             <div class="col-sm-6">
-                                <div class="about-detail">
-                                    <div class="about-icon"><i class="bi bi-people-fill"></i></div>
-                                    <div>
+                                <div class="about-feature-card">
+                                    <div class="about-feature-icon">
+                                        <i class="bi bi-people-fill"></i>
+                                    </div>
+                                    <div class="about-feature-content">
                                         <h5>Growing Team</h5>
                                         <p>Professional management &amp; dedicated workforce</p>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Feature 4 -->
                             <div class="col-sm-6">
-                                <div class="about-detail">
-                                    <div class="about-icon"><i class="bi bi-globe-americas"></i></div>
-                                    <div>
+                                <div class="about-feature-card">
+                                    <div class="about-feature-icon">
+                                        <i class="bi bi-globe-americas"></i>
+                                    </div>
+                                    <div class="about-feature-content">
                                         <h5>Global Reach</h5>
-                                        <p>Cross-border investments and strategic trading</p>
+                                        <p>Cross-border investments &amp; strategic trading</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <a href="<?= $base_url ?>about/" class="btn-green">More About Crown Asia <i class="bi bi-arrow-right ms-1"></i></a>
+
+                        <!-- CTA & Trust Pill -->
+                        <div class="about-cta-wrap d-flex flex-wrap align-items-center gap-3">
+                            <a href="<?= $base_url ?>about/" class="btn-green">More About Crown Asia <i class="bi bi-arrow-right ms-1"></i></a>
+                            <div class="about-security-badge d-flex align-items-center gap-2">
+                                <i class="bi bi-check-circle-fill text-success fs-5"></i>
+                                <span class="small text-muted fw-semibold">State of New Mexico Verified LLC</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -522,8 +646,12 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
     </section>
 
     <!-- Stats Counter Section -->
-    <section class="stats-section">
-        <div class="container">
+    <section class="stats-section position-relative overflow-hidden">
+        <video class="stats-bg-video" autoplay loop muted playsinline preload="auto">
+            <source src="<?= $base_url ?>assets/video/countup-bg.webm" type="video/webm">
+        </video>
+        <div class="stats-video-overlay"></div>
+        <div class="container position-relative" style="z-index: 2;">
             <div class="row g-4">
                 <div class="col-6 col-md-3" data-aos="fade-up">
                     <div class="stat-box">
@@ -572,15 +700,15 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
                 <div class="col-lg-4 col-md-6" data-aos="fade-up">
                     <article class="article-card d-flex flex-column">
                         <div class="article-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="How to Evaluate an Investment Opportunity">
+                            <img src="<?= $base_url ?>assets/images/blog/blog-1.webp" alt="How to Evaluate an Investment Opportunity">
                         </div>
                         <div class="article-body d-flex flex-column flex-grow-1">
-                            <span class="article-category">Investor Education</span>
-                            <h4 class="article-title"><a href="<?= $base_url ?>blog/">How to Evaluate an Investment Opportunity Before You Commit</a></h4>
-                            <p class="small text-muted mb-3">A practical framework for reviewing asset backing, term structures, fee schedules, and offering-specific risk disclosures.</p>
+                            <span class="article-category">Due Diligence</span>
+                            <h4 class="article-title"><a href="<?= $base_url ?>blog/post.php?slug=how-to-evaluate-an-investment-opportunity">How to Evaluate an Investment Opportunity: 7 Due Diligence Steps</a></h4>
+                            <p class="small text-muted mb-3">A practical framework for reviewing legal charters, cash flow modeling, risk buffers, and tangible collateral.</p>
                             <div class="mt-auto d-flex justify-content-between align-items-center">
-                                <span class="article-date"><i class="bi bi-calendar3 me-1"></i> Investor Guide</span>
-                                <a href="<?= $base_url ?>blog/" class="small fw-semibold text-success text-decoration-none">Read Article &rarr;</a>
+                                <span class="article-date"><i class="bi bi-calendar3 me-1"></i> Nov 12, 2026</span>
+                                <a href="<?= $base_url ?>blog/post.php?slug=how-to-evaluate-an-investment-opportunity" class="small fw-semibold text-success text-decoration-none">Read Briefing &rarr;</a>
                             </div>
                         </div>
                     </article>
@@ -590,15 +718,15 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="80">
                     <article class="article-card d-flex flex-column">
                         <div class="article-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="What to Review Before Investing in a Real Estate Project">
+                            <img src="<?= $base_url ?>assets/images/blog/blog-5.webp" alt="Commercial Real Estate in the Southwest">
                         </div>
                         <div class="article-body d-flex flex-column flex-grow-1">
-                            <span class="article-category">Market Research</span>
-                            <h4 class="article-title"><a href="<?= $base_url ?>blog/">What to Review Before Investing in a Real Estate Project</a></h4>
-                            <p class="small text-muted mb-3">Evaluating location fundamentals, title verification, construction milestones, and exit liquidity in Dubai, Sri Lanka, and US markets.</p>
+                            <span class="article-category">Commercial Real Estate</span>
+                            <h4 class="article-title"><a href="<?= $base_url ?>blog/post.php?slug=commercial-real-estate-corridors">Commercial Real Estate in the Southwest: Yields &amp; Asset Backing</a></h4>
+                            <p class="small text-muted mb-3">Evaluating prime logistics corridors, tenant occupancy, and inflation-hedged yields along US interstate routes.</p>
                             <div class="mt-auto d-flex justify-content-between align-items-center">
-                                <span class="article-date"><i class="bi bi-calendar3 me-1"></i> Real Estate Desk</span>
-                                <a href="<?= $base_url ?>blog/" class="small fw-semibold text-success text-decoration-none">Read Article &rarr;</a>
+                                <span class="article-date"><i class="bi bi-calendar3 me-1"></i> Oct 24, 2026</span>
+                                <a href="<?= $base_url ?>blog/post.php?slug=commercial-real-estate-corridors" class="small fw-semibold text-success text-decoration-none">Read Briefing &rarr;</a>
                             </div>
                         </div>
                     </article>
@@ -608,15 +736,15 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="160">
                     <article class="article-card d-flex flex-column">
                         <div class="article-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1621416894569-0f39ed31d247?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="How USDT Deposits and Withdrawals Work">
+                            <img src="<?= $base_url ?>assets/images/blog/blog-2.webp" alt="USDT Investment Rails">
                         </div>
                         <div class="article-body d-flex flex-column flex-grow-1">
-                            <span class="article-category">Platform Guide</span>
-                            <h4 class="article-title"><a href="<?= $base_url ?>how-it-works/usdt-deposits-withdrawals/">How USDT Deposits and Withdrawals Work on Crown Asia</a></h4>
-                            <p class="small text-muted mb-3">Confirmed blockchain networks, deposit confirmation windows, withdrawal request status tracking, and security best practices.</p>
+                            <span class="article-category">Digital Settlement</span>
+                            <h4 class="article-title"><a href="<?= $base_url ?>blog/post.php?slug=usdt-cross-border-investment-rails">USDT Investment Rails: Fast, Borderless &amp; Transparent Asset Settlement</a></h4>
+                            <p class="small text-muted mb-3">How institutional stablecoins eliminate multi-day correspondent banking friction and weekend market lockups.</p>
                             <div class="mt-auto d-flex justify-content-between align-items-center">
-                                <span class="article-date"><i class="bi bi-calendar3 me-1"></i> Treasury Team</span>
-                                <a href="<?= $base_url ?>how-it-works/usdt-deposits-withdrawals/" class="small fw-semibold text-success text-decoration-none">Read Guide &rarr;</a>
+                                <span class="article-date"><i class="bi bi-calendar3 me-1"></i> Nov 08, 2026</span>
+                                <a href="<?= $base_url ?>blog/post.php?slug=usdt-cross-border-investment-rails" class="small fw-semibold text-success text-decoration-none">Read Briefing &rarr;</a>
                             </div>
                         </div>
                     </article>
@@ -724,112 +852,6 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
         </div>
     </section>
 
-    <!-- 9. Contact Section -->
-    <section class="section section-light" id="contact">
-        <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <div class="section-label">Get In Touch</div>
-                <div class="green-line center"></div>
-                <h2 class="section-title">Contact Us</h2>
-                <p class="section-subtitle mx-auto">Have a question or want to explore business opportunities? We'd love to hear from you.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-5" data-aos="fade-right">
-                    <div class="contact-info-card">
-                        <h3>Let's Talk</h3>
-                        <p>Reach out to us for any enquiries about our business sectors, investment opportunities, or general information.</p>
-                        <div class="contact-item">
-                            <div class="contact-item-icon"><i class="bi bi-geo-alt-fill"></i></div>
-                            <div>
-                                <div class="label">Head Office</div>
-                                <div class="value">10242 Coors Bypass Blvd. N.W.<br>Albuquerque, New Mexico 87114<br>United States</div>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item-icon"><i class="bi bi-envelope-fill"></i></div>
-                            <div>
-                                <div class="label">Email</div>
-                                <div class="value"><a href="mailto:info@crownasia.io">info@crownasia.io</a></div>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item-icon"><i class="bi bi-globe2"></i></div>
-                            <div>
-                                <div class="label">Website</div>
-                                <div class="value"><a href="https://crownasia.io" target="_blank" rel="noopener">crownasia.io</a></div>
-                            </div>
-                        </div>
-                        <div class="contact-social">
-                            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7" data-aos="fade-left">
-                    <div class="contact-form-card">
-                        <h4 class="mb-1">Send Us a Message</h4>
-                        <p class="text-muted mb-4" style="font-size:14px;">Fill out the form below and our team will respond within 24 hours.</p>
-                        <form id="contactForm" action="contact-handler.php" method="POST">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="float-field">
-                                        <input type="text" name="name" id="name" placeholder=" " required>
-                                        <label for="name">Full Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="float-field">
-                                        <input type="tel" name="phone" id="phone" placeholder=" ">
-                                        <label for="phone">Phone Number</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="float-field">
-                                        <input type="email" name="email" id="email" placeholder=" " required>
-                                        <label for="email">Email Address</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="float-field">
-                                        <select name="subject" id="subject" required>
-                                            <option value="" selected disabled></option>
-                                            <option>General Enquiry</option>
-                                            <option>Investment Opportunities</option>
-                                            <option>Forex Trading</option>
-                                            <option>Real Estate Investment</option>
-                                            <option>Research &amp; Development</option>
-                                            <option>Technology &amp; Communications</option>
-                                            <option>Trading, Import &amp; Export</option>
-                                            <option>E-Commerce</option>
-                                            <option>Gems &amp; Gemstones</option>
-                                            <option>Agriculture &amp; Plantation</option>
-                                            <option>Other</option>
-                                        </select>
-                                        <label for="subject">Subject</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="float-field">
-                                        <textarea name="message" id="message" placeholder=" " required></textarea>
-                                        <label for="message">Message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn-green w-100 text-center border-0" style="cursor:pointer;">
-                                        <i class="bi bi-send me-2"></i>Send Message
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="map-wrap">
-                        <iframe src="https://www.google.com/maps?q=10242+Coors+Bypass+Blvd+NW,+Albuquerque,+NM+87114&amp;output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Crown Asia location"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
 
 <?php include_once __DIR__ . '/footer.php'; ?>
