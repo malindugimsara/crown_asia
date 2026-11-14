@@ -159,7 +159,7 @@ $sectors = [
                             <div class="sector-body d-flex flex-column flex-grow-1 p-4">
                                 <div class="d-flex align-items-center gap-2 mb-2">
                                     <i class="bi <?= $s['icon'] ?> text-success fs-5"></i>
-                                    <h3 class="sector-title mb-0" style="font-family: 'Cinzel', serif; font-size: 18px; font-weight: 700;">
+                                    <h3 class="sector-title mb-0" style="font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 700;">
                                         <?= htmlspecialchars($s['title']) ?>
                                     </h3>
                                 </div>
@@ -181,7 +181,7 @@ $sectors = [
             <!-- Bottom CTA Strip -->
             <div class="mt-5 p-4 p-md-5 rounded-4 text-center" style="background: linear-gradient(135deg, #060B08 0%, #0E1812 100%); border: 1px solid rgba(29, 185, 84, 0.35); box-shadow: 0 15px 40px rgba(0,0,0,0.3);" data-aos="fade-up">
                 <span class="topic-badge-pill dark mb-3">CROSS-SECTOR DEPLOYMENT</span>
-                <h3 class="text-white mb-2" style="font-family: 'Cinzel', serif; font-size: 26px;">Explore Asset-Backed Offerings</h3>
+                <h3 class="text-white mb-2" style="font-family: 'Poppins', sans-serif; font-size: 26px; font-weight: 700;">Explore Asset-Backed Offerings</h3>
                 <p class="text-white-50 mx-auto mb-4" style="max-width: 580px; font-size: 14px;">
                     Review minimum allocations, maturity horizons, and distribution schedules across our eight operating divisions.
                 </p>

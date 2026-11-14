@@ -152,10 +152,6 @@ $portal_register_url = $portal_register_url ?? ($base_url . 'contact/');
                                     <div class="val">1,000 USDT</div>
                                 </div>
                                 <div class="offering-term-item">
-                                    <div class="label">Term Horizon</div>
-                                    <div class="val">12 – 24 Months</div>
-                                </div>
-                                <div class="offering-term-item">
                                     <div class="label">Currency</div>
                                     <div class="val">USDT (TRC20/ERC20)</div>
                                 </div>
@@ -188,10 +184,6 @@ $portal_register_url = $portal_register_url ?? ($base_url . 'contact/');
                                     <div class="val">500 USDT</div>
                                 </div>
                                 <div class="offering-term-item">
-                                    <div class="label">Term Horizon</div>
-                                    <div class="val">6 – 12 Months</div>
-                                </div>
-                                <div class="offering-term-item">
                                     <div class="label">Currency</div>
                                     <div class="val">USDT Multi-Network</div>
                                 </div>
@@ -222,10 +214,6 @@ $portal_register_url = $portal_register_url ?? ($base_url . 'contact/');
                                 <div class="offering-term-item">
                                     <div class="label">Minimum</div>
                                     <div class="val">500 USDT</div>
-                                </div>
-                                <div class="offering-term-item">
-                                    <div class="label">Term Horizon</div>
-                                    <div class="val">9 – 18 Months</div>
                                 </div>
                                 <div class="offering-term-item">
                                     <div class="label">Currency</div>

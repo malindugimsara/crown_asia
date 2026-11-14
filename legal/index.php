@@ -58,7 +58,7 @@ include_once ROOT_PATH . 'header.php';
                     </div>
                     <div class="d-flex justify-content-between py-2 border-bottom small">
                         <span class="text-muted">Official Compliance Contact</span>
-                        <strong class="text-dark"><a href="mailto:web@crownasia.io" class="text-success text-decoration-none">web@crownasia.io</a></strong>
+                        <strong class="text-dark"><a href="mailto:info@crownasia.io" class="text-success text-decoration-none">info@crownasia.io</a></strong>
                     </div>
                     <div class="d-flex justify-content-between pt-2 small">
                         <span class="text-muted">Settlement Currency</span>

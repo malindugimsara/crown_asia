@@ -19,7 +19,7 @@ include_once ROOT_PATH . 'header.php';
 
                 <h1 class="inner-hero-title">Approved Investment<br><span class="accent">Opportunities &amp; Offerings</span></h1>
                 <p class="inner-hero-lead mb-4">
-                    Explore structured, asset-backed investment offerings across Crown Asia's eight operating sectors. Review minimum allocations, term horizons, risk disclosures, and participate seamlessly using USDT.
+                    Explore structured, asset-backed investment offerings across Crown Asia's eight operating sectors. Review minimum allocations, distribution schedules, risk disclosures, and participate seamlessly using USDT.
                 </p>
 
                 <div class="d-flex flex-wrap gap-3">
@@ -169,11 +169,7 @@ include_once ROOT_PATH . 'header.php';
                         <div class="offering-grid-terms">
                             <div class="offering-term-item">
                                 <div class="label">Minimum</div>
-                                <div class="val">1,000 USDT</div>
-                            </div>
-                            <div class="offering-term-item">
-                                <div class="label">Term</div>
-                                <div class="val">12 – 24 Months</div>
+                                <div class="val">100 USDT</div>
                             </div>
                             <div class="offering-term-item">
                                 <div class="label">Distributions</div>
@@ -205,11 +201,7 @@ include_once ROOT_PATH . 'header.php';
                         <div class="offering-grid-terms">
                             <div class="offering-term-item">
                                 <div class="label">Minimum</div>
-                                <div class="val">500 USDT</div>
-                            </div>
-                            <div class="offering-term-item">
-                                <div class="label">Term</div>
-                                <div class="val">6 – 12 Months</div>
+                                <div class="val">100 USDT</div>
                             </div>
                             <div class="offering-term-item">
                                 <div class="label">Distributions</div>
@@ -241,11 +233,7 @@ include_once ROOT_PATH . 'header.php';
                         <div class="offering-grid-terms">
                             <div class="offering-term-item">
                                 <div class="label">Minimum</div>
-                                <div class="val">500 USDT</div>
-                            </div>
-                            <div class="offering-term-item">
-                                <div class="label">Term</div>
-                                <div class="val">9 – 18 Months</div>
+                                <div class="val">100 USDT</div>
                             </div>
                             <div class="offering-term-item">
                                 <div class="label">Distributions</div>
@@ -277,11 +265,7 @@ include_once ROOT_PATH . 'header.php';
                         <div class="offering-grid-terms">
                             <div class="offering-term-item">
                                 <div class="label">Minimum</div>
-                                <div class="val">1,500 USDT</div>
-                            </div>
-                            <div class="offering-term-item">
-                                <div class="label">Term</div>
-                                <div class="val">6 – 12 Months</div>
+                                <div class="val">100 USDT</div>
                             </div>
                             <div class="offering-term-item">
                                 <div class="label">Distributions</div>
@@ -313,11 +297,7 @@ include_once ROOT_PATH . 'header.php';
                         <div class="offering-grid-terms">
                             <div class="offering-term-item">
                                 <div class="label">Minimum</div>
-                                <div class="val">2,000 USDT</div>
-                            </div>
-                            <div class="offering-term-item">
-                                <div class="label">Term</div>
-                                <div class="val">18 – 36 Months</div>
+                                <div class="val">100 USDT</div>
                             </div>
                             <div class="offering-term-item">
                                 <div class="label">Distributions</div>
@@ -349,11 +329,7 @@ include_once ROOT_PATH . 'header.php';
                         <div class="offering-grid-terms">
                             <div class="offering-term-item">
                                 <div class="label">Minimum</div>
-                                <div class="val">1,000 USDT</div>
-                            </div>
-                            <div class="offering-term-item">
-                                <div class="label">Term</div>
-                                <div class="val">12 Months</div>
+                                <div class="val">100 USDT</div>
                             </div>
                             <div class="offering-term-item">
                                 <div class="label">Status</div>
@@ -433,9 +409,9 @@ include_once ROOT_PATH . 'header.php';
                         <span class="pillar-tag-glow mb-0">Check 03</span>
                         <i class="bi bi-calendar2-check text-success fs-4"></i>
                     </div>
-                    <h3 class="pillar-card-title mb-3">FEES, TERM &amp;<br>DISTRIBUTIONS</h3>
+                    <h3 class="pillar-card-title mb-3">FEES &amp;<br>DISTRIBUTIONS</h3>
                     <p class="pillar-body-text">
-                        Review the minimum USDT threshold, lock-in term, management or performance fee deductions, and scheduled payout intervals.
+                        Review the minimum USDT threshold, management or performance fee deductions, and scheduled payout intervals.
                     </p>
                 </div>
             </div>

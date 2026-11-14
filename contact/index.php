@@ -81,7 +81,7 @@ $status = $_GET['status'] ?? '';
                     </div>
                     <h3 class="contact-grid-title">Email Desks</h3>
                     <ul class="contact-grid-list">
-                        <li><a href="mailto:web@crownasia.io"><i class="bi bi-arrow-right-short text-success"></i>web@crownasia.io</a></li>
+                        <li><a href="mailto:info@crownasia.io"><i class="bi bi-arrow-right-short text-success"></i>info@crownasia.io</a></li>
                         <li><a href="mailto:investors@crownasia.io"><i class="bi bi-arrow-right-short text-success"></i>investors@crownasia.io</a></li>
                         <li><a href="mailto:partnerships@crownasia.io"><i class="bi bi-arrow-right-short text-success"></i>partnerships@crownasia.io</a></li>
                     </ul>
@@ -221,7 +221,7 @@ $status = $_GET['status'] ?? '';
                         <div class="contact-item-icon"><i class="bi bi-envelope-fill"></i></div>
                         <div>
                             <div class="label">Primary Email Desk</div>
-                            <div class="value"><a href="mailto:web@crownasia.io">web@crownasia.io</a></div>
+                            <div class="value"><a href="mailto:info@crownasia.io">info@crownasia.io</a></div>
                         </div>
                     </div>
 
@@ -269,7 +269,7 @@ $status = $_GET['status'] ?? '';
             <div class="col-lg-7" data-aos="fade-left">
                 <div class="contact-form-card">
                     <div class="topic-badge-pill light mb-2">Direct Routing Form</div>
-                    <h4 class="mb-1" style="font-family: 'Cinzel', serif; font-weight: 700;">Submit an Official Inquiry</h4>
+                    <h4 class="mb-1" style="font-family: 'Poppins', sans-serif; font-weight: 700;">Submit an Official Inquiry</h4>
                     <p class="text-muted mb-3" style="font-size:14px;">Select the pertinent division or category to direct your inquiry to the relevant corporate officer.</p>
 
                     <!-- Alerts for PHP handler fallback -->
@@ -387,7 +387,7 @@ $status = $_GET['status'] ?? '';
                     <div class="contact-map-header">
                         <div>
                             <span class="badge bg-success bg-opacity-10 text-success mb-1">Corporate Location</span>
-                            <h5 class="mb-0" style="font-family: 'Cinzel', serif; font-weight: 700;">Albuquerque, New Mexico Office</h5>
+                            <h5 class="mb-0" style="font-family: 'Poppins', sans-serif; font-weight: 700;">Albuquerque, New Mexico Office</h5>
                             <p class="text-muted small mb-0">10242 Coors Bypass Blvd. N.W., Albuquerque, NM 87114, USA</p>
                         </div>
                         <div>
@@ -481,7 +481,7 @@ $status = $_GET['status'] ?? '';
             <div class="row align-items-center g-4 position-relative" style="z-index: 2;">
                 <div class="col-lg-8">
                     <span class="badge bg-success bg-opacity-25 text-white mb-2 px-3 py-1" style="letter-spacing: 1px;">REGISTERED INVESTOR PLATFORM</span>
-                    <h3 class="mb-2" style="font-family: 'Cinzel', serif; font-size: 28px; font-weight: 700;">Already an Active Crown Asia Investor?</h3>
+                    <h3 class="mb-2" style="font-family: 'Poppins', sans-serif; font-size: 28px; font-weight: 700;">Already an Active Crown Asia Investor?</h3>
                     <p class="mb-0 text-white-50" style="font-size: 14.5px; line-height: 1.65;">
                         Skip standard email queues. Access live allocation milestones, request USDT distributions, or open dedicated support tickets directly inside your investor portal.
                     </p>

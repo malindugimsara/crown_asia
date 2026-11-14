@@ -57,7 +57,7 @@ include_once ROOT_PATH . 'header.php';
 
                     <h4 class="mb-3">5. Contact Information &amp; Effective Date</h4>
                     <p class="about-copy mb-4">
-                        These Terms of Use are effective as of <strong>November 1, 2026</strong>. We reserve the right to update these terms periodically; continued use of the Website constitutes acceptance of the revised terms. For legal or compliance questions, contact us at <a href="mailto:web@crownasia.io" class="text-success fw-semibold">web@crownasia.io</a> or by mail at Crown Asia LLC, 10242 Coors Bypass Blvd. N.W., Albuquerque, New Mexico 87114, United States.
+                        These Terms of Use are effective as of <strong>November 1, 2026</strong>. We reserve the right to update these terms periodically; continued use of the Website constitutes acceptance of the revised terms. For legal or compliance questions, contact us at <a href="mailto:info@crownasia.io" class="text-success fw-semibold">info@crownasia.io</a> or by mail at Crown Asia LLC, 10242 Coors Bypass Blvd. N.W., Albuquerque, New Mexico 87114, United States.
                     </p>
 
                     <div class="pt-3 border-top d-flex flex-wrap justify-content-between align-items-center gap-3">

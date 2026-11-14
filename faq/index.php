@@ -188,7 +188,7 @@ $faqs = [
                 <div class="col-lg-9">
                     <div class="p-4 p-md-5 rounded-4 text-center" style="background: linear-gradient(135deg, #060B08 0%, #0E1812 100%); border: 1px solid rgba(29, 185, 84, 0.35); box-shadow: 0 15px 40px rgba(0,0,0,0.3);">
                         <span class="topic-badge-pill dark mb-3">STILL HAVE QUESTIONS?</span>
-                        <h3 class="text-white mb-2" style="font-family: 'Cinzel', serif; font-size: 26px;">Speak With Our Investor Relations Desk</h3>
+                        <h3 class="text-white mb-2" style="font-family: 'Poppins', sans-serif; font-size: 26px; font-weight: 700;">Speak With Our Investor Relations Desk</h3>
                         <p class="text-white-50 mx-auto mb-4" style="max-width: 580px; font-size: 14px;">
                             Our corporate compliance officers and treasury specialists are available to review tailored allocation inquiries, offering memoranda, and institutional partnership agreements.
                         </p>

@@ -362,7 +362,7 @@ include_once ROOT_PATH . 'header.php';
                         <div class="verify-item">
                             <div class="verify-label">Corporate Email &amp; Web</div>
                             <div class="verify-val" style="font-size: 14px;">
-                                <a href="mailto:web@crownasia.io" class="text-success text-decoration-none">web@crownasia.io</a> &nbsp;|&nbsp;
+                                <a href="mailto:info@crownasia.io" class="text-success text-decoration-none">info@crownasia.io</a> &nbsp;|&nbsp;
                                 <a href="https://crownasia.io" target="_blank" rel="noopener" class="text-white text-decoration-none">crownasia.io</a>
                             </div>
                         </div>

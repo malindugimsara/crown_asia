@@ -52,7 +52,7 @@ include_once ROOT_PATH . 'header.php';
 
                     <h4 class="mb-3">4. Your Privacy Rights &amp; Contact</h4>
                     <p class="about-copy mb-4">
-                        Depending on your jurisdiction, you may have the right to request access to, correction of, or deletion of your personal information (subject to mandatory legal and AML retention obligations), or to object to certain processing activities. This Privacy Policy is effective as of <strong>November 1, 2026</strong>. To exercise your privacy rights or submit a data protection inquiry, contact our Privacy Officer at <a href="mailto:web@crownasia.io" class="text-success fw-semibold">web@crownasia.io</a> or write to Crown Asia LLC, 10242 Coors Bypass Blvd. N.W., Albuquerque, New Mexico 87114, United States.
+                        Depending on your jurisdiction, you may have the right to request access to, correction of, or deletion of your personal information (subject to mandatory legal and AML retention obligations), or to object to certain processing activities. This Privacy Policy is effective as of <strong>November 1, 2026</strong>. To exercise your privacy rights or submit a data protection inquiry, contact our Privacy Officer at <a href="mailto:info@crownasia.io" class="text-success fw-semibold">info@crownasia.io</a> or write to Crown Asia LLC, 10242 Coors Bypass Blvd. N.W., Albuquerque, New Mexico 87114, United States.
                     </p>
 
                     <div class="pt-3 border-top d-flex flex-wrap justify-content-between align-items-center gap-3">

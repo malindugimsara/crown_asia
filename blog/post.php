@@ -545,7 +545,7 @@ include_once ROOT_PATH . 'header.php';
                         <div class="blog-author-bio-card">
                             <img src="<?= $base_url . $post['avatar'] ?>" alt="<?= htmlspecialchars($post['author']) ?>" class="blog-author-bio-avatar">
                             <div>
-                                <h5 class="mb-1" style="font-family: 'Cinzel', serif; font-weight: 700; color: var(--black);">
+                                <h5 class="mb-1" style="font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--black);">
                                     <?= htmlspecialchars($post['author']) ?>
                                 </h5>
                                 <div class="text-success small fw-semibold mb-2"><?= htmlspecialchars($post['role']) ?> &bull; Crown Asia LLC</div>

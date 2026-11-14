@@ -64,7 +64,7 @@ $canonical_url = $canonical_url ?? ('https://crownasia.io' . $clean_uri);
         "addressCountry": "US"
       },
       "telephone": "+1-505-000-0000",
-      "email": "web@crownasia.io",
+      "email": "info@crownasia.io",
       "priceRange": "$$$$",
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
