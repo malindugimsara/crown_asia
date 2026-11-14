@@ -1,4 +1,11 @@
 RewriteEngine On
+
+# Investment Opportunities Details Clean URLs
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^investment-opportunities/([a-z0-9\-]+)/?$ investment-opportunities/detail.php?slug=$1 [L,QSA]
+
+# Blog Article Details Clean URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/([a-z0-9\-]+)/?$ blog/post.php?slug=$1 [L,QSA]

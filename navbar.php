@@ -7,7 +7,7 @@ $current_uri = $_SERVER['REQUEST_URI'] ?? '/';
     <div class="container">
         <!-- Brand Logo -->
         <a class="navbar-brand" href="<?= $base_url ?>">
-            <img src="<?= $base_url ?>assets/images/logo.png" alt="Crown Asia">
+            <img src="<?= $base_url ?>assets/images/logo/logo.png" alt="Crown Asia LLC Logo" width="46" height="46">
             <div class="brand-text">
                 <div class="name">CROWN ASIA</div>
                 <div class="sub">International</div>

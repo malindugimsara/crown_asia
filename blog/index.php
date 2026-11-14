@@ -213,7 +213,7 @@ $grid_posts    = array_slice($articles, 1);
                                 <i class="bi bi-star-fill"></i> Spotlight Briefing
                             </div>
                             <h2 class="featured-title">
-                                <a href="<?= $base_url ?>blog/post.php?slug=<?= $featured_post['slug'] ?>">
+                                <a href="<?= $base_url ?>blog/<?= $featured_post['slug'] ?>/">
                                     <?= htmlspecialchars($featured_post['title']) ?>
                                 </a>
                             </h2>
@@ -226,7 +226,7 @@ $grid_posts    = array_slice($articles, 1);
                                 <span><i class="bi bi-clock"></i> <?= $featured_post['read_time'] ?></span>
                             </div>
                             <div>
-                                <a href="<?= $base_url ?>blog/post.php?slug=<?= $featured_post['slug'] ?>" class="btn-green">
+                                <a href="<?= $base_url ?>blog/<?= $featured_post['slug'] ?>/" class="btn-green">
                                     Read Complete Analysis <i class="bi bi-arrow-right ms-1"></i>
                                 </a>
                             </div>
@@ -254,7 +254,7 @@ $grid_posts    = array_slice($articles, 1);
                                             <span><i class="bi bi-clock"></i> <?= htmlspecialchars($post['read_time']) ?></span>
                                         </div>
                                         <h3 class="blog-card-title">
-                                            <a href="<?= $base_url ?>blog/post.php?slug=<?= $post['slug'] ?>">
+                                            <a href="<?= $base_url ?>blog/<?= $post['slug'] ?>/">
                                                 <?= htmlspecialchars($post['title']) ?>
                                             </a>
                                         </h3>
@@ -263,10 +263,10 @@ $grid_posts    = array_slice($articles, 1);
                                         </p>
                                         <div class="blog-card-footer">
                                             <div class="blog-author-wrap">
-                                                <img src="<?= $base_url . $post['avatar'] ?>" alt="<?= htmlspecialchars($post['author']) ?>" class="blog-author-avatar">
+                                                <img src="<?= $base_url . $post['avatar'] ?>" alt="<?= htmlspecialchars($post['author']) ?>" class="blog-author-avatar" width="32" height="32" loading="lazy">
                                                 <span class="blog-author-name"><?= htmlspecialchars($post['author']) ?></span>
                                             </div>
-                                            <a href="<?= $base_url ?>blog/post.php?slug=<?= $post['slug'] ?>" class="blog-read-link">
+                                            <a href="<?= $base_url ?>blog/<?= $post['slug'] ?>/" class="blog-read-link">
                                                 Read Article <i class="bi bi-arrow-right"></i>
                                             </a>
                                         </div>
@@ -357,7 +357,7 @@ $grid_posts    = array_slice($articles, 1);
                                         <div class="widget-recent-info">
                                             <span class="widget-recent-date"><i class="bi bi-calendar-event"></i> <?= $rpost['date'] ?></span>
                                             <h5 class="widget-recent-title">
-                                                <a href="<?= $base_url ?>blog/post.php?slug=<?= $rpost['slug'] ?>">
+                                                <a href="<?= $base_url ?>blog/<?= $rpost['slug'] ?>/">
                                                     <?= htmlspecialchars($rpost['title']) ?>
                                                 </a>
                                             </h5>

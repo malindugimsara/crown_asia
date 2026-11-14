@@ -124,10 +124,43 @@ if (!array_key_exists($slug, $articles)) {
 }
 $post = $articles[$slug];
 
-$page_title = htmlspecialchars($post['title']) . " | Crown Asia Knowledge Hub";
-$page_desc  = htmlspecialchars($post['excerpt']);
+$page_title    = htmlspecialchars($post['title']) . " | Crown Asia Knowledge Hub";
+$page_desc     = htmlspecialchars($post['excerpt']);
+$canonical_url = "https://crownasia.io/blog/" . $post['slug'] . "/";
+$og_image      = "https://crownasia.io/" . $post['image'];
+$og_type       = "article";
 include_once ROOT_PATH . 'header.php';
 ?>
+
+    <!-- Article JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://crownasia.io/blog/<?= $post['slug'] ?>/"
+      },
+      "headline": <?= json_encode($post['title']) ?>,
+      "description": <?= json_encode($post['excerpt']) ?>,
+      "image": "https://crownasia.io/<?= $post['image'] ?>",
+      "author": {
+        "@type": "Person",
+        "name": <?= json_encode($post['author']) ?>,
+        "jobTitle": <?= json_encode($post['role']) ?>
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Crown Asia LLC",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://crownasia.io/assets/images/logo/logo.png"
+        }
+      },
+      "datePublished": "2026-11-12T08:00:00+00:00",
+      "dateModified": "2026-11-14T08:00:00+00:00"
+    }
+    </script>
 
     <!-- 1. Single Post Hero Banner -->
     <section class="blog-single-hero">
@@ -262,7 +295,7 @@ include_once ROOT_PATH . 'header.php';
                                 <ul class="widget-category-list">
                                     <?php foreach ($articles as $rel_slug => $rel_post): if ($rel_slug === $slug) continue; ?>
                                         <li>
-                                            <a href="<?= $base_url ?>blog/post.php?slug=<?= $rel_slug ?>">
+                                            <a href="<?= $base_url ?>blog/<?= $rel_slug ?>/">
                                                 <span class="text-truncate" style="max-width: 210px;"><?= htmlspecialchars($rel_post['title']) ?></span>
                                                 <i class="bi bi-arrow-right text-success"></i>
                                             </a>

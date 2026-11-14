@@ -1,2 +1,8 @@
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /demo/
+Disallow: /includes/
+
+# Sitemaps
+Sitemap: https://crownasia.io/sitemap.xml
+

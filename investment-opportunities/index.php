@@ -28,20 +28,20 @@ include_once ROOT_PATH . 'header.php';
                     </div>
                 </div>
 
-               <!-- Right Column: Visual Hero Media -->
+                <!-- Right Column: Visual Hero Media -->
                 <div class="col-lg-5" data-aos="fade-left">
                     <div class="sector-hero-visual">
                         <div class="hero-image-frame">
-                            <img src="<?= $base_url ?>assets/images/opportunities.jfif" alt="Crown Asia Investor Journey &amp; Portal Execution" class="img-fluid">
+                            <img src="<?= $base_url ?>assets/images/hero/opportunities.webp" alt="Crown Asia Approved Investment Opportunities and Offerings" class="img-fluid" width="1024" height="572" loading="eager">
                             <div class="hero-live-pill">
                                 <span class="live-dot pulse"></span>
-                                <span>Verified USDT Portal Active</span>
+                                <span>Verified USDT Offerings Active</span>
                             </div>
                             <div class="hero-floating-stat">
                                 <div class="stat-icon"><i class="bi bi-shield-check"></i></div>
                                 <div>
-                                    <div class="stat-title">USDT Capital Deployment</div>
-                                    <div class="stat-sub">5-Stage Structured Workflow</div>
+                                    <div class="stat-title">8 Strategic Sectors</div>
+                                    <div class="stat-sub">Asset-Backed USDT Allocations</div>
                                 </div>
                             </div>
                         </div>

@@ -39,7 +39,7 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
             <!-- Column 1: Brand & Verified Head Office -->
             <div class="col-lg-4 col-md-6">
                 <div class="footer-logo d-flex align-items-center gap-3 mb-3">
-                    <img src="<?= $base_url ?>assets/images/logo.png" alt="Crown Asia">
+                    <img src="<?= $base_url ?>assets/images/logo/logo.png" alt="Crown Asia LLC Logo" width="48" height="48" loading="lazy">
                     <div class="brand-text">
                         <div class="name">CROWN ASIA</div>
                         <div class="sub">International</div>
@@ -169,7 +169,7 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script src="<?= $base_url ?>assets/js/swiper.min.js"></script>
-<script src="<?= $base_url ?>assets/js/main.js"></script>
+<script src="<?= $base_url ?>assets/js/main.js?v=<?= filemtime(__DIR__ . '/assets/js/main.js') ?>"></script>
 </body>
 
 </html>

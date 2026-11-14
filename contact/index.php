@@ -17,13 +17,36 @@ $status = $_GET['status'] ?? '';
                 <span class="active">Contact Us</span>
             </nav>
 
-            <div class="row align-items-center g-4">
-                <div class="col-lg-8" data-aos="fade-up">
-                    <div class="topic-badge-pill dark">Global Communications Desk</div>
-                    <h1 class="inner-hero-title">Connect With <span style="color: var(--green-bright);">Crown Asia LLC</span></h1>
-                    <p class="inner-hero-lead mb-0">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="topic-badge-pill dark mb-3">Global Communications Desk</div>
+                    <h1 class="inner-hero-title">Connect With <br><span class="accent">Crown Asia LLC</span></h1>
+                    <p class="inner-hero-lead mb-4">
                         Whether you are exploring strategic business partnerships, evaluating allocations across our eight diversified sectors, or requiring dedicated investor portal assistance, our corporate team is at your service.
                     </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#contact-form" class="btn-green">Send an Inquiry <i class="bi bi-arrow-down ms-1"></i></a>
+                        <a href="<?= $portal_login_url ?>" target="_blank" rel="noopener" class="btn-ghost">Investor Portal <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="sector-hero-visual">
+                        <div class="hero-image-frame">
+                            <img src="<?= $base_url ?>assets/images/hero/contact.webp" alt="Crown Asia Global Corporate Headquarters &amp; Communications Desk" class="img-fluid" width="1024" height="572" loading="eager">
+                            <div class="hero-live-pill">
+                                <span class="live-dot pulse"></span>
+                                <span>Communications Desk Active</span>
+                            </div>
+                            <div class="hero-floating-stat">
+                                <div class="stat-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                                <div>
+                                    <div class="stat-title">Albuquerque, New Mexico</div>
+                                    <div class="stat-sub">Corporate Registered HQ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 

@@ -700,15 +700,15 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
                 <div class="col-lg-4 col-md-6" data-aos="fade-up">
                     <article class="article-card d-flex flex-column">
                         <div class="article-img-wrap">
-                            <img src="<?= $base_url ?>assets/images/blog/blog-1.webp" alt="How to Evaluate an Investment Opportunity">
+                            <img src="<?= $base_url ?>assets/images/blog/blog-1.webp" alt="How to Evaluate an Investment Opportunity" width="800" height="450" loading="lazy">
                         </div>
                         <div class="article-body d-flex flex-column flex-grow-1">
                             <span class="article-category">Due Diligence</span>
-                            <h4 class="article-title"><a href="<?= $base_url ?>blog/post.php?slug=how-to-evaluate-an-investment-opportunity">How to Evaluate an Investment Opportunity: 7 Due Diligence Steps</a></h4>
+                            <h4 class="article-title"><a href="<?= $base_url ?>blog/how-to-evaluate-an-investment-opportunity/">How to Evaluate an Investment Opportunity: 7 Due Diligence Steps</a></h4>
                             <p class="small text-muted mb-3">A practical framework for reviewing legal charters, cash flow modeling, risk buffers, and tangible collateral.</p>
                             <div class="mt-auto d-flex justify-content-between align-items-center">
                                 <span class="article-date"><i class="bi bi-calendar3 me-1"></i> Nov 12, 2026</span>
-                                <a href="<?= $base_url ?>blog/post.php?slug=how-to-evaluate-an-investment-opportunity" class="small fw-semibold text-success text-decoration-none">Read Briefing &rarr;</a>
+                                <a href="<?= $base_url ?>blog/how-to-evaluate-an-investment-opportunity/" class="small fw-semibold text-success text-decoration-none">Read Briefing &rarr;</a>
                             </div>
                         </div>
                     </article>
@@ -718,15 +718,15 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="80">
                     <article class="article-card d-flex flex-column">
                         <div class="article-img-wrap">
-                            <img src="<?= $base_url ?>assets/images/blog/blog-5.webp" alt="Commercial Real Estate in the Southwest">
+                            <img src="<?= $base_url ?>assets/images/blog/blog-5.webp" alt="Commercial Real Estate in the Southwest" width="800" height="450" loading="lazy">
                         </div>
                         <div class="article-body d-flex flex-column flex-grow-1">
                             <span class="article-category">Commercial Real Estate</span>
-                            <h4 class="article-title"><a href="<?= $base_url ?>blog/post.php?slug=commercial-real-estate-corridors">Commercial Real Estate in the Southwest: Yields &amp; Asset Backing</a></h4>
+                            <h4 class="article-title"><a href="<?= $base_url ?>blog/commercial-real-estate-corridors/">Commercial Real Estate in the Southwest: Yields &amp; Asset Backing</a></h4>
                             <p class="small text-muted mb-3">Evaluating prime logistics corridors, tenant occupancy, and inflation-hedged yields along US interstate routes.</p>
                             <div class="mt-auto d-flex justify-content-between align-items-center">
                                 <span class="article-date"><i class="bi bi-calendar3 me-1"></i> Oct 24, 2026</span>
-                                <a href="<?= $base_url ?>blog/post.php?slug=commercial-real-estate-corridors" class="small fw-semibold text-success text-decoration-none">Read Briefing &rarr;</a>
+                                <a href="<?= $base_url ?>blog/commercial-real-estate-corridors/" class="small fw-semibold text-success text-decoration-none">Read Briefing &rarr;</a>
                             </div>
                         </div>
                     </article>
@@ -736,15 +736,15 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="160">
                     <article class="article-card d-flex flex-column">
                         <div class="article-img-wrap">
-                            <img src="<?= $base_url ?>assets/images/blog/blog-2.webp" alt="USDT Investment Rails">
+                            <img src="<?= $base_url ?>assets/images/blog/blog-2.webp" alt="USDT Investment Rails" width="800" height="450" loading="lazy">
                         </div>
                         <div class="article-body d-flex flex-column flex-grow-1">
                             <span class="article-category">Digital Settlement</span>
-                            <h4 class="article-title"><a href="<?= $base_url ?>blog/post.php?slug=usdt-cross-border-investment-rails">USDT Investment Rails: Fast, Borderless &amp; Transparent Asset Settlement</a></h4>
+                            <h4 class="article-title"><a href="<?= $base_url ?>blog/usdt-cross-border-investment-rails/">USDT Investment Rails: Fast, Borderless &amp; Transparent Asset Settlement</a></h4>
                             <p class="small text-muted mb-3">How institutional stablecoins eliminate multi-day correspondent banking friction and weekend market lockups.</p>
                             <div class="mt-auto d-flex justify-content-between align-items-center">
                                 <span class="article-date"><i class="bi bi-calendar3 me-1"></i> Nov 08, 2026</span>
-                                <a href="<?= $base_url ?>blog/post.php?slug=usdt-cross-border-investment-rails" class="small fw-semibold text-success text-decoration-none">Read Briefing &rarr;</a>
+                                <a href="<?= $base_url ?>blog/usdt-cross-border-investment-rails/" class="small fw-semibold text-success text-decoration-none">Read Briefing &rarr;</a>
                             </div>
                         </div>
                     </article>

@@ -150,10 +150,34 @@ $offering = $offerings[$slug] ?? $offerings['priority-real-estate-pool'];
 // Portal Invest Now URL (තෝරාගත් offering slug එක portal වෙත යොමු කිරීම - Sitemap Page 05)
 $portal_invest_url = $portal_login_url . '?offering=' . urlencode($slug);
 
-$page_title = $offering['title'] . " | Crown Asia LLC";
-$page_desc  = $offering['summary'];
+$page_title    = $offering['title'] . " | Crown Asia LLC";
+$page_desc     = $offering['summary'];
+$canonical_url = "https://crownasia.io/investment-opportunities/{$slug}/";
+$og_image      = $offering['hero_img'];
+$og_type       = "product";
 include_once ROOT_PATH . 'header.php';
 ?>
+
+    <!-- Financial Product JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialProduct",
+      "name": <?= json_encode($offering['title']) ?>,
+      "description": <?= json_encode($offering['summary']) ?>,
+      "category": <?= json_encode($offering['sector']) ?>,
+      "provider": {
+        "@type": "FinancialService",
+        "name": "Crown Asia LLC",
+        "url": "https://crownasia.io/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": <?= json_encode($offering['minimum']) ?>,
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
 
     <!-- 1. Offering Hero & Invest Now Section -->
     <section class="inner-hero">
