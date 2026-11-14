@@ -3,7 +3,7 @@ $page_title = "Crown Asia | Diversified Investment & Business Solutions";
 $page_desc  = "Crown Asia LLC - A diversified United States investment and business company operating across eight strategic sectors with transparent USDT funding.";
 include_once __DIR__ . '/header.php';
 
-// Portal URLs (header.php / config.php හි අර්ථ දක්වා නොමැති නම් fallback ලෙස)
+// Portal URLs fallback
 $portal_login_url    = $portal_login_url ?? ($base_url . 'admin/login.php');
 $portal_register_url = $portal_register_url ?? ($base_url . 'contact/');
 ?>

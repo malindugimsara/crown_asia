@@ -165,7 +165,7 @@ $status = $_GET['status'] ?? '';
                         Active account holders receive dedicated priority routing for KYC onboarding, USDT settlement verification, distribution statements, and multi-sector offering allocations through the Investor Dashboard.
                     </p>
                     <div class="mt-auto d-flex flex-wrap gap-2">
-                        <a href="<?= $portal_login_url ?>" class="btn-green py-2 px-4" style="font-size: 12.5px;">
+                        <a href="https://crownasia.io/profile" class="btn-green py-2 px-4" style="font-size: 12.5px;">
                             <i class="bi bi-box-arrow-in-right me-2"></i>Open Investor Portal
                         </a>
                         <a href="<?= $base_url ?>how-it-works/usdt-deposits-withdrawals/" class="btn btn-outline-dark rounded-pill py-2 px-3" style="font-size: 12.5px; font-weight: 500;">
@@ -488,7 +488,7 @@ $status = $_GET['status'] ?? '';
                 </div>
                 <div class="col-lg-4 text-lg-end">
                     <div class="d-flex flex-wrap gap-2 justify-content-lg-end">
-                        <a href="<?= $portal_login_url ?>" class="btn-green py-2 px-4">
+                        <a href="https://crownasia.io/profile" class="btn-green py-2 px-4">
                             <i class="bi bi-box-arrow-in-right me-2"></i>Sign In to Portal
                         </a>
                         <a href="<?= $base_url ?>how-it-works/" class="btn btn-outline-light rounded-pill py-2 px-3" style="font-size: 13px;">

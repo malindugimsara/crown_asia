@@ -1,10 +1,10 @@
 <?php
 require_once dirname(__DIR__) . '/config.php';
 
-// URL එකෙන් slug එක ලබා ගැනීම (Default: priority-real-estate-pool)
+// Get slug from URL (Default: priority-real-estate-pool)
 $slug = isset($_GET['slug']) ? preg_replace('/[^a-z0-9\-]/', '', strtolower($_GET['slug'])) : 'priority-real-estate-pool';
 
-// Offerings Data Repository (Database එකකට සම්බන්ධ කරන තෙක් මෙම array එක භාවිතා කළ හැක)
+// Offerings Data Repository
 $offerings = [
     'priority-real-estate-pool' => [
         'title'         => 'Priority Coastal & Urban Real Estate Pool',
@@ -142,10 +142,10 @@ $offerings = [
     ]
 ];
 
-// තෝරාගත් slug එක නොමැති නම් පළමු offering එක fallback ලෙස ගැනීම
+// Fallback to first offering if selected slug is not found
 $offering = $offerings[$slug] ?? $offerings['priority-real-estate-pool'];
 
-// Portal Invest Now URL (තෝරාගත් offering slug එක portal වෙත යොමු කිරීම - Sitemap Page 05)
+// Portal Invest Now URL
 $portal_invest_url = $portal_login_url . '?offering=' . urlencode($slug);
 
 $page_title    = $offering['title'] . " | Crown Asia LLC";
