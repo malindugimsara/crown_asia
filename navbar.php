@@ -60,8 +60,8 @@ $current_uri = $_SERVER['REQUEST_URI'] ?? '/';
 
                 <!-- Header Action Buttons (Investor Login & Register Now) -->
                 <li class="nav-item d-flex flex-column flex-lg-row gap-2 ms-lg-3 mt-3 mt-lg-0">
-                    <a class="nav-link nav-login text-center" href="<?= $portal_login_url ?>">Investor Login</a>
-                    <a class="nav-link nav-cta text-center" href="<?= $portal_register_url ?>">Register Now</a>
+                    <a class="nav-link nav-login text-center" href="https://crownasia.io/profile">Investor Login</a>
+                    <a class="nav-link nav-cta text-center" href="https://crownasia.io/profile/sign-up.php?ref_code=CA000009">Register Now</a>
                 </li>
             </ul>
         </div>

@@ -1,23 +1,37 @@
 RewriteEngine On
 
-# Prevent Directory Browsing
+# 1. Prevent Directory Browsing
 Options -Indexes
 
-# Protect sensitive environment and configuration files
-<FilesMatch "^\.env">
+# 2. Block access to hidden files and directories (e.g. .git, .env, .htaccess, .gitignore)
+RewriteRule (^|/)\.(?!well-known) - [F,L]
+
+# 3. Block sensitive extensions (.log, .sql, .ini, .bak, .sh, .env, .yml, .yaml)
+<FilesMatch "(?i)\.(env|log|sql|ini|bak|sh|bash|yml|yaml|md|jsonl)$">
     Order allow,deny
     Deny from all
 </FilesMatch>
 
-# Login & Admin Clean URLs
+# 4. Block direct web access to private directories
+RewriteRule ^(logs|includes)(/.*)?$ - [F,L]
+
+# 5. Security HTTP Headers
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# 6. Clean URLs: Login & Admin
 RewriteRule ^login/?$ admin/login.php [L,QSA]
 
-# Investment Opportunities Details Clean URLs
+# 7. Clean URLs: Investment Opportunities Details
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^investment-opportunities/([a-z0-9\-]+)/?$ investment-opportunities/detail.php?slug=$1 [L,QSA]
 
-# Blog Article Details Clean URLs
+# 8. Clean URLs: Blog Article Details
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^blog/([a-z0-9\-]+)/?$ blog/post.php?slug=$1 [L,QSA]

@@ -12,9 +12,11 @@ $msg = '';
 if (isset($_GET['msg'])) {
     if ($_GET['msg'] == 'added') $msg = "<div class='alert alert-success alert-dismissible fade show border-0 shadow-sm'><i class='bi bi-check-circle-fill me-2'></i>Article published successfully!<button type='button' class='btn-close' data-bs-dismiss='alert'></button></div>";
     if ($_GET['msg'] == 'updated') $msg = "<div class='alert alert-success alert-dismissible fade show border-0 shadow-sm'><i class='bi bi-check-circle-fill me-2'></i>Article updated successfully!<button type='button' class='btn-close' data-bs-dismiss='alert'></button></div>";
-    if ($_GET['msg'] == 'trashed') $msg = "<div class='alert alert-warning alert-dismissible fade show border-0 shadow-sm'><i class='bi bi-trash3-fill me-2'></i>Article moved to Trash! You can restore it anytime from the Trash tab.<button type='button' class='btn-close' data-bs-dismiss='alert'></button></div>";
-    if ($_GET['msg'] == 'restored') $msg = "<div class='alert alert-success alert-dismissible fade show border-0 shadow-sm'><i class='bi bi-arrow-counterclockwise me-2'></i>Article restored successfully to active list!<button type='button' class='btn-close' data-bs-dismiss='alert'></button></div>";
-    if ($_GET['msg'] == 'deleted_permanent') $msg = "<div class='alert alert-danger alert-dismissible fade show border-0 shadow-sm'><i class='bi bi-exclamation-octagon-fill me-2'></i>Article permanently deleted!<button type='button' class='btn-close' data-bs-dismiss='alert'></button></div>";
+    if ($_GET['msg'] == 'published' || $_GET['msg'] == 'unhidden') $msg = "<div class='alert alert-success alert-dismissible fade show border-0 shadow-sm'><i class='bi bi-eye-fill me-2'></i>Article published live on website!<button type='button' class='btn-close' data-bs-dismiss='alert'></button></div>";
+    if ($_GET['msg'] == 'unpublished' || $_GET['msg'] == 'hidden') $msg = "<div class='alert alert-info alert-dismissible fade show border-0 shadow-sm'><i class='bi bi-eye-slash-fill me-2'></i>Article hidden from public view!<button type='button' class='btn-close' data-bs-dismiss='alert'></button></div>";
+    if ($_GET['msg'] == 'deleted' || $_GET['msg'] == 'deleted_permanent') $msg = "<div class='alert alert-danger alert-dismissible fade show border-0 shadow-sm'><i class='bi bi-trash3-fill me-2'></i>Article deleted successfully!<button type='button' class='btn-close' data-bs-dismiss='alert'></button></div>";
+    if ($_GET['msg'] == 'trashed') $msg = "<div class='alert alert-warning alert-dismissible fade show border-0 shadow-sm'><i class='bi bi-trash3-fill me-2'></i>Article moved to Trash!<button type='button' class='btn-close' data-bs-dismiss='alert'></button></div>";
+    if ($_GET['msg'] == 'restored') $msg = "<div class='alert alert-success alert-dismissible fade show border-0 shadow-sm'><i class='bi bi-arrow-counterclockwise me-2'></i>Article restored successfully!<button type='button' class='btn-close' data-bs-dismiss='alert'></button></div>";
 }
 
 // Crown Asia Categories Mapping
@@ -38,6 +40,47 @@ function slugify($text) {
     return empty($text) ? 'article-' . time() : $text;
 }
 
+// Helper function: Strictly re-sequence all article IDs continuously (1, 2, 3... N)
+// and set AUTO_INCREMENT to N + 1 so no ID gaps or skipped numbers ever occur.
+function resequenceBlogIds($conn) {
+    // Purge any lingering deleted rows to avoid key collisions
+    $conn->query("DELETE FROM blog_posts WHERE deleted_at IS NOT NULL");
+
+    $stmt = $conn->query("SELECT id FROM blog_posts ORDER BY id ASC");
+    $articles = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    if (empty($articles)) {
+        $conn->query("ALTER TABLE blog_posts AUTO_INCREMENT = 1");
+        return 1;
+    }
+
+    $conn->beginTransaction();
+    try {
+        $offset = 100000;
+        $updateOffset = $conn->prepare("UPDATE blog_posts SET id = id + ? WHERE id = ?");
+        foreach ($articles as $a) {
+            $updateOffset->execute([$offset, $a['id']]);
+        }
+
+        $newId = 1;
+        $updateNew = $conn->prepare("UPDATE blog_posts SET id = ? WHERE id = ?");
+        foreach ($articles as $a) {
+            $tempId = $a['id'] + $offset;
+            $updateNew->execute([$newId, $tempId]);
+            $newId++;
+        }
+
+        $conn->commit();
+    } catch (Exception $e) {
+        if ($conn->inTransaction()) {
+            $conn->rollBack();
+        }
+    }
+
+    $conn->query("ALTER TABLE blog_posts AUTO_INCREMENT = $newId");
+    return $newId;
+}
+
 // 1. Toggle Publish / Hide Status
 if (isset($_GET['toggle_publish']) && isset($_GET['id'])) {
     $id = (int) $_GET['id'];
@@ -52,7 +95,8 @@ if (isset($_GET['toggle_publish']) && isset($_GET['id'])) {
         exit;
     }
 
-    header("Location: manage_blog.php?msg=updated");
+    $msg_type = ($new_status == 1) ? 'unhidden' : 'hidden';
+    header("Location: manage_blog.php?msg=" . $msg_type);
     exit;
 }
 
@@ -69,25 +113,26 @@ if (isset($_GET['toggle_featured']) && isset($_GET['id'])) {
     exit;
 }
 
-// 3. Soft Delete (Move to Trash)
+// 3. Delete Article (Permanent with ID Resequencing)
 if (isset($_GET['delete'])) {
     $id = (int) $_GET['delete'];
-    $stmt = $conn->prepare("UPDATE blog_posts SET deleted_at = NOW() WHERE id = ?");
+    $stmt = $conn->prepare("SELECT cover_image FROM blog_posts WHERE id = ?");
     $stmt->execute([$id]);
-    header("Location: manage_blog.php?msg=trashed");
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    if ($row && !empty($row['cover_image'])) {
+        if (strpos($row['cover_image'], 'uploads/') === 0 && file_exists("../" . $row['cover_image'])) {
+            @unlink("../" . $row['cover_image']);
+        }
+    }
+    $delStmt = $conn->prepare("DELETE FROM blog_posts WHERE id = ?");
+    $delStmt->execute([$id]);
+    resequenceBlogIds($conn);
+
+    header("Location: manage_blog.php?msg=deleted");
     exit;
 }
 
-// 4. Restore from Trash
-if (isset($_GET['restore'])) {
-    $id = (int) $_GET['restore'];
-    $stmt = $conn->prepare("UPDATE blog_posts SET deleted_at = NULL WHERE id = ?");
-    $stmt->execute([$id]);
-    header("Location: manage_blog.php?view=trash&msg=restored");
-    exit;
-}
-
-// 5. Force / Permanent Delete
+// 4. Force / Permanent Delete
 if (isset($_GET['force_delete'])) {
     $id = (int) $_GET['force_delete'];
     $stmt = $conn->prepare("SELECT cover_image FROM blog_posts WHERE id = ?");
@@ -100,7 +145,19 @@ if (isset($_GET['force_delete'])) {
     }
     $delStmt = $conn->prepare("DELETE FROM blog_posts WHERE id = ?");
     $delStmt->execute([$id]);
-    header("Location: manage_blog.php?view=trash&msg=deleted_permanent");
+    resequenceBlogIds($conn);
+
+    header("Location: manage_blog.php?msg=deleted");
+    exit;
+}
+
+// 5. Restore from Trash (Fallback)
+if (isset($_GET['restore'])) {
+    $id = (int) $_GET['restore'];
+    $stmt = $conn->prepare("UPDATE blog_posts SET deleted_at = NULL WHERE id = ?");
+    $stmt->execute([$id]);
+    resequenceBlogIds($conn);
+    header("Location: manage_blog.php?msg=restored");
     exit;
 }
 
@@ -141,50 +198,72 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['update_article'])) {
         $id = (int) $_POST['article_id'];
 
-        $chkStmt = $conn->prepare("SELECT id FROM blog_posts WHERE slug = ? AND id != ?");
-        $chkStmt->execute([$slug, $id]);
-        if ($chkStmt->fetch()) {
-            $slug .= '-' . $id;
-        }
+        // Retrieve existing article from DB to preserve its image and other unmodified data
+        $currStmt = $conn->prepare("SELECT * FROM blog_posts WHERE id = ?");
+        $currStmt->execute([$id]);
+        $currArticle = $currStmt->fetch(PDO::FETCH_ASSOC);
 
-        $cover_image = $edit_data['cover_image'] ?? 'assets/images/blog/blog-1.webp';
+        if (!$currArticle) {
+            $msg = "<div class='alert alert-danger'>Article not found.</div>";
+        } else {
+            $chkStmt = $conn->prepare("SELECT id FROM blog_posts WHERE slug = ? AND id != ?");
+            $chkStmt->execute([$slug, $id]);
+            if ($chkStmt->fetch()) {
+                $slug .= '-' . $id;
+            }
 
-        if (isset($_FILES["image"]) && $_FILES["image"]["error"] === 0) {
-            $ext = strtolower(pathinfo($_FILES["image"]["name"], PATHINFO_EXTENSION));
-            $allowed = ['jpg', 'jpeg', 'png', 'webp', 'avif'];
-            if (in_array($ext, $allowed)) {
-                $image_name = 'ca_blog_' . time() . '_' . rand(100, 999) . '.' . $ext;
-                $target_file = $target_dir . $image_name;
-                if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-                    if (!empty($edit_data['cover_image']) && strpos($edit_data['cover_image'], 'uploads/') === 0 && file_exists("../" . $edit_data['cover_image'])) {
-                        @unlink("../" . $edit_data['cover_image']);
+            // CRITICAL: Preserve existing cover image unless a new valid image file is uploaded!
+            $cover_image = !empty($currArticle['cover_image']) ? $currArticle['cover_image'] : 'assets/images/blog/blog-1.webp';
+            $allowed_exts  = ['jpg', 'jpeg', 'png', 'webp'];
+            $allowed_mimes = ['image/jpeg', 'image/png', 'image/webp'];
+            $upload_error  = false;
+
+            if (isset($_FILES["image"]) && $_FILES["image"]["error"] === 0) {
+                $ext = strtolower(pathinfo($_FILES["image"]["name"], PATHINFO_EXTENSION));
+                $finfo = finfo_open(FILEINFO_MIME_TYPE);
+                $mime = finfo_file($finfo, $_FILES["image"]["tmp_name"]);
+                finfo_close($finfo);
+
+                if (!in_array($ext, $allowed_exts) || !in_array($mime, $allowed_mimes)) {
+                    $msg = "<div class='alert alert-danger alert-dismissible fade show border-0 shadow-sm'><i class='bi bi-exclamation-octagon-fill me-2'></i>Invalid file format! Only <strong>.jpg</strong>, <strong>.jpeg</strong>, <strong>.webp</strong>, and <strong>.png</strong> image files are accepted.<button type='button' class='btn-close' data-bs-dismiss='alert'></button></div>";
+                    $upload_error = true;
+                } else {
+                    $image_name = 'ca_blog_' . time() . '_' . rand(100, 999) . '.' . $ext;
+                    $target_file = $target_dir . $image_name;
+                    if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+                        // Delete old uploaded image file if it was a user upload
+                        if (!empty($currArticle['cover_image']) && strpos($currArticle['cover_image'], 'uploads/') === 0 && file_exists("../" . $currArticle['cover_image'])) {
+                            @unlink("../" . $currArticle['cover_image']);
+                        }
+                        $cover_image = "uploads/blog/" . $image_name;
                     }
-                    $cover_image = "uploads/blog/" . $image_name;
                 }
             }
-        }
 
-        $sql = "UPDATE blog_posts SET 
-                title = ?, 
-                slug = ?,
-                category = ?, 
-                category_slug = ?, 
-                author_name = ?,
-                author_role = ?,
-                read_time = ?, 
-                excerpt = ?, 
-                content = ?,
-                cover_image = ?,
-                is_featured = ?,
-                is_published = ?
-                WHERE id = ?";
+            if (!$upload_error) {
+                $sql = "UPDATE blog_posts SET 
+                        title = ?, 
+                        slug = ?,
+                        category = ?, 
+                        category_slug = ?, 
+                        author_name = ?,
+                        author_role = ?,
+                        read_time = ?, 
+                        excerpt = ?, 
+                        content = ?,
+                        cover_image = ?,
+                        is_featured = ?,
+                        is_published = ?
+                        WHERE id = ?";
 
-        $stmt = $conn->prepare($sql);
-        if ($stmt->execute([$title, $slug, $category_name, $category_slug, $author_name, $author_role, $read_time, $excerpt, $content, $cover_image, $is_featured, $is_published, $id])) {
-            header("Location: manage_blog.php?msg=updated");
-            exit;
-        } else {
-            $msg = "<div class='alert alert-danger'>Failed to update article.</div>";
+                $stmt = $conn->prepare($sql);
+                if ($stmt->execute([$title, $slug, $category_name, $category_slug, $author_name, $author_role, $read_time, $excerpt, $content, $cover_image, $is_featured, $is_published, $id])) {
+                    header("Location: manage_blog.php?msg=updated");
+                    exit;
+                } else {
+                    $msg = "<div class='alert alert-danger'>Failed to update article.</div>";
+                }
+            }
         }
     } elseif (isset($_POST['add_article'])) {
         $chkStmt = $conn->prepare("SELECT id FROM blog_posts WHERE slug = ?");
@@ -194,11 +273,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         $cover_image = "assets/images/blog/blog-1.webp";
+        $allowed_exts  = ['jpg', 'jpeg', 'png', 'webp'];
+        $allowed_mimes = ['image/jpeg', 'image/png', 'image/webp'];
+        $upload_error  = false;
 
         if (isset($_FILES["image"]) && $_FILES["image"]["error"] === 0) {
             $ext = strtolower(pathinfo($_FILES["image"]["name"], PATHINFO_EXTENSION));
-            $allowed = ['jpg', 'jpeg', 'png', 'webp', 'avif'];
-            if (in_array($ext, $allowed)) {
+            $finfo = finfo_open(FILEINFO_MIME_TYPE);
+            $mime = finfo_file($finfo, $_FILES["image"]["tmp_name"]);
+            finfo_close($finfo);
+
+            if (!in_array($ext, $allowed_exts) || !in_array($mime, $allowed_mimes)) {
+                $msg = "<div class='alert alert-danger alert-dismissible fade show border-0 shadow-sm'><i class='bi bi-exclamation-octagon-fill me-2'></i>Invalid file format! Only <strong>.jpg</strong>, <strong>.jpeg</strong>, <strong>.webp</strong>, and <strong>.png</strong> image files are accepted.<button type='button' class='btn-close' data-bs-dismiss='alert'></button></div>";
+                $upload_error = true;
+            } else {
                 $image_name = 'ca_blog_' . time() . '_' . rand(100, 999) . '.' . $ext;
                 $target_file = $target_dir . $image_name;
                 if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
@@ -207,16 +295,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
 
-        $sql = "INSERT INTO blog_posts 
-                (title, slug, category, category_slug, author_name, author_role, read_time, cover_image, excerpt, content, is_featured, is_published, created_at) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())";
+        if (!$upload_error) {
+            resequenceBlogIds($conn);
 
-        $stmt = $conn->prepare($sql);
-        if ($stmt->execute([$title, $slug, $category_name, $category_slug, $author_name, $author_role, $read_time, $cover_image, $excerpt, $content, $is_featured, $is_published])) {
-            header("Location: manage_blog.php?msg=added");
-            exit;
-        } else {
-            $msg = "<div class='alert alert-danger'>Database error: Failed to save article.</div>";
+            $sql = "INSERT INTO blog_posts 
+                    (title, slug, category, category_slug, author_name, author_role, read_time, cover_image, excerpt, content, is_featured, is_published, created_at) 
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())";
+
+            $stmt = $conn->prepare($sql);
+            if ($stmt->execute([$title, $slug, $category_name, $category_slug, $author_name, $author_role, $read_time, $cover_image, $excerpt, $content, $is_featured, $is_published])) {
+                resequenceBlogIds($conn);
+                header("Location: manage_blog.php?msg=added");
+                exit;
+            } else {
+                $msg = "<div class='alert alert-danger'>Database error: Failed to save article.</div>";
+            }
         }
     }
 }
@@ -236,7 +329,7 @@ try {
     if ($view === 'trash') {
         $stmt = $conn->query("SELECT * FROM blog_posts WHERE deleted_at IS NOT NULL ORDER BY deleted_at DESC");
     } else {
-        $stmt = $conn->query("SELECT * FROM blog_posts WHERE deleted_at IS NULL ORDER BY is_featured DESC, id DESC");
+        $stmt = $conn->query("SELECT * FROM blog_posts WHERE deleted_at IS NULL ORDER BY id ASC");
     }
     $articles = $stmt ? $stmt->fetchAll(PDO::FETCH_ASSOC) : [];
 } catch (PDOException $e) {
@@ -261,6 +354,10 @@ try {
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="admin.css">
+
+    <!-- Summernote Rich Text Editor CSS -->
+    <link rel="stylesheet" href="../assets/plugins/summernote/summernote-lite.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.css">
 
     <!-- DataTables CSS Dependencies -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
@@ -303,15 +400,25 @@ try {
                 <?php echo $msg; ?>
 
                 <?php if ($view === 'active' || $edit_mode): ?>
-                <!-- Article Form Card (Add / Edit) -->
-                <div class="custom-card mb-4" id="form-section">
-                    <div class="d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom">
-                        <h5 class="m-0" style="font-weight: 800; color: #060908;">
-                            <?php echo $edit_mode ? '<i class="bi bi-pencil-square text-success me-2"></i>Edit Article #' . $edit_data['id'] : '<i class="bi bi-journal-plus text-success me-2"></i>Publish New Article'; ?>
-                        </h5>
+                <!-- Luxury Article Form Card (Add / Edit) -->
+                <div class="article-form-card" id="form-section">
+                    <div class="article-form-header">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="form-header-icon">
+                                <i class="bi <?php echo $edit_mode ? 'bi-pencil-square' : 'bi-journal-plus'; ?>"></i>
+                            </div>
+                            <div>
+                                <h3 class="form-header-title">
+                                    <?php echo $edit_mode ? 'Edit Article #' . sprintf('%02d', $edit_data['id']) : 'Publish New Research Article'; ?>
+                                </h3>
+                                <p class="form-header-subtitle">
+                                    <?php echo $edit_mode ? 'Refine your research briefing, metadata, taxonomy, or spotlight status.' : 'Broadcast fresh market intelligence, compliance guidelines, or treasury frameworks.'; ?>
+                                </p>
+                            </div>
+                        </div>
                         <?php if ($edit_mode): ?>
-                            <a href="manage_blog.php" class="btn btn-sm btn-outline-secondary rounded-pill px-3">
-                                <i class="bi bi-x-lg me-1"></i> Cancel Edit
+                            <a href="manage_blog.php" class="btn-cancel-edit">
+                                <i class="bi bi-x-circle"></i> Cancel Edit
                             </a>
                         <?php endif; ?>
                     </div>
@@ -319,24 +426,46 @@ try {
                     <form action="manage_blog.php" method="POST" enctype="multipart/form-data">
                         <?php if ($edit_mode): ?>
                             <input type="hidden" name="article_id" value="<?php echo $edit_data['id']; ?>">
+                            <input type="hidden" name="existing_cover_image" value="<?php echo htmlspecialchars($edit_data['cover_image'] ?? ''); ?>">
                         <?php endif; ?>
 
-                        <div class="row g-3">
+                        <!-- Section 1: Core Article Information -->
+                        <div class="form-section-title">
+                            <i class="bi bi-card-heading"></i> Article Identity &amp; Headline
+                        </div>
+
+                        <div class="row g-3 mb-2">
                             <div class="col-md-7">
-                                <label class="form-label fw-bold small">Article Title *</label>
-                                <input type="text" name="title" class="form-control" placeholder="e.g. How to Evaluate an Investment Opportunity Before You Commit"
+                                <label class="form-label-custom">
+                                    <i class="bi bi-fonts"></i> Article Title *
+                                </label>
+                                <input type="text" name="title" class="form-control form-control-luxury" placeholder="e.g. Cross-Border Trade Logistics: Scaling Ports, Supply Chains &amp; Regional Hubs"
                                     value="<?php echo htmlspecialchars($edit_data['title'] ?? ''); ?>" required>
                             </div>
                             <div class="col-md-5">
-                                <label class="form-label fw-bold small">Custom SEO URL Slug (Optional)</label>
-                                <input type="text" name="slug" class="form-control" placeholder="auto-generated-from-title"
-                                    value="<?php echo htmlspecialchars($edit_data['slug'] ?? ''); ?>">
-                                <small class="text-muted" style="font-size: 11px;">Leave empty to auto-generate clean SEO slug from title.</small>
+                                <label class="form-label-custom">
+                                    <i class="bi bi-link-45deg"></i> Custom SEO URL Slug (Optional)
+                                </label>
+                                <div class="slug-preview-box">
+                                    <span class="slug-prefix">crownasia.io/blog/</span>
+                                    <input type="text" name="slug" class="form-control slug-input" placeholder="custom-slug"
+                                        value="<?php echo htmlspecialchars($edit_data['slug'] ?? ''); ?>">
+                                </div>
+                                <small class="text-muted d-block mt-1" style="font-size: 11px;">Leave empty to automatically construct a pristine URL slug from the title.</small>
                             </div>
+                        </div>
 
+                        <!-- Section 2: Taxonomy, Author & Metadata -->
+                        <div class="form-section-title">
+                            <i class="bi bi-tags"></i> Taxonomy, Author &amp; Read Time
+                        </div>
+
+                        <div class="row g-3 mb-2">
                             <div class="col-md-4">
-                                <label class="form-label fw-bold small">Topic / Sector Category *</label>
-                                <select name="category_slug" class="form-select" required>
+                                <label class="form-label-custom">
+                                    <i class="bi bi-folder2-open"></i> Sector / Category *
+                                </label>
+                                <select name="category_slug" class="form-select form-control-luxury" required>
                                     <?php
                                     $selected_cat = $edit_data['category_slug'] ?? 'due-diligence';
                                     foreach ($cat_names as $slug => $cname):
@@ -348,68 +477,115 @@ try {
                                 </select>
                             </div>
 
-                            <div class="col-md-3">
-                                <label class="form-label fw-bold small">Estimated Read Time</label>
-                                <input type="text" name="read_time" class="form-control" placeholder="e.g. 5 Min Read"
-                                    value="<?php echo htmlspecialchars($edit_data['read_time'] ?? '5 Min Read'); ?>" required>
-                            </div>
-
-                            <div class="col-md-5">
-                                <label class="form-label fw-bold small">Cover Image (16:9 Landscape Recommended)</label>
-                                <input type="file" name="image" class="form-control" accept="image/*">
-                                <?php if ($edit_mode && !empty($edit_data['cover_image'])): ?>
-                                    <div class="mt-2 d-flex align-items-center gap-2">
-                                        <img src="../<?php echo htmlspecialchars($edit_data['cover_image']); ?>"
-                                            style="width: 72px; height: 42px; object-fit: cover; border-radius: 6px; border: 1px solid #dce4df;">
-                                        <small class="text-muted" style="font-size: 11px;">Current: <?php echo basename($edit_data['cover_image']); ?></small>
-                                    </div>
-                                <?php endif; ?>
-                            </div>
-
-                            <div class="col-md-6">
-                                <label class="form-label fw-bold small">Author / Desk Name</label>
-                                <input type="text" name="author_name" class="form-control" placeholder="e.g. Crown Asia Research Desk"
+                            <div class="col-md-4">
+                                <label class="form-label-custom">
+                                    <i class="bi bi-person-badge"></i> Author / Desk Name
+                                </label>
+                                <input type="text" name="author_name" class="form-control form-control-luxury" placeholder="e.g. Crown Asia Research Desk"
                                     value="<?php echo htmlspecialchars($edit_data['author_name'] ?? 'Crown Asia Research Desk'); ?>">
                             </div>
 
-                            <div class="col-md-6">
-                                <label class="form-label fw-bold small">Author Title / Division</label>
-                                <input type="text" name="author_role" class="form-control" placeholder="e.g. Investment Strategy & Risk Governance"
+                            <div class="col-md-4">
+                                <label class="form-label-custom">
+                                    <i class="bi bi-clock-history"></i> Estimated Read Time
+                                </label>
+                                <input type="text" name="read_time" class="form-control form-control-luxury" placeholder="e.g. 5 Min Read"
+                                    value="<?php echo htmlspecialchars($edit_data['read_time'] ?? '5 Min Read'); ?>" required>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label class="form-label-custom">
+                                    <i class="bi bi-briefcase"></i> Author Title / Division
+                                </label>
+                                <input type="text" name="author_role" class="form-control form-control-luxury" placeholder="e.g. Investment Strategy &amp; Risk Governance Division"
                                     value="<?php echo htmlspecialchars($edit_data['author_role'] ?? 'Investment Strategy Team'); ?>">
                             </div>
+                        </div>
 
+                        <!-- Section 3: Visual Cover & Media -->
+                        <div class="form-section-title">
+                            <i class="bi bi-image"></i> Editorial Cover Image
+                        </div>
+
+                        <div class="cover-upload-box mb-3">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+                                <label class="form-label-custom mb-0">
+                                    <i class="bi bi-cloud-arrow-up"></i> Upload High-Resolution Cover Image
+                                </label>
+                                <div class="d-flex align-items-center gap-1">
+                                    <span class="text-muted small me-1">Allowed formats:</span>
+                                    <span class="format-badge">.JPG</span>
+                                    <span class="format-badge">.PNG</span>
+                                    <span class="format-badge">.WEBP</span>
+                                </div>
+                            </div>
+                            <input type="file" name="image" id="coverImageInput" class="form-control form-control-luxury" accept=".jpg,.jpeg,.png,.webp" onchange="previewCoverImage(this)">
+                            <div class="small text-muted mt-1" style="font-size: 11.5px;">
+                                <i class="bi bi-info-circle me-1"></i> Recommended: 16:9 landscape aspect ratio (1200x675px or 1920x1080px). Only JPG, PNG, and WEBP files are accepted.
+                            </div>
+
+                            <!-- Live Upload Preview Container -->
+                            <div id="coverPreviewContainer" class="cover-preview-frame <?php echo ($edit_mode && !empty($edit_data['cover_image'])) ? '' : 'd-none'; ?>">
+                                <img id="coverPreviewImg" src="<?php echo ($edit_mode && !empty($edit_data['cover_image'])) ? '../' . htmlspecialchars($edit_data['cover_image']) : ''; ?>" class="cover-preview-img" alt="Cover Preview" onerror="this.src='../assets/images/logo/logo.png'">
+                                <div>
+                                    <div class="fw-bold small text-dark" id="coverPreviewFilename">
+                                        <?php echo ($edit_mode && !empty($edit_data['cover_image'])) ? basename($edit_data['cover_image']) : 'Selected Image Preview'; ?>
+                                    </div>
+                                    <span class="badge bg-success-subtle text-success small mt-1">Ready for display</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 4: Summary & Full Article Content -->
+                        <div class="form-section-title">
+                            <i class="bi bi-file-earmark-text"></i> Summary &amp; Content Composition
+                        </div>
+
+                        <div class="row g-3 mb-2">
                             <div class="col-md-12">
-                                <label class="form-label fw-bold small">Short Excerpt (Meta Description &amp; Card Summary) *</label>
-                                <textarea name="excerpt" class="form-control" rows="2" placeholder="Concise summary of the article..." required><?php echo htmlspecialchars($edit_data['excerpt'] ?? ''); ?></textarea>
+                                <label class="form-label-custom">
+                                    <i class="bi bi-card-text"></i> Short Excerpt (Meta Description &amp; Card Summary) *
+                                </label>
+                                <textarea name="excerpt" class="form-control form-control-luxury" rows="2" placeholder="Concise 1-2 sentence executive briefing for listing cards and SEO meta tags..." required><?php echo htmlspecialchars($edit_data['excerpt'] ?? ''); ?></textarea>
                             </div>
 
                             <div class="col-md-12">
-                                <label class="form-label fw-bold small">Full Article Content (HTML tags &amp; internal sector links supported) *</label>
-                                <textarea name="content" class="form-control" rows="8" placeholder="<p>Full research briefing with headings, bullet points, and links to relevant Crown Asia sectors...</p>" required><?php echo htmlspecialchars($edit_data['content'] ?? ''); ?></textarea>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <label class="form-label-custom mb-0">
+                                        <i class="bi bi-pen"></i> Full Article Content (Rich Text Editor) *
+                                    </label>
+                                    <span class="text-muted small" style="font-size: 11.5px;">
+                                        <i class="bi bi-check2-circle text-success me-1"></i>Headings, Bullet Lists, Blockquotes, Tables &amp; Sector Links supported
+                                    </span>
+                                </div>
+                                <textarea name="content" id="articleContentEditor" class="form-control" rows="12" placeholder="Write full research briefing here..." required><?php echo htmlspecialchars($edit_data['content'] ?? ''); ?></textarea>
                             </div>
+                        </div>
 
-                            <div class="col-md-6 d-flex align-items-center gap-4 pt-2 flex-wrap">
+                        <!-- Section 5: Visibility Controls & Action Button -->
+                        <div class="form-action-bar">
+                            <div class="d-flex align-items-center gap-4 flex-wrap">
                                 <div class="form-check form-switch">
                                     <input class="form-check-input" type="checkbox" name="is_featured" id="is_featured" value="1" <?php echo (!empty($edit_data['is_featured'])) ? 'checked' : ''; ?>>
-                                    <label class="form-check-label fw-semibold" for="is_featured">
+                                    <label class="form-check-label fw-semibold" for="is_featured" style="font-size: 13.5px; color: #1a2520;">
                                         <i class="bi bi-star-fill text-warning me-1"></i> Spotlight Featured Article
                                     </label>
                                 </div>
                                 <div class="form-check form-switch">
                                     <input class="form-check-input" type="checkbox" name="is_published" id="is_published" value="1" <?php echo (!isset($edit_data) || !empty($edit_data['is_published'])) ? 'checked' : ''; ?>>
-                                    <label class="form-check-label fw-semibold" for="is_published">
-                                        <i class="bi bi-eye-fill text-success me-1"></i> Published (Visible on Website)
+                                    <label class="form-check-label fw-semibold" for="is_published" style="font-size: 13.5px; color: #1a2520;">
+                                        <i class="bi bi-eye-fill text-success me-1"></i> Published (Live on Website)
                                     </label>
                                 </div>
                             </div>
 
-                            <div class="col-md-6 text-end pt-2">
+                            <div>
                                 <?php if ($edit_mode): ?>
-                                    <button type="submit" name="update_article" class="btn-ca-primary">
-                                        <i class="bi bi-floppy2-fill"></i> Update Article
+                                    <button type="submit" name="update_article" class="btn-publish-luxury">
+                                        <i class="bi bi-floppy2-fill"></i> Update Article #<?php echo sprintf('%02d', $edit_data['id']); ?>
                                     </button>
                                 <?php else: ?>
-                                    <button type="submit" name="add_article" class="btn-ca-primary">
+                                    <button type="submit" name="add_article" class="btn-publish-luxury">
                                         <i class="bi bi-send-fill"></i> Publish Article
                                     </button>
                                 <?php endif; ?>
@@ -439,7 +615,7 @@ try {
                         <table id="blogTable" class="table table-hover align-middle">
                             <thead class="table-light">
                                 <tr>
-                                    <th style="width: 60px;">ID</th>
+                                    <th style="width: 75px; text-align: center;">ID</th>
                                     <th style="width: 90px;">Cover</th>
                                     <th>Title &amp; Summary</th>
                                     <th>Category</th>
@@ -459,7 +635,9 @@ try {
                                 <?php else: ?>
                                     <?php foreach ($articles as $art): ?>
                                         <tr>
-                                            <td><strong>#<?php echo $art['id']; ?></strong></td>
+                                            <td class="text-center" data-order="<?php echo (int) $art['id']; ?>">
+                                                <span class="badge-article-id">#<?php echo sprintf('%02d', $art['id']); ?></span>
+                                            </td>
                                             <td>
                                                 <img src="../<?php echo htmlspecialchars($art['cover_image']); ?>" 
                                                      alt="Cover" 
@@ -525,7 +703,7 @@ try {
                                                         <a href="manage_blog.php?toggle_publish=<?php echo $art['is_published']; ?>&id=<?php echo $art['id']; ?>" class="btn-action <?php echo ($art['is_published'] == 1) ? 'btn-action-hide' : 'btn-action-publish'; ?>" title="<?php echo ($art['is_published'] == 1) ? 'Hide Article' : 'Publish Article'; ?>">
                                                             <i class="bi bi-<?php echo ($art['is_published'] == 1) ? 'eye-slash' : 'eye'; ?>"></i>
                                                         </a>
-                                                        <a href="manage_blog.php?delete=<?php echo $art['id']; ?>" class="btn-action btn-action-delete" data-item-name="<?php echo htmlspecialchars($art['title']); ?>" title="Move to Trash">
+                                                        <a href="manage_blog.php?delete=<?php echo $art['id']; ?>" class="btn-action btn-action-delete" data-item-name="<?php echo htmlspecialchars($art['title']); ?>" title="Delete Article">
                                                             <i class="bi bi-trash3-fill"></i>
                                                         </a>
                                                     </div>
@@ -549,22 +727,80 @@ try {
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
 
+    <!-- Summernote Rich Text Editor JS -->
+    <script src="../assets/plugins/summernote/summernote-lite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.js"></script>
+
     <!-- Core Admin Interaction Engine -->
     <script src="admin.js"></script>
 
     <script>
         $(document).ready(function () {
+            // Initialize Summernote Rich Text Editor
+            if ($('#articleContentEditor').length) {
+                $('#articleContentEditor').summernote({
+                    placeholder: '<p>Compose your full research briefing here. Add headings (H2, H3), paragraphs, bullet points, blockquotes, tables, and internal sector links...</p>',
+                    tabsize: 2,
+                    height: 380,
+                    minHeight: 260,
+                    toolbar: [
+                        ['style', ['style']],
+                        ['font', ['bold', 'italic', 'underline', 'strikethrough', 'clear']],
+                        ['fontname', ['fontname']],
+                        ['color', ['color']],
+                        ['para', ['ul', 'ol', 'paragraph']],
+                        ['table', ['table']],
+                        ['insert', ['link', 'picture', 'hr']],
+                        ['view', ['fullscreen', 'codeview', 'help']]
+                    ],
+                    styleTags: [
+                        'p',
+                        { title: 'Blockquote', tag: 'blockquote', className: 'blockquote', value: 'blockquote' },
+                        'pre', 'h2', 'h3', 'h4', 'h5', 'h6'
+                    ]
+                });
+
+                // Ensure Summernote HTML is synchronized to textarea before form submission
+                $('form').on('submit', function () {
+                    var htmlContent = $('#articleContentEditor').summernote('code');
+                    $('#articleContentEditor').val(htmlContent);
+                });
+            }
+
+            // Initialize DataTables
             if ($('#blogTable tbody tr').length > 1 || $('#blogTable tbody tr td').length > 1) {
                 $('#blogTable').DataTable({
-                    order: [[0, 'desc']],
+                    order: [[0, 'asc']],
                     pageLength: 10,
+                    lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]],
                     language: {
                         search: "_INPUT_",
-                        searchPlaceholder: "Search articles..."
+                        searchPlaceholder: "Search articles...",
+                        lengthMenu: "Show _MENU_ articles",
+                        info: "Showing _START_ to _END_ of _TOTAL_ articles",
+                        paginate: {
+                            first: '<i class="bi bi-chevron-double-left"></i>',
+                            previous: '<i class="bi bi-chevron-left"></i>',
+                            next: '<i class="bi bi-chevron-right"></i>',
+                            last: '<i class="bi bi-chevron-double-right"></i>'
+                        }
                     }
                 });
             }
         });
+
+        // Live cover image upload preview
+        function previewCoverImage(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#coverPreviewImg').attr('src', e.target.result);
+                    $('#coverPreviewFilename').text(input.files[0].name);
+                    $('#coverPreviewContainer').removeClass('d-none').addClass('d-flex');
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
     </script>
 </body>
 

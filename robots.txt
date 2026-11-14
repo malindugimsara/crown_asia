@@ -1,7 +1,11 @@
 User-agent: *
 Allow: /
-Disallow: /demo/
+
+# Disallow private administrative areas, endpoints, and internal logs
+Disallow: /admin/
+Disallow: /login/
 Disallow: /includes/
+Disallow: /logs/
 
 # Sitemaps
 Sitemap: https://crownasia.io/sitemap.xml

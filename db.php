@@ -11,6 +11,12 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
-    die("Database connection failed: " . $e->getMessage());
+    error_log("Crown Asia DB Connection Error: " . $e->getMessage());
+    if (env('APP_ENV') === 'development' || env('APP_DEBUG') === true) {
+        die("Database connection failed: " . htmlspecialchars($e->getMessage()));
+    } else {
+        http_response_code(503);
+        die("Service temporarily unavailable. Please try again shortly.");
+    }
 }
 ?>

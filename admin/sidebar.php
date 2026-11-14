@@ -33,11 +33,6 @@ $currentPage = basename($_SERVER['PHP_SELF']);
             <span>Blog &amp; Insights</span>
         </a>
 
-        <a href="create_user.php" class="<?php echo ($currentPage === 'create_user.php') ? 'active' : ''; ?>">
-            <i class="bi bi-people-fill"></i>
-            <span>Admin Accounts</span>
-        </a>
-
         <a href="../index.php" target="_blank">
             <i class="bi bi-globe2"></i>
             <span>View Live Site</span>

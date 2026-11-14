@@ -103,29 +103,26 @@
 
         if (msgParam) {
             const msgLower = msgParam.toLowerCase();
-            if (msgLower === 'deleted') {
-                window.showAdminToast('success', 'Deleted Successfully', 'The selected item was removed.');
+            if (msgLower === 'deleted' || msgLower === 'deleted_permanent') {
+                window.showAdminToast('error', 'Article Deleted', 'The article was permanently deleted and IDs re-sequenced in order.');
                 triggered = true;
             } else if (msgLower === 'updated') {
-                window.showAdminToast('success', 'Changes Saved', 'Information updated successfully.');
+                window.showAdminToast('success', 'Article Updated', 'All article modifications and content have been saved successfully.');
                 triggered = true;
             } else if (msgLower === 'added') {
-                window.showAdminToast('success', 'Created Successfully', 'New record added to the database.');
+                window.showAdminToast('success', 'Article Published', 'New research briefing has been published live on the website.');
                 triggered = true;
-            } else if (msgLower === 'published') {
-                window.showAdminToast('success', 'Published', 'Item is now publicly visible on Crown Asia.');
+            } else if (msgLower === 'published' || msgLower === 'unhidden') {
+                window.showAdminToast('success', 'Article Published (Live)', 'Article is now active and visible to all investors on Crown Asia.');
                 triggered = true;
-            } else if (msgLower === 'unpublished') {
-                window.showAdminToast('info', 'Hidden', 'Item is hidden from the public website.');
+            } else if (msgLower === 'unpublished' || msgLower === 'hidden') {
+                window.showAdminToast('info', 'Article Hidden', 'Article has been unpublished and hidden from public view.');
                 triggered = true;
             } else if (msgLower === 'trashed') {
-                window.showAdminToast('warning', 'Moved to Trash', 'Item moved to Trash tab. You can restore it anytime.');
+                window.showAdminToast('warning', 'Moved to Trash', 'Article moved to Trash tab.');
                 triggered = true;
             } else if (msgLower === 'restored') {
-                window.showAdminToast('success', 'Restored Successfully', 'Item restored to active list.');
-                triggered = true;
-            } else if (msgLower === 'deleted_permanent') {
-                window.showAdminToast('error', 'Permanently Deleted', 'Record has been permanently removed.');
+                window.showAdminToast('success', 'Article Restored', 'Article restored to active list successfully.');
                 triggered = true;
             }
 
@@ -878,11 +875,12 @@
                         }
 
                         if (window.showAdminToast) {
-                            const titleText = (newStatus === 1) ? 'Status: Active / Published' : 'Status: Hidden';
-                            const msgText = (newStatus === 1)
-                                ? 'Item is now live and visible on Crown Asia.'
-                                : 'Item has been hidden from public view.';
-                            window.showAdminToast(newStatus === 1 ? 'success' : 'info', titleText, msgText);
+                            const isUnhide = (newStatus === 1);
+                            const titleText = isUnhide ? 'Article Published (Live)' : 'Article Hidden';
+                            const msgText = isUnhide
+                                ? 'Article is now visible live to all investors on Crown Asia.'
+                                : 'Article is now unpublished and hidden from public view.';
+                            window.showAdminToast(isUnhide ? 'success' : 'info', titleText, msgText);
                         }
                     } else {
                         if (iconEl) iconEl.className = originalIconClass;
