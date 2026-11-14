@@ -392,12 +392,65 @@
     if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
+
+            const form = this;
+            const submitBtn = form.querySelector('button[type="submit"]');
             const toast = document.getElementById('toastMsg');
-            if (toast) {
-                toast.classList.add('show');
-                setTimeout(() => toast.classList.remove('show'), 3800);
+            const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+
+            // Append ajax identifier
+            const formData = new FormData(form);
+            formData.append('is_ajax', '1');
+
+            // Button loading state
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Transmitting Securely...';
             }
-            this.reset();
+
+            function showToast(message, isSuccess) {
+                if (!toast) return;
+                const icon = isSuccess
+                    ? '<i class="bi bi-check-circle-fill me-2" style="color:var(--green-bright); font-size: 1.15rem;"></i>'
+                    : '<i class="bi bi-exclamation-triangle-fill me-2 text-warning" style="font-size: 1.15rem;"></i>';
+
+                toast.innerHTML = icon + '<span>' + message + '</span>';
+                toast.classList.toggle('toast-error', !isSuccess);
+                toast.classList.add('show');
+
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 5500);
+            }
+
+            fetch(form.getAttribute('action') || 'contact-handler.php', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnHtml;
+                    }
+
+                    if (data && data.success) {
+                        showToast(data.message || 'Thank you! Your message has been sent successfully.', true);
+                        form.reset();
+                    } else {
+                        showToast((data && data.message) ? data.message : 'Please check your inputs and try again.', false);
+                    }
+                })
+                .catch(err => {
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnHtml;
+                    }
+                    showToast('Unable to transmit inquiry. Please check your connection or contact web@crownasia.io directly.', false);
+                });
         });
     }
 

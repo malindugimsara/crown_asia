@@ -1,8 +1,8 @@
 <?php
 require_once __DIR__ . '/config.php';
 
-$portal_login_url    = $portal_login_url ?? 'https://portal.crownasia.io/login';
-$portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/register';
+$portal_login_url    = $portal_login_url ?? ($base_url . 'admin/login.php');
+$portal_register_url = $portal_register_url ?? ($base_url . 'contact/');
 ?>
 
 <footer class="footer-modern">
@@ -55,7 +55,7 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
                 </div>
                 <div class="footer-hq-item">
                     <i class="bi bi-envelope-fill"></i>
-                    <a href="mailto:info@crownasia.io">info@crownasia.io</a>
+                    <a href="mailto:web@crownasia.io">web@crownasia.io</a>
                 </div>
                 <div class="footer-hq-item mb-3">
                     <i class="bi bi-globe2"></i>
@@ -151,7 +151,7 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
 </footer>
 
 <!-- Floating Contact & Back to Top Buttons -->
-<a class="whatsapp-float" href="mailto:info@crownasia.io" aria-label="Email Crown Asia">
+<a class="whatsapp-float" href="mailto:web@crownasia.io" aria-label="Email Crown Asia">
     <i class="bi bi-envelope-fill"></i>
 </a>
 <button class="back-to-top" id="backToTop" aria-label="Back to top">

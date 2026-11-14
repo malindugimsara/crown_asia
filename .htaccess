@@ -1,5 +1,17 @@
 RewriteEngine On
 
+# Prevent Directory Browsing
+Options -Indexes
+
+# Protect sensitive environment and configuration files
+<FilesMatch "^\.env">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Login & Admin Clean URLs
+RewriteRule ^login/?$ admin/login.php [L,QSA]
+
 # Investment Opportunities Details Clean URLs
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

@@ -4,8 +4,8 @@ $page_desc  = "Crown Asia LLC - A diversified United States investment and busin
 include_once __DIR__ . '/header.php';
 
 // Portal URLs (header.php / config.php හි අර්ථ දක්වා නොමැති නම් fallback ලෙස)
-$portal_login_url    = $portal_login_url ?? 'https://portal.crownasia.io/login';
-$portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/register';
+$portal_login_url    = $portal_login_url ?? ($base_url . 'admin/login.php');
+$portal_register_url = $portal_register_url ?? ($base_url . 'contact/');
 ?>
 
     <!-- 1. Hero Section with Updated Platform CTAs -->
@@ -45,7 +45,7 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
     <section class="section-marquee-overview">
         <div class="container text-center mb-4" data-aos="fade-up">
             <span class="topic-badge-pill light">STRATEGIC SECTORS</span>
-            <h2 class="section-title mb-2">Our Eight Diversified Industries</h2>
+            <h2 class="section-title mb-2">Our Diversified Industries</h2>
             <p class="section-subtitle mx-auto">Operating across premier global growth markets supported by real assets, institutional governance, and cross-border agility.</p>
         </div>
         <div class="marquee" aria-label="Our Eight Business Sectors">
@@ -339,7 +339,7 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
                 <div class="col-12">
                     <div class="sec-heading style-4 text-center" data-aos="fade-up">
                         <span class="sub-title"><i class="bi bi-grid-3x3-gap-fill me-1"></i>Diversified Portfolio</span>
-                        <h2 class="sec-title">Eight Strategic Industries</h2>
+                        <h2 class="sec-title">Strategic Industries</h2>
                         <p class="sec-desc">Explore dedicated sector briefings, operational strategies, and risk governance across our eight core business divisions.</p>
                     </div>
                 </div>

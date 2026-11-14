@@ -113,9 +113,317 @@ $articles = [
             <p>
                 Crown Asia operates across eight distinct commercial divisions—Foreign Exchange, Commercial Real Estate, SME Development, Precious Metals, Emerging Tech, Retail Distribution, Export-Import Logistics, and Manufacturing. When retail cycles contract, commodities and forex arbitrage provide counter-cyclical cash flows, stabilizing overall portfolio returns.
             </p>
+
+            <div class="blog-highlight-box">
+                <h5><i class="bi bi-pie-chart-fill me-2"></i> Key Tenets of Non-Correlated Allocation:</h5>
+                <ul>
+                    <li>Balancing high-liquidity digital trading engines with physical long-term asset reserves.</li>
+                    <li>Geographic hedging across North American legal corridors and high-growth Asian trade crossroads.</li>
+                    <li>Counter-cyclical revenue offsetting during central bank interest rate fluctuations.</li>
+                </ul>
+            </div>
+        '
+    ],
+    'financial-audit-and-balance-sheet-verification' => [
+        'id'        => 4,
+        'slug'      => 'financial-audit-and-balance-sheet-verification',
+        'title'     => 'Balance Sheet Verification & Escrow Safeguards in Private Offerings',
+        'category'  => 'Due Diligence',
+        'author'    => 'Sarah Jenkins, Esq.',
+        'role'      => 'Senior Legal Counsel',
+        'avatar'    => 'assets/images/blog/avatar-2.webp',
+        'image'     => 'assets/images/blog/blog-8.webp',
+        'date'      => 'November 10, 2026',
+        'read_time' => '5 min read',
+        'excerpt'   => 'A structured walkthrough of auditing independent bank reconciliations, third-party asset valuations, and milestone-based escrow release schedules before committing funds.',
+        'content'   => '
+            <p class="lead" style="font-size: 18px; color: #2B3830; line-height: 1.8; font-weight: 500;">
+                Auditing financial health is the bedrock of institutional investing. In private placements, investors must look beyond pitch decks to independently verify bank reconciliations, certified balance sheets, and formal escrow structures.
+            </p>
+
+            <h2>1. Independent CPA Financial Reviews</h2>
+            <p>
+                Reliable syndicators provide financial statements prepared or audited by recognized independent public accounting firms. These statements verify unencumbered asset ownership, current debt covenants, and accurate debt-to-equity ratios.
+            </p>
+
+            <h2>2. Milestone-Based Escrow Accounts</h2>
+            <p>
+                Capital preservation requires that investor principal is not released immediately to speculative operating pools. Instead, funds reside in segregated escrow repositories released only upon reaching verified operational milestones verified by legal trustees.
+            </p>
+
+            <div class="blog-quote-box">
+                "An ironclad escrow agreement ensures that your principal remains safeguarded until all legal covenants and pre-conditions are fully met."
+            </div>
+        '
+    ],
+    'multi-network-treasury-architecture-and-cold-custody' => [
+        'id'        => 5,
+        'slug'      => 'multi-network-treasury-architecture-and-cold-custody',
+        'title'     => 'Multi-Sig Treasury Architecture: Securing Digital Capital Across Global Nodes',
+        'category'  => 'USDT & Settlement',
+        'author'    => 'Elena Vance',
+        'role'      => 'Head of Digital Settlement',
+        'avatar'    => 'assets/images/blog/avatar-2.webp',
+        'image'     => 'assets/images/blog/blog-9.webp',
+        'date'      => 'November 05, 2026',
+        'read_time' => '6 min read',
+        'excerpt'   => 'Deep dive into segregated cold storage vaults, multi-signature threshold approval workflows, and automated on-chain verification safeguarding institutional USDT capital.',
+        'content'   => '
+            <p class="lead" style="font-size: 18px; color: #2B3830; line-height: 1.8; font-weight: 500;">
+                Safeguarding institutional digital treasury assets demands multi-layered cryptographic engineering. Single-key vulnerabilities are completely unacceptable in high-volume enterprise operations.
+            </p>
+
+            <h2>Multi-Signature Authorization (M-of-N)</h2>
+            <p>
+                At Crown Asia, treasury transactions require multiple independent cryptographic approvals distributed across geographically segregated Hardware Security Modules (HSMs). No single executive or engineer can initiate or finalize a treasury disbursement alone.
+            </p>
+
+            <h2>Segregated Cold Storage Architecture</h2>
+            <p>
+                Over 95% of reserve digital capital is maintained in air-gapped, offline cold storage vaults. Only minimal operational float is allocated to automated hot-wallet distribution smart contracts for daily investor dividend settlements.
+            </p>
+
+            <div class="blog-highlight-box">
+                <h5><i class="bi bi-shield-lock-fill me-2"></i> Crown Asia Treasury Safeguards:</h5>
+                <ul>
+                    <li>Air-gapped multi-signature institutional vault security.</li>
+                    <li>Automated smart-contract risk thresholds and transaction ceilings.</li>
+                    <li>Real-time public blockchain ledger verification for all incoming allocations.</li>
+                </ul>
+            </div>
+        '
+    ],
+    'cross-border-supply-chain-modernization-and-trade' => [
+        'id'        => 6,
+        'slug'      => 'cross-border-supply-chain-modernization-and-trade',
+        'title'     => 'Capitalizing on Cross-Border Trade & Value-Added Export Supply Chains',
+        'category'  => 'Strategy',
+        'author'    => 'David Reynolds',
+        'role'      => 'Portfolio Director',
+        'avatar'    => 'assets/images/blog/avatar-1.webp',
+        'image'     => 'assets/images/blog/blog-10.webp',
+        'date'      => 'November 01, 2026',
+        'read_time' => '6 min read',
+        'excerpt'   => 'Analyzing how direct agricultural processing, customs-bonded logistics hubs, and bilateral merchant credit agreements generate resilient, inflation-hedged yields.',
+        'content'   => '
+            <p class="lead" style="font-size: 18px; color: #2B3830; line-height: 1.8; font-weight: 500;">
+                Global supply chain restructuring has unlocked immense yields for asset-backed merchant trade finance. By modernizing physical trade corridors between Asia and Western markets, syndicates capture solid cash flows insulated from stock market swings.
+            </p>
+
+            <h2>Value-Added Agricultural Processing</h2>
+            <p>
+                Exporting raw commodities produces low margins; however, investing in local processing plants, quality grading facilities, and hermetic storage infrastructure increases net merchant margins substantially while creating verifiable collateral.
+            </p>
+
+            <h2>Customs-Bonded Logistics & Bilateral Credit</h2>
+            <p>
+                Physical cargo held in bonded customs warehouses serves as immediate collateral for trade financing tranches. Receivables are backed by letters of credit and verified bills of lading, ensuring near-zero default rates.
+            </p>
+        '
+    ],
+    'state-of-new-mexico-llc-governance' => [
+        'id'        => 7,
+        'slug'      => 'state-of-new-mexico-llc-governance',
+        'title'     => 'Corporate Governance & Transparency: Inside Our New Mexico LLC Structure',
+        'category'  => 'Compliance',
+        'author'    => 'Sarah Jenkins, Esq.',
+        'role'      => 'Senior Legal Counsel',
+        'avatar'    => 'assets/images/blog/avatar-2.webp',
+        'image'     => 'assets/images/blog/blog-4.webp',
+        'date'      => 'October 29, 2026',
+        'read_time' => '4 min read',
+        'excerpt'   => 'An in-depth look at our formal LLC registration in Albuquerque, New Mexico, regulatory filings, banking controls, and contractual obligations protecting investor funds.',
+        'content'   => '
+            <p class="lead" style="font-size: 18px; color: #2B3830; line-height: 1.8; font-weight: 500;">
+                Transparent legal charters establish trust and accountability in international business. Crown Asia LLC is formally organized and registered under the laws of the State of New Mexico, USA.
+            </p>
+
+            <h2>US LLC Corporate Structure</h2>
+            <p>
+                The New Mexico Limited Liability Company Act provides a robust statutory framework establishing manager fiduciary responsibilities, capital accounting standards, and creditor protection for members and investment partners.
+            </p>
+
+            <h2>Banking and Regulatory Compliance</h2>
+            <p>
+                Our entity complies with FinCEN beneficial ownership transparency requirements, maintains segregated commercial accounts, and submits regular regulatory filings to preserve good standing with US authorities.
+            </p>
+        '
+    ],
+    'global-kyc-aml-compliance-and-investor-protection' => [
+        'id'        => 8,
+        'slug'      => 'global-kyc-aml-compliance-and-investor-protection',
+        'title'     => 'Institutional Compliance Standards: Automated AML/KYC & Investor Protections',
+        'category'  => 'Compliance',
+        'author'    => 'Sarah Jenkins, Esq.',
+        'role'      => 'Senior Legal Counsel',
+        'avatar'    => 'assets/images/blog/avatar-2.webp',
+        'image'     => 'assets/images/blog/blog-11.webp',
+        'date'      => 'October 26, 2026',
+        'read_time' => '5 min read',
+        'excerpt'   => 'How biometric identity checks, sanctioned entity screening, and strict jurisdictional investor qualification guidelines maintain institutional credibility and legal compliance.',
+        'content'   => '
+            <p class="lead" style="font-size: 18px; color: #2B3830; line-height: 1.8; font-weight: 500;">
+                Operating at the intersection of traditional private equity and modern digital rails requires uncompromising adherence to global Anti-Money Laundering (AML) and Know Your Customer (KYC) standards.
+            </p>
+
+            <h2>Biometric Identity & Sanctions Screening</h2>
+            <p>
+                Crown Asia employs automated verification systems integrated with global watchlists, OFAC sanction databases, and Politically Exposed Persons (PEP) registries. This ensures that every dollar moving through our portal originates from legitimate, verified sources.
+            </p>
+
+            <h2>Protecting Honest Capital</h2>
+            <p>
+                Strict compliance frameworks protect legitimate investors by eliminating legal contagion, preventing banking freezes, and upholding institutional credibility with global financial regulators.
+            </p>
+        '
+    ],
+    'commercial-real-estate-corridors' => [
+        'id'        => 9,
+        'slug'      => 'commercial-real-estate-corridors',
+        'title'     => 'Commercial Real Estate in the Southwest: Yields, Logistics & Asset Backing',
+        'category'  => 'Real Estate',
+        'author'    => 'Marcus Sterling',
+        'role'      => 'Chief Investment Strategist',
+        'avatar'    => 'assets/images/blog/avatar-1.webp',
+        'image'     => 'assets/images/blog/blog-5.webp',
+        'date'      => 'October 24, 2026',
+        'read_time' => '6 min read',
+        'excerpt'   => 'Analyzing warehouse, mixed-use commercial, and prime logistics corridors along US Interstate routes driving high tenant occupancy and inflation-protected cash flow yields.',
+        'content'   => '
+            <p class="lead" style="font-size: 18px; color: #2B3830; line-height: 1.8; font-weight: 500;">
+                The American Southwest represents one of the fastest-growing logistics and trade corridors in North America. Rapid population shifts, nearshoring manufacturing, and e-commerce distribution demand premier industrial real estate.
+            </p>
+
+            <h2>Interstate Logistics Hubs (I-25 & I-40)</h2>
+            <p>
+                Albuquerque and the broader Southwest corridor sit at the critical intersection of continental freight routes. Class-A distribution warehouses and cold-storage facilities enjoy near-zero vacancy rates and long-term triple-net (NNN) leases with national tenants.
+            </p>
+
+            <h2>Inflation-Protected Physical Collateral</h2>
+            <p>
+                Commercial deeds registered with county recording offices provide direct, physical collateral backing that appreciates with replacement cost inflation while producing steady quarterly yield distributions.
+            </p>
+        '
+    ],
+    'cross-border-real-estate-syndication-and-land-titling' => [
+        'id'        => 10,
+        'slug'      => 'cross-border-real-estate-syndication-and-land-titling',
+        'title'     => 'Cross-Border Real Estate: Land Rights, SPVs & Sovereign Freehold Titles',
+        'category'  => 'Real Estate',
+        'author'    => 'Marcus Sterling',
+        'role'      => 'Chief Investment Strategist',
+        'avatar'    => 'assets/images/blog/avatar-1.webp',
+        'image'     => 'assets/images/blog/blog-12.webp',
+        'date'      => 'October 20, 2026',
+        'read_time' => '6 min read',
+        'excerpt'   => 'Understanding Special Purpose Vehicles, international tax treaties, and conservative below-market acquisition basis in Dubai and US property syndications.',
+        'content'   => '
+            <p class="lead" style="font-size: 18px; color: #2B3830; line-height: 1.8; font-weight: 500;">
+                International property syndication allows global investors to acquire shares in prime real estate assets without the bureaucratic hurdles of cross-border individual land registration.
+            </p>
+
+            <h2>Special Purpose Vehicles (SPVs)</h2>
+            <p>
+                Each property project is ring-fenced within a dedicated Special Purpose Vehicle (SPV). This legal isolation ensures that liabilities or operational risks from one project can never affect another property in the portfolio.
+            </p>
+
+            <h2>Clear Sovereign Freehold Titling</h2>
+            <p>
+                Whether in prime US commercial zones or international freehold districts, Crown Asia mandates title insurance policies and sovereign deed registrations to guarantee undisputed property ownership.
+            </p>
+        '
+    ],
+    'forex-quantitative-hedging-strategies' => [
+        'id'        => 11,
+        'slug'      => 'forex-quantitative-hedging-strategies',
+        'title'     => 'Institutional Forex Strategies: Quantitative Hedging & Capital Preservation',
+        'category'  => 'Forex',
+        'author'    => 'David Reynolds',
+        'role'      => 'Portfolio Director',
+        'avatar'    => 'assets/images/blog/avatar-1.webp',
+        'image'     => 'assets/images/blog/blog-6.webp',
+        'date'      => 'October 18, 2026',
+        'read_time' => '5 min read',
+        'excerpt'   => 'How systematic algorithmic trade execution and Tier-1 prime liquidity feeds prevent drawdowns while capturing micro-arbitrage opportunities across G10 currency pairs.',
+        'content'   => '
+            <p class="lead" style="font-size: 18px; color: #2B3830; line-height: 1.8; font-weight: 500;">
+                The foreign exchange market is the largest and most liquid financial market in the world. Operating profitably at an institutional level requires algorithmic precision rather than emotional discretionary trading.
+            </p>
+
+            <h2>Algorithmic Alpha & Triangular Arbitrage</h2>
+            <p>
+                Our trading infrastructure utilizes proprietary algorithms that capitalize on cross-currency pricing disparities across major international banking nodes. Low-latency execution ensures that positions are opened and closed within milliseconds with minimal slippage.
+            </p>
+
+            <h2>Strict Downside Risk Limits</h2>
+            <p>
+                Every position is governed by non-negotiable risk limits. Daily Value-at-Risk (VaR) is capped at 1.5%, and automated circuit breakers liquidate exposure if unexpected macro announcements trigger abnormal volatility.
+            </p>
+        '
+    ],
+    'macro-liquidity-and-g10-drawdown-management' => [
+        'id'        => 12,
+        'slug'      => 'macro-liquidity-and-g10-drawdown-management',
+        'title'     => 'Navigating FX Volatility: Tier-1 Prime Liquidity & 1:10 Leverage Limits',
+        'category'  => 'Forex',
+        'author'    => 'David Reynolds',
+        'role'      => 'Portfolio Director',
+        'avatar'    => 'assets/images/blog/avatar-1.webp',
+        'image'     => 'assets/images/blog/blog-7.webp',
+        'date'      => 'October 15, 2026',
+        'read_time' => '5 min read',
+        'excerpt'   => 'Managing currency risk through mathematical exposure limits, dynamic algorithmic stop-loss protocols, and strict leverage discipline across institutional FX portfolios.',
+        'content'   => '
+            <p class="lead" style="font-size: 18px; color: #2B3830; line-height: 1.8; font-weight: 500;">
+                Excessive leverage is the number one cause of capital destruction in currency trading. While retail brokers routinely promote dangerous 1:100 or 1:500 leverage, institutional managers enforce conservative ratios.
+            </p>
+
+            <h2>The 1:10 Leverage Rule</h2>
+            <p>
+                Crown Asia enforces a maximum leverage cap of 1:10 across all foreign exchange trading pools. This conservative framework allows our portfolios to withstand severe currency swings and central bank surprises without risking margin calls.
+            </p>
+
+            <h2>Tier-1 Prime Liquidity Feeds</h2>
+            <p>
+                By connecting directly to Tier-1 interbank liquidity providers in London, New York, and Tokyo, our desks access deep order books and institutional spreads, ensuring optimal execution efficiency and capital safety.
+            </p>
         '
     ]
 ];
+
+// Live Database Integration with fallback
+try {
+    require_once ROOT_PATH . 'db.php';
+    if (isset($conn)) {
+        $dbStmt = $conn->query("SELECT * FROM blog_posts WHERE is_published = 1 AND deleted_at IS NULL ORDER BY is_featured DESC, id DESC");
+        $dbRows = $dbStmt ? $dbStmt->fetchAll(PDO::FETCH_ASSOC) : [];
+        if (!empty($dbRows)) {
+            $liveArticles = [];
+            foreach ($dbRows as $row) {
+                $liveArticles[$row['slug']] = [
+                    'id'        => (int) $row['id'],
+                    'slug'      => $row['slug'],
+                    'title'     => $row['title'],
+                    'category'  => $row['category'],
+                    'category_slug' => $row['category_slug'] ?? '',
+                    'author'    => $row['author_name'] ?? 'Crown Asia Research Desk',
+                    'role'      => $row['author_role'] ?? 'Investment Strategy Team',
+                    'avatar'    => 'assets/images/blog/avatar-1.webp',
+                    'image'     => $row['cover_image'] ?? 'assets/images/blog/blog-1.webp',
+                    'date'      => !empty($row['created_at']) ? date('F d, Y', strtotime($row['created_at'])) : 'Recent',
+                    'read_time' => $row['read_time'] ?? '5 min read',
+                    'excerpt'   => $row['excerpt'] ?? '',
+                    'content'   => $row['content'] ?? ''
+                ];
+            }
+            if (!empty($liveArticles)) {
+                $articles = $liveArticles;
+            }
+        }
+    }
+} catch (Exception $e) {
+    // Fallback to static articles array
+}
 
 // Determine selected post
 $slug = isset($_GET['slug']) ? trim($_GET['slug']) : 'how-to-evaluate-an-investment-opportunity';

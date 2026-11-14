@@ -1,0 +1,107 @@
+<?php
+/**
+ * admin/topbar.php
+ * Common Admin Top Navigation Bar for Crown Asia LLC Management Portal
+ */
+if (!isset($_SESSION)) {
+    session_start();
+}
+$current_admin_user = htmlspecialchars($_SESSION['admin_user'] ?? 'Admin');
+$admin_initial = strtoupper(substr($current_admin_user, 0, 1));
+?>
+
+<!-- Common Admin Top Bar -->
+<div class="admin-topbar-card">
+    <!-- Left Side: Company Logo & Brand -->
+    <div class="topbar-left">
+        <!-- Mobile Sidebar Drawer Toggle -->
+        <button type="button" class="sidebar-toggle-btn d-lg-none" id="mobileSidebarToggle" aria-label="Toggle Navigation">
+            <i class="bi bi-list"></i>
+        </button>
+
+        <a href="dashboard.php" class="topbar-brand">
+            <div class="topbar-logo-frame" style="background: #0d1612; border: 1px solid rgba(15, 157, 88, 0.35);">
+                <img src="../assets/images/logo/logo.png" alt="Crown Asia Logo" class="topbar-logo-img" style="width: 34px; height: 34px; object-fit: contain;">
+            </div>
+            <div class="topbar-brand-info">
+                <span class="topbar-brand-name">CROWN ASIA</span>
+                <span class="topbar-brand-sub">Admin Management Portal</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- Right Side: Date, Live Time, Live Site, Profile & Logout Button -->
+    <div class="topbar-right">
+        <!-- Today's Date -->
+        <div class="topbar-item topbar-date" title="Today's Date">
+            <i class="bi bi-calendar3" style="color: #0f9d58;"></i>
+            <span><?php echo date('l, d M Y'); ?></span>
+        </div>
+
+        <!-- Vertical Divider Bar -->
+        <div class="topbar-vr"></div>
+
+        <!-- Today's Real-time Live Clock -->
+        <div class="topbar-item topbar-time" title="Current Time">
+            <i class="bi bi-clock-fill" style="color: #0f9d58;"></i>
+            <span id="adminLiveClockDisplay"><?php echo date('h:i:s A'); ?></span>
+        </div>
+
+        <!-- Vertical Divider Bar -->
+        <div class="topbar-vr d-none d-md-inline-block"></div>
+
+        <!-- Live Website Button -->
+        <a href="../index.php" target="_blank" class="topbar-link-btn d-none d-md-inline-flex" title="Open Public Website in New Tab">
+            <i class="bi bi-globe2" style="color: #0f9d58;"></i>
+            <span>View Website</span>
+        </a>
+
+        <!-- Vertical Divider Bar -->
+        <div class="topbar-vr d-none d-sm-inline-block"></div>
+
+        <!-- Admin Profile Info -->
+        <div class="topbar-item topbar-profile">
+            <div class="topbar-avatar" title="<?php echo $current_admin_user; ?> (Administrator)">
+                <?php echo $admin_initial; ?>
+                <span class="online-dot" title="Online Status"></span>
+            </div>
+            <div class="topbar-user-info d-none d-lg-flex">
+                <span class="topbar-username"><?php echo $current_admin_user; ?></span>
+                <span class="topbar-role">Administrator</span>
+            </div>
+        </div>
+
+        <!-- Vertical Divider Bar -->
+        <div class="topbar-vr"></div>
+
+        <!-- Logout Button on Right Side -->
+        <a href="logout.php" class="topbar-logout-btn" title="Log Out from Crown Asia Admin">
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Logout</span>
+        </a>
+    </div>
+</div>
+
+<!-- Live Real-Time Clock Script -->
+<script>
+(function() {
+    function updateAdminClock() {
+        var clockElement = document.getElementById('adminLiveClockDisplay');
+        if (!clockElement) return;
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+        var ampm = hours >= 12 ? 'PM' : 'AM';
+        
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        var hoursStr = hours < 10 ? '0' + hours : hours;
+        var minutesStr = minutes < 10 ? '0' + minutes : minutes;
+        var secondsStr = seconds < 10 ? '0' + seconds : seconds;
+        
+        clockElement.textContent = hoursStr + ':' + minutesStr + ':' + secondsStr + ' ' + ampm;
+    }
+    setInterval(updateAdminClock, 1000);
+})();
+</script>

@@ -60,31 +60,94 @@ include_once ROOT_PATH . 'header.php';
             <p class="section-subtitle mx-auto">Filter offerings by business sector or allocation status to review full terms, use of funds, and offering memoranda.</p>
         </div>
 
-        <!-- Interactive Filter Bar -->
+        <!-- Interactive Filter Control Bar -->
         <div class="filter-control-panel" data-aos="fade-up">
-            <div class="row g-3 align-items-center">
-                <!-- Sector Filter -->
-                <div class="col-lg-8">
-                    <span class="filter-group-label"><i class="bi bi-funnel-fill text-success me-1"></i> Filter by Business Sector</span>
-                    <div class="filter-pills-wrap" id="sectorFilters">
-                        <button type="button" class="filter-pill-btn active" data-sector="all">All Sectors</button>
-                        <button type="button" class="filter-pill-btn" data-sector="real-estate">Real Estate</button>
-                        <button type="button" class="filter-pill-btn" data-sector="forex-trading">Forex Trading</button>
-                        <button type="button" class="filter-pill-btn" data-sector="agriculture">Agriculture</button>
-                        <button type="button" class="filter-pill-btn" data-sector="gems">Gems &amp; Gemstones</button>
-                        <button type="button" class="filter-pill-btn" data-sector="technology">Tech &amp; Cloud</button>
-                        <button type="button" class="filter-pill-btn" data-sector="ecommerce">E-Commerce</button>
+            <!-- Top Header Row: Title, Live Counter & Quick Reset -->
+            <div class="filter-panel-header d-flex flex-wrap align-items-center justify-content-between gap-3 pb-3 mb-3">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="filter-header-icon">
+                        <i class="bi bi-sliders2-vertical"></i>
+                    </div>
+                    <div>
+                        <h5 class="filter-header-title mb-0">Investment Offering Filters</h5>
+                        <span class="filter-header-subtitle">Filter asset classes and allocation stages</span>
                     </div>
                 </div>
+                <div class="d-flex align-items-center gap-2">
+                    <span class="filter-count-badge" id="filterCountBadge">
+                        <span class="live-dot pulse"></span>
+                        <span><strong id="visibleOfferingsCount">6</strong> of 6 Offerings</span>
+                    </span>
+                    <button type="button" class="filter-reset-btn" id="filterBarResetBtn" title="Reset all filters">
+                        <i class="bi bi-arrow-counterclockwise"></i> <span>Reset</span>
+                    </button>
+                </div>
+            </div>
 
-                <!-- Status Filter -->
-                <div class="col-lg-4">
-                    <span class="filter-group-label"><i class="bi bi-check2-circle text-success me-1"></i> Filter by Status</span>
-                    <div class="filter-pills-wrap" id="statusFilters">
-                        <button type="button" class="filter-pill-btn active" data-status="all">All Status</button>
-                        <button type="button" class="filter-pill-btn" data-status="open">Open</button>
-                        <button type="button" class="filter-pill-btn" data-status="upcoming">Upcoming</button>
-                        <button type="button" class="filter-pill-btn" data-status="closed">Fully Subscribed</button>
+            <!-- Filter Group 1: Business Sector -->
+            <div class="filter-group mb-3">
+                <div class="filter-group-header d-flex align-items-center justify-content-between mb-2">
+                    <span class="filter-group-label">
+                        <i class="bi bi-grid-3x3-gap-fill text-success me-1"></i> Filter by Business Sector
+                    </span>
+                    <span class="filter-group-hint d-none d-sm-inline">All 8 diversified sectors</span>
+                </div>
+                <div class="filter-pills-wrap" id="sectorFilters">
+                    <button type="button" class="filter-pill-btn active" data-sector="all">
+                        <i class="bi bi-grid-fill"></i> All Sectors
+                    </button>
+                    <button type="button" class="filter-pill-btn" data-sector="real-estate">
+                        <i class="bi bi-building"></i> Real Estate
+                    </button>
+                    <button type="button" class="filter-pill-btn" data-sector="forex-trading">
+                        <i class="bi bi-graph-up-arrow"></i> Forex Trading
+                    </button>
+                    <button type="button" class="filter-pill-btn" data-sector="agriculture">
+                        <i class="bi bi-tree"></i> Agriculture
+                    </button>
+                    <button type="button" class="filter-pill-btn" data-sector="gems">
+                        <i class="bi bi-gem"></i> Gems &amp; Gemstones
+                    </button>
+                    <button type="button" class="filter-pill-btn" data-sector="technology">
+                        <i class="bi bi-cpu"></i> Tech &amp; Cloud
+                    </button>
+                    <button type="button" class="filter-pill-btn" data-sector="ecommerce">
+                        <i class="bi bi-cart-check"></i> E-Commerce
+                    </button>
+                </div>
+            </div>
+
+            <div class="filter-divider"></div>
+
+            <!-- Filter Group 2: Status & Active Filter Summary -->
+            <div class="filter-group">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+                    <div>
+                        <div class="filter-group-header mb-2">
+                            <span class="filter-group-label">
+                                <i class="bi bi-activity text-success me-1"></i> Filter by Allocation Status
+                            </span>
+                        </div>
+                        <div class="filter-pills-wrap" id="statusFilters">
+                            <button type="button" class="filter-pill-btn active" data-status="all">
+                                <i class="bi bi-circle-fill" style="font-size: 8px;"></i> All Status
+                            </button>
+                            <button type="button" class="filter-pill-btn" data-status="open">
+                                <span class="status-indicator-dot open"></span> Open for Allocation
+                            </button>
+                            <button type="button" class="filter-pill-btn" data-status="upcoming">
+                                <span class="status-indicator-dot upcoming"></span> Upcoming
+                            </button>
+                            <button type="button" class="filter-pill-btn" data-status="closed">
+                                <span class="status-indicator-dot closed"></span> Fully Subscribed
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Active Filter Summary Pill -->
+                    <div class="active-filter-summary-wrap d-none d-md-block text-end">
+                        <span class="summary-label text-muted d-block" style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px;">Active Filter</span>
+                        <span class="summary-value fw-semibold text-dark" id="activeFilterSummary" style="font-size: 13px;">All Sectors · All Status</span>
                     </div>
                 </div>
             </div>
@@ -506,64 +569,166 @@ include_once ROOT_PATH . 'header.php';
     </div>
 </section>
 
-<?php include_once ROOT_PATH . 'footer.php'; ?>
-
-<!-- Interactive Sector & Status Filter Script -->
+<!-- Interactive Sector & Status Filter Script (Runs before footer scripts) -->
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        let selectedSector = 'all';
-        let selectedStatus = 'all';
+    (function() {
+        function initOfferingsFilter() {
+            let selectedSector = 'all';
+            let selectedStatus = 'all';
 
-        const sectorBtns = document.querySelectorAll('#sectorFilters .filter-pill-btn');
-        const statusBtns = document.querySelectorAll('#statusFilters .filter-pill-btn');
-        const items = document.querySelectorAll('.offering-item');
-        const emptyMsg = document.getElementById('noOfferingsMsg');
-        const resetBtn = document.getElementById('resetFiltersBtn');
+            const sectorBtns = document.querySelectorAll('#sectorFilters .filter-pill-btn');
+            const statusBtns = document.querySelectorAll('#statusFilters .filter-pill-btn');
+            const items = document.querySelectorAll('.offering-item');
+            const emptyMsg = document.getElementById('noOfferingsMsg');
+            const resetBtn = document.getElementById('resetFiltersBtn');
+            const barResetBtn = document.getElementById('filterBarResetBtn');
+            const countEl = document.getElementById('visibleOfferingsCount');
+            const summaryEl = document.getElementById('activeFilterSummary');
 
-        function applyFilters() {
-            let visibleCount = 0;
-            items.forEach(item => {
-                const matchSector = (selectedSector === 'all' || item.dataset.sector === selectedSector);
-                const matchStatus = (selectedStatus === 'all' || item.dataset.status === selectedStatus);
-                if (matchSector && matchStatus) {
-                    item.classList.remove('d-none');
-                    visibleCount++;
-                } else {
-                    item.classList.add('d-none');
+            if (!items.length) return;
+
+            function updateSummary() {
+                let activeSectorText = 'All Sectors';
+                let activeStatusText = 'All Status';
+                
+                const activeSectorBtn = document.querySelector('#sectorFilters .filter-pill-btn.active');
+                if (activeSectorBtn) activeSectorText = activeSectorBtn.textContent.trim();
+                
+                const activeStatusBtn = document.querySelector('#statusFilters .filter-pill-btn.active');
+                if (activeStatusBtn) activeStatusText = activeStatusBtn.textContent.trim();
+                
+                if (summaryEl) {
+                    summaryEl.textContent = `${activeSectorText} · ${activeStatusText}`;
                 }
-            });
 
-            if (emptyMsg) {
-                emptyMsg.classList.toggle('d-none', visibleCount > 0);
+                if (barResetBtn) {
+                    const isFiltered = (selectedSector !== 'all' || selectedStatus !== 'all');
+                    if (isFiltered) {
+                        barResetBtn.style.borderColor = 'var(--green)';
+                        barResetBtn.style.color = 'var(--green)';
+                        barResetBtn.style.background = 'rgba(15, 157, 88, 0.08)';
+                        barResetBtn.style.fontWeight = '600';
+                    } else {
+                        barResetBtn.style.borderColor = '#DCE4DF';
+                        barResetBtn.style.color = '#4B5563';
+                        barResetBtn.style.background = '#FFFFFF';
+                        barResetBtn.style.fontWeight = '500';
+                    }
+                }
             }
-        }
 
-        sectorBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                sectorBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                selectedSector = btn.dataset.sector;
-                applyFilters();
+            function applyFilters() {
+                let visibleCount = 0;
+                items.forEach(item => {
+                    const itemSector = item.getAttribute('data-sector') || '';
+                    const itemStatus = item.getAttribute('data-status') || '';
+                    
+                    const matchSector = (selectedSector === 'all' || itemSector === selectedSector);
+                    const matchStatus = (selectedStatus === 'all' || itemStatus === selectedStatus);
+
+                    if (matchSector && matchStatus) {
+                        item.classList.remove('d-none');
+                        item.classList.add('aos-animate');
+                        item.style.display = '';
+                        item.style.opacity = '1';
+                        item.style.transform = 'none';
+                        item.style.visibility = 'visible';
+                        visibleCount++;
+                    } else {
+                        item.classList.add('d-none');
+                        item.style.display = 'none';
+                    }
+                });
+
+                if (countEl) {
+                    countEl.textContent = visibleCount;
+                }
+
+                if (emptyMsg) {
+                    emptyMsg.classList.toggle('d-none', visibleCount > 0);
+                }
+
+                updateSummary();
+
+                if (window.AOS && typeof window.AOS.refresh === 'function') {
+                    window.AOS.refresh();
+                }
+            }
+
+            // Click Sector button
+            sectorBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    sectorBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    selectedSector = btn.getAttribute('data-sector') || 'all';
+
+                    // If a specific sector is selected, verify it matches currently selected status.
+                    // If no offering matches this combination (e.g. E-Commerce is 'closed' while Status was 'open'),
+                    // auto-reset status to 'all' so the user's selected sector is NEVER hidden!
+                    if (selectedSector !== 'all' && selectedStatus !== 'all') {
+                        const hasMatch = Array.from(items).some(item => {
+                            const isSector = (item.getAttribute('data-sector') === selectedSector);
+                            const isStatus = (item.getAttribute('data-status') === selectedStatus);
+                            return isSector && isStatus;
+                        });
+                        if (!hasMatch) {
+                            selectedStatus = 'all';
+                            statusBtns.forEach(b => b.classList.toggle('active', (b.getAttribute('data-status') === 'all')));
+                        }
+                    }
+
+                    applyFilters();
+                });
             });
-        });
 
-        statusBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                statusBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                selectedStatus = btn.dataset.status;
-                applyFilters();
+            // Click Status button
+            statusBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    statusBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    selectedStatus = btn.getAttribute('data-status') || 'all';
+
+                    // If a specific status is selected, verify it matches currently selected sector.
+                    // If no offering matches this combination, auto-reset sector to 'all'.
+                    if (selectedStatus !== 'all' && selectedSector !== 'all') {
+                        const hasMatch = Array.from(items).some(item => {
+                            const isSector = (item.getAttribute('data-sector') === selectedSector);
+                            const isStatus = (item.getAttribute('data-status') === selectedStatus);
+                            return isSector && isStatus;
+                        });
+                        if (!hasMatch) {
+                            selectedSector = 'all';
+                            sectorBtns.forEach(b => b.classList.toggle('active', (b.getAttribute('data-sector') === 'all')));
+                        }
+                    }
+
+                    applyFilters();
+                });
             });
-        });
 
-        if (resetBtn) {
-            resetBtn.addEventListener('click', () => {
+            function resetAll() {
                 selectedSector = 'all';
                 selectedStatus = 'all';
-                sectorBtns.forEach(b => b.classList.toggle('active', b.dataset.sector === 'all'));
-                statusBtns.forEach(b => b.classList.toggle('active', b.dataset.status === 'all'));
+                sectorBtns.forEach(b => b.classList.toggle('active', (b.getAttribute('data-sector') === 'all')));
+                statusBtns.forEach(b => b.classList.toggle('active', (b.getAttribute('data-status') === 'all')));
                 applyFilters();
-            });
+            }
+
+            if (resetBtn) resetBtn.addEventListener('click', resetAll);
+            if (barResetBtn) barResetBtn.addEventListener('click', resetAll);
+
+            // Initial calculation
+            applyFilters();
         }
-    });
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initOfferingsFilter);
+        } else {
+            initOfferingsFilter();
+        }
+    })();
 </script>
+
+<?php include_once ROOT_PATH . 'footer.php'; ?>

@@ -1,0 +1,14 @@
+<?php
+/**
+ * Crown Asia - Admin Portal Entry Resolver
+ * Redirects to dashboard if authenticated, or login page if unauthenticated.
+ */
+session_start();
+
+if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true) {
+    header("Location: dashboard.php");
+    exit;
+} else {
+    header("Location: login.php");
+    exit;
+}

@@ -95,7 +95,7 @@ $sectors = [
                     </span>
 
                     <h1 class="inner-hero-title">
-                        Eight Strategic <br><span class="accent">Operating Divisions</span>
+                        Strategic <br><span class="accent">Operating Divisions</span>
                     </h1>
                     <p class="inner-hero-lead mb-4">
                         Crown Asia LLC mitigates cyclical volatility through non-correlated operational diversification across real assets, financial liquidity, digital technologies, and global trade.
