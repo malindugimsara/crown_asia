@@ -33,7 +33,7 @@ include_once ROOT_PATH . 'header.php';
                 <div class="col-lg-5" data-aos="fade-left">
                     <div class="sector-hero-visual">
                         <div class="hero-image-frame">
-                            <img src="<?= $base_url ?>assets/images/import_export.webp" alt="Crown Asia International Import and Export Logistics Hub" class="img-fluid">
+                            <img src="<?= $base_url ?>assets/images/hero/import_export.webp" alt="Crown Asia International Import and Export Logistics Hub" class="img-fluid" width="1024" height="768">
                             <div class="hero-live-pill">
                                 <span class="live-dot pulse"></span>
                                 <span>Global Trade &amp; Export Desk Active</span>
@@ -343,7 +343,7 @@ include_once ROOT_PATH . 'header.php';
                 <div class="col-lg-4 col-md-6" data-aos="fade-up">
                     <article class="article-card">
                         <div class="article-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Value-Added Spices and Agricultural Exports">
+                            <img src="<?= $base_url ?>assets/images/common/cargo-logistics.webp" alt="Value-Added Spices and Agricultural Exports" width="800" height="500" loading="lazy">
                         </div>
                         <div class="article-body">
                             <span class="article-category">Industry Insights</span>
@@ -357,7 +357,7 @@ include_once ROOT_PATH . 'header.php';
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="80">
                     <article class="article-card">
                         <div class="article-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Evaluating Investment Opportunities">
+                            <img src="<?= $base_url ?>assets/images/blog/blog-1.webp" alt="Evaluating Investment Opportunities" width="800" height="500" loading="lazy">
                         </div>
                         <div class="article-body">
                             <span class="article-category">Investor Education</span>
@@ -371,7 +371,7 @@ include_once ROOT_PATH . 'header.php';
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="160">
                     <article class="article-card">
                         <div class="article-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1621416894569-0f39ed31d247?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="USDT Deposits and Withdrawals">
+                            <img src="<?= $base_url ?>assets/images/blog/blog-2.webp" alt="USDT Deposits and Withdrawals" width="800" height="500" loading="lazy">
                         </div>
                         <div class="article-body">
                             <span class="article-category">Platform Guide</span>

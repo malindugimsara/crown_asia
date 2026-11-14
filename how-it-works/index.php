@@ -36,7 +36,7 @@ include_once ROOT_PATH . 'header.php';
                 <div class="col-lg-5" data-aos="fade-left">
                     <div class="sector-hero-visual">
                         <div class="hero-image-frame">
-                            <img src="<?= $base_url ?>assets/images/how-it-works-hero.webp" alt="Crown Asia Investor Journey &amp; Portal Execution" class="img-fluid">
+                            <img src="<?= $base_url ?>assets/images/hero/how-it-works-hero.webp" alt="Crown Asia Investor Journey &amp; Portal Execution" class="img-fluid" width="1024" height="768">
                             <div class="hero-live-pill">
                                 <span class="live-dot pulse"></span>
                                 <span>Verified USDT Portal Active</span>

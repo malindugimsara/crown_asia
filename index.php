@@ -30,7 +30,7 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
                     <div class="hero-logo-wrap">
                         <div class="hero-logo-ring"></div>
                         <div class="hero-logo-glow"></div>
-                        <img src="<?= $base_url ?>assets/images/logo.png" alt="Crown Asia logo">
+                        <img src="<?= $base_url ?>assets/images/logo/logo.png" alt="Crown Asia logo">
                     </div>
                 </div>
             </div>
@@ -139,7 +139,7 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
                 <div class="col-lg-4 col-md-6" data-aos="fade-up">
                     <div class="offering-card">
                         <div class="offering-badge-wrap">
-                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Priority Real Estate Development Fund">
+                            <img src="<?= $base_url ?>assets/images/offerings/real-estate-pool.webp" alt="Priority Real Estate Development Fund" width="900" height="600" loading="lazy">
                             <span class="offering-status-tag"><i class="bi bi-circle-fill me-1" style="font-size: 7px;"></i> Open for Allocation</span>
                             <span class="offering-sector-tag">Real Estate</span>
                         </div>
@@ -175,7 +175,7 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="80">
                     <div class="offering-card">
                         <div class="offering-badge-wrap">
-                            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="G10 Quantitative Liquidity Strategy">
+                            <img src="<?= $base_url ?>assets/images/offerings/forex-liquidity.webp" alt="G10 Quantitative Liquidity Strategy" width="900" height="600" loading="lazy">
                             <span class="offering-status-tag"><i class="bi bi-circle-fill me-1" style="font-size: 7px;"></i> Open for Allocation</span>
                             <span class="offering-sector-tag">Forex Trading</span>
                         </div>
@@ -211,7 +211,7 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="160">
                     <div class="offering-card">
                         <div class="offering-badge-wrap">
-                            <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Agro-Processing & Export Facility">
+                            <img src="<?= $base_url ?>assets/images/offerings/plantation-export.webp" alt="Agro-Processing & Export Facility" width="900" height="600" loading="lazy">
                             <span class="offering-status-tag"><i class="bi bi-circle-fill me-1" style="font-size: 7px;"></i> Open for Allocation</span>
                             <span class="offering-sector-tag">Agriculture &amp; Trade</span>
                         </div>
@@ -364,7 +364,7 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
                                         </div>
                                         <div class="project-img">
                                             <a href="<?= $base_url ?>industries/forex-trading/">
-                                                <img src="<?= $base_url ?>assets/images/forex-hero.webp" alt="Forex Trading">
+                                                <img src="<?= $base_url ?>assets/images/hero/forex-hero.webp" alt="Forex Trading" width="800" height="500" loading="lazy">
                                             </a>
                                         </div>
                                     </div>
@@ -385,7 +385,7 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
                                         </div>
                                         <div class="project-img">
                                             <a href="<?= $base_url ?>industries/real-estate/">
-                                                <img src="<?= $base_url ?>assets/images/real-state.webp" alt="Real Estate Investment">
+                                                <img src="<?= $base_url ?>assets/images/hero/real-state.webp" alt="Real Estate Investment" width="800" height="500" loading="lazy">
                                             </a>
                                         </div>
                                     </div>
@@ -406,7 +406,7 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
                                         </div>
                                         <div class="project-img">
                                             <a href="<?= $base_url ?>industries/research-and-development/">
-                                                <img src="<?= $base_url ?>assets/images/rd.webp" alt="Research and Development">
+                                                <img src="<?= $base_url ?>assets/images/hero/rd.webp" alt="Research and Development" width="800" height="500" loading="lazy">
                                             </a>
                                         </div>
                                     </div>
@@ -427,7 +427,7 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
                                         </div>
                                         <div class="project-img">
                                             <a href="<?= $base_url ?>industries/technology-and-communications/">
-                                                <img src="<?= $base_url ?>assets/images/technology.webp" alt="Technology and Communications">
+                                                <img src="<?= $base_url ?>assets/images/hero/technology.webp" alt="Technology and Communications" width="800" height="500" loading="lazy">
                                             </a>
                                         </div>
                                     </div>
@@ -448,7 +448,7 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
                                         </div>
                                         <div class="project-img">
                                             <a href="<?= $base_url ?>industries/import-export/">
-                                                <img src="<?= $base_url ?>assets/images/import_export.webp" alt="Trading, Import and Export">
+                                                <img src="<?= $base_url ?>assets/images/hero/import_export.webp" alt="Trading, Import and Export" width="800" height="500" loading="lazy">
                                             </a>
                                         </div>
                                     </div>
@@ -469,7 +469,7 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
                                         </div>
                                         <div class="project-img">
                                             <a href="<?= $base_url ?>industries/ecommerce/">
-                                                <img src="<?= $base_url ?>assets/images/ecom.webp" alt="E-Commerce">
+                                                <img src="<?= $base_url ?>assets/images/hero/ecom.webp" alt="E-Commerce" width="800" height="500" loading="lazy">
                                             </a>
                                         </div>
                                     </div>
@@ -490,7 +490,7 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
                                         </div>
                                         <div class="project-img">
                                             <a href="<?= $base_url ?>industries/gems-and-gemstones/">
-                                                <img src="<?= $base_url ?>assets/images/gem.webp" alt="Gems and Gemstones">
+                                                <img src="<?= $base_url ?>assets/images/hero/gem.webp" alt="Gems and Gemstones" width="800" height="500" loading="lazy">
                                             </a>
                                         </div>
                                     </div>
@@ -511,7 +511,7 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
                                         </div>
                                         <div class="project-img">
                                             <a href="<?= $base_url ?>industries/agriculture-and-plantation/">
-                                                <img src="<?= $base_url ?>assets/images/agriculture.webp" alt="Agriculture and Plantation">
+                                                <img src="<?= $base_url ?>assets/images/hero/agriculture.webp" alt="Agriculture and Plantation">
                                             </a>
                                         </div>
                                     </div>
@@ -535,7 +535,7 @@ $portal_register_url = $portal_register_url ?? 'https://portal.crownasia.io/regi
                     <div class="about-visual-wrap">
                         <div class="about-visual">
                             <div class="about-visual-inner">
-                                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Crown Asia Head Office">
+                                <img src="<?= $base_url ?>assets/images/common/head-office.webp" alt="Crown Asia Head Office" width="1200" height="800" loading="lazy">
                                 <div class="about-visual-overlay"></div>
                             </div>
                             <div class="about-frame"></div>

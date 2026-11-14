@@ -33,7 +33,7 @@ include_once ROOT_PATH . 'header.php';
                 <div class="col-lg-5" data-aos="fade-left">
                     <div class="sector-hero-visual">
                         <div class="hero-image-frame">
-                            <img src="<?= $base_url ?>assets/images/real-state.webp" alt="Crown Asia Real Estate Investment Desk" class="img-fluid">
+                            <img src="<?= $base_url ?>assets/images/hero/real-state.webp" alt="Crown Asia Real Estate Investment Desk" class="img-fluid" width="1024" height="768">
                             <div class="hero-live-pill">
                                 <span class="live-dot pulse"></span>
                                 <span>Global Property Syndications Active</span>
@@ -350,7 +350,7 @@ include_once ROOT_PATH . 'header.php';
                 <div class="col-lg-4 col-md-6" data-aos="fade-up">
                     <article class="article-card">
                         <div class="article-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Commercial vs Residential Real Estate">
+                            <img src="<?= $base_url ?>assets/images/common/property-development.webp" alt="Commercial vs Residential Real Estate" width="800" height="500" loading="lazy">
                         </div>
                         <div class="article-body">
                             <span class="article-category">Real Estate Guide</span>
@@ -364,7 +364,7 @@ include_once ROOT_PATH . 'header.php';
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="80">
                     <article class="article-card">
                         <div class="article-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Dubai & Cross-Border Property Investment">
+                            <img src="<?= $base_url ?>assets/images/common/luxury-property.webp" alt="Dubai & Cross-Border Property Investment" width="800" height="500" loading="lazy">
                         </div>
                         <div class="article-body">
                             <span class="article-category">Market Research</span>
@@ -378,7 +378,7 @@ include_once ROOT_PATH . 'header.php';
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="160">
                     <article class="article-card">
                         <div class="article-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1621416894569-0f39ed31d247?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="USDT Property Funding">
+                            <img src="<?= $base_url ?>assets/images/blog/blog-2.webp" alt="USDT Property Funding" width="800" height="500" loading="lazy">
                         </div>
                         <div class="article-body">
                             <span class="article-category">Platform Guide</span>

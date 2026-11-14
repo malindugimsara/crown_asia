@@ -37,7 +37,7 @@ include_once ROOT_PATH . 'header.php';
                 <div class="col-lg-5" data-aos="fade-left">
                     <div class="sector-hero-visual">
                         <div class="hero-image-frame">
-                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Crown Asia Global Headquarters" class="img-fluid">
+                            <img src="<?= $base_url ?>assets/images/common/head-office.webp" alt="Crown Asia Global Headquarters" class="img-fluid" width="1200" height="800" loading="lazy">
                             <div class="hero-live-pill">
                                 <span class="live-dot pulse"></span>
                                 <span>Active &amp; Compliant US Corporation</span>
@@ -100,7 +100,7 @@ include_once ROOT_PATH . 'header.php';
                 <!-- Left Visual with Floating Frosted Progress Card -->
                 <div class="col-lg-5" data-aos="fade-right">
                     <div class="vm-visual-wrapper">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Crown Asia Strategic Business Leaders" class="vm-main-img">
+                        <img src="<?= $base_url ?>assets/images/common/leadership-team.webp" alt="Crown Asia Strategic Business Leaders" class="vm-main-img" width="1200" height="800" loading="lazy">
                         
                         <!-- Floating Glass Business Progress Card -->
                         <div class="biz-progress-card">
@@ -596,7 +596,7 @@ include_once ROOT_PATH . 'header.php';
                                         </div>
                                         <div class="project-img">
                                             <a href="<?= $base_url ?>industries/forex-trading/">
-                                                <img src="<?= $base_url ?>assets/images/forex-hero.webp" alt="Forex Trading">
+                                                <img src="<?= $base_url ?>assets/images/hero/forex-hero.webp" alt="Forex Trading" width="800" height="500" loading="lazy">
                                             </a>
                                         </div>
                                     </div>
@@ -617,7 +617,7 @@ include_once ROOT_PATH . 'header.php';
                                         </div>
                                         <div class="project-img">
                                             <a href="<?= $base_url ?>industries/real-estate/">
-                                                <img src="<?= $base_url ?>assets/images/real-state.webp" alt="Real Estate Investment">
+                                                <img src="<?= $base_url ?>assets/images/hero/real-state.webp" alt="Real Estate Investment" width="800" height="500" loading="lazy">
                                             </a>
                                         </div>
                                     </div>
@@ -638,7 +638,7 @@ include_once ROOT_PATH . 'header.php';
                                         </div>
                                         <div class="project-img">
                                             <a href="<?= $base_url ?>industries/research-and-development/">
-                                                <img src="<?= $base_url ?>assets/images/rd.webp" alt="Research and Development">
+                                                <img src="<?= $base_url ?>assets/images/hero/rd.webp" alt="Research and Development" width="800" height="500" loading="lazy">
                                             </a>
                                         </div>
                                     </div>
@@ -659,7 +659,7 @@ include_once ROOT_PATH . 'header.php';
                                         </div>
                                         <div class="project-img">
                                             <a href="<?= $base_url ?>industries/technology-and-communications/">
-                                                <img src="<?= $base_url ?>assets/images/technology.webp" alt="Technology and Communications">
+                                                <img src="<?= $base_url ?>assets/images/hero/technology.webp" alt="Technology and Communications" width="800" height="500" loading="lazy">
                                             </a>
                                         </div>
                                     </div>
@@ -680,7 +680,7 @@ include_once ROOT_PATH . 'header.php';
                                         </div>
                                         <div class="project-img">
                                             <a href="<?= $base_url ?>industries/import-export/">
-                                                <img src="<?= $base_url ?>assets/images/import_export.webp" alt="Trading, Import and Export">
+                                                <img src="<?= $base_url ?>assets/images/hero/import_export.webp" alt="Trading, Import and Export" width="800" height="500" loading="lazy">
                                             </a>
                                         </div>
                                     </div>
@@ -701,7 +701,7 @@ include_once ROOT_PATH . 'header.php';
                                         </div>
                                         <div class="project-img">
                                             <a href="<?= $base_url ?>industries/ecommerce/">
-                                                <img src="<?= $base_url ?>assets/images/ecom.webp" alt="E-Commerce">
+                                                <img src="<?= $base_url ?>assets/images/hero/ecom.webp" alt="E-Commerce" width="800" height="500" loading="lazy">
                                             </a>
                                         </div>
                                     </div>
@@ -722,7 +722,7 @@ include_once ROOT_PATH . 'header.php';
                                         </div>
                                         <div class="project-img">
                                             <a href="<?= $base_url ?>industries/gems-and-gemstones/">
-                                                <img src="<?= $base_url ?>assets/images/gem.webp" alt="Gems and Gemstones">
+                                                <img src="<?= $base_url ?>assets/images/hero/gem.webp" alt="Gems and Gemstones" width="800" height="500" loading="lazy">
                                             </a>
                                         </div>
                                     </div>
@@ -743,7 +743,7 @@ include_once ROOT_PATH . 'header.php';
                                         </div>
                                         <div class="project-img">
                                             <a href="<?= $base_url ?>industries/agriculture-and-plantation/">
-                                                <img src="<?= $base_url ?>assets/images/agriculture.webp" alt="Agriculture and Plantation">
+                                                <img src="<?= $base_url ?>assets/images/hero/agriculture.webp" alt="Agriculture and Plantation">
                                             </a>
                                         </div>
                                     </div>
