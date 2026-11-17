@@ -28,7 +28,7 @@ include_once ROOT_PATH . 'header.php';
 
                     <div class="d-flex flex-wrap gap-3">
                         <a href="#investor-journey" class="btn-green">Explore 5-Step Journey <i class="bi bi-arrow-down ms-1"></i></a>
-                        <a href="<?= $portal_register_url ?>" target="_blank" rel="noopener" class="btn-ghost">Open Investor Portal <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                        <a href="<?= $portal_login_url ?>" target="_blank" rel="noopener" class="btn-ghost">Open Investor Portal <i class="bi bi-box-arrow-up-right ms-1"></i></a>
                     </div>
                 </div>
 
@@ -91,7 +91,7 @@ include_once ROOT_PATH . 'header.php';
                                     <div class="small fw-bold text-dark mb-1">Before You Register</div>
                                     <p class="small text-muted mb-3">Confirm your country and investor classification meet our compliance standards.</p>
                                     <div class="d-flex flex-wrap gap-2">
-                                        <a href="<?= $portal_register_url ?>" target="_blank" rel="noopener" class="btn-green py-2 px-3" style="font-size: 11.5px;">Create Account</a>
+                                        <a href="https://crownasia.io/profile/sign-up.php?ref_code=CA000009" target="_blank" rel="noopener" class="btn-green py-2 px-3" style="font-size: 11.5px;">Create Account</a>
                                         <a href="<?= $base_url ?>legal/investor-eligibility/" class="btn btn-sm btn-outline-dark rounded-pill px-3">Eligibility Rules</a>
                                     </div>
                                 </div>
@@ -193,7 +193,7 @@ include_once ROOT_PATH . 'header.php';
                                 <div class="p-3 rounded-4 bg-light border text-start">
                                     <div class="small fw-bold text-dark mb-1">Existing Investor?</div>
                                     <p class="small text-muted mb-3">Sign in directly to view your active allocations and distribution statements.</p>
-                                    <a href="<?= $portal_login_url ?>" target="_blank" rel="noopener" class="btn btn-sm btn-dark rounded-pill px-4 py-2">
+                                    <a href="https://crownasia.io/profile" target="_blank" rel="noopener" class="btn btn-sm btn-dark rounded-pill px-4 py-2">
                                         Investor Login <i class="bi bi-box-arrow-up-right ms-1"></i>
                                     </a>
                                 </div>

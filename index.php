@@ -3,9 +3,9 @@ $page_title = "Crown Asia | Diversified Investment & Business Solutions";
 $page_desc  = "Crown Asia LLC - A diversified United States investment and business company operating across eight strategic sectors with transparent USDT funding.";
 include_once __DIR__ . '/header.php';
 
-// Portal URLs fallback
-$portal_login_url    = $portal_login_url ?? ($base_url . 'admin/login.php');
-$portal_register_url = $portal_register_url ?? ($base_url . 'contact/');
+// Portal URLs
+$portal_login_url    = $portal_login_url ?? 'https://crownasia.io/profile';
+$portal_register_url = $portal_register_url ?? 'https://crownasia.io/profile/sign-up.php?ref_code=CA000009';
 ?>
 
     <!-- 1. Hero Section with Updated Platform CTAs -->
@@ -275,7 +275,7 @@ $portal_register_url = $portal_register_url ?? ($base_url . 'contact/');
                                 <i class="bi bi-wallet2"></i>
                             </div>
                         </div>
-                        <h3 class="journey-card-title">FUND VIA<br>USDT NETWORK</h3>
+                        <h3 class="journey-card-title">FUND VIA<br>CRYPTO WALLET</h3>
                         <p class="journey-card-desc">
                             Deposit USDT securely using supported blockchain networks with automated on-chain confirmation tracking.
                         </p>
@@ -305,7 +305,7 @@ $portal_register_url = $portal_register_url ?? ($base_url . 'contact/');
                                 <i class="bi bi-graph-up-arrow"></i>
                             </div>
                         </div>
-                        <h3 class="journey-card-title">TRACK &amp;<br>WITHDRAW USDT</h3>
+                        <h3 class="journey-card-title">TRACK &amp;<br>WITHDRAW PROFIT</h3>
                         <p class="journey-card-desc">
                             Monitor performance milestones inside your dashboard and request USDT withdrawals upon distribution or redemption.
                         </p>

@@ -251,7 +251,7 @@ $grid_posts    = $articles; // Display all articles across categories
 
                     <div class="d-flex flex-wrap gap-3">
                         <a href="#articles-grid" class="btn-green">Browse Latest Articles <i class="bi bi-arrow-down ms-1"></i></a>
-                        <a href="<?= $portal_register_url ?>" target="_blank" rel="noopener" class="btn-ghost">Access Investor Portal <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                        <a href="<?= $portal_login_url ?>" target="_blank" rel="noopener" class="btn-ghost">Access Investor Portal <i class="bi bi-box-arrow-up-right ms-1"></i></a>
                     </div>
                 </div>
 
@@ -521,20 +521,7 @@ $grid_posts    = $articles; // Display all articles across categories
                                 </div>
                             </div>
 
-                            <!-- Newsletter Subscription Widget -->
-                            <div class="blog-widget widget-newsletter-box" data-aos="fade-up" data-aos-delay="250">
-                                <h4 class="blog-widget-title">Executive Newsletter</h4>
-                                <p>Get our monthly investment memorandum, macroeconomic briefings, and risk disclosures delivered to your inbox.</p>
-                                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Crown Asia Research Briefings.');">
-                                    <div class="mb-3">
-                                        <input type="email" class="form-control" placeholder="Your business email" required style="border-radius: 12px; font-size: 13.5px; padding: 12px 14px; border-color: #DCE4DE;">
-                                    </div>
-                                    <button type="submit" class="btn-green w-100" style="padding: 12px 20px;">
-                                        Subscribe to Research <i class="bi bi-send ms-1"></i>
-                                    </button>
-                                </form>
-                            </div>
-
+                           
                         </div>
                     </aside>
                 </div>

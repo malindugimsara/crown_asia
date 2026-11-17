@@ -60,12 +60,12 @@ $status = $_GET['status'] ?? '';
         <div class="row g-4">
             <!-- Box 1: Headquarters -->
             <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="50">
-                <div class="contact-grid-card">
+                <div class="contact-grid-card text-center">
                     <div class="contact-grid-icon">
                         <i class="bi bi-geo-alt-fill"></i>
                     </div>
                     <h3 class="contact-grid-title">Headquarters</h3>
-                    <p class="contact-grid-text">
+                    <p class="contact-grid-text text-center">
                         10242 Coors Bypass Blvd. N.W.<br>
                         Albuquerque, NM 87114<br>
                         <strong>United States</strong>
@@ -82,8 +82,7 @@ $status = $_GET['status'] ?? '';
                     <h3 class="contact-grid-title">Email Desks</h3>
                     <ul class="contact-grid-list">
                         <li><a href="mailto:info@crownasia.io"><i class="bi bi-arrow-right-short text-success"></i>info@crownasia.io</a></li>
-                        <li><a href="mailto:investors@crownasia.io"><i class="bi bi-arrow-right-short text-success"></i>investors@crownasia.io</a></li>
-                        <li><a href="mailto:partnerships@crownasia.io"><i class="bi bi-arrow-right-short text-success"></i>partnerships@crownasia.io</a></li>
+                        <li><a href="mailto:support@crownasia.io"><i class="bi bi-arrow-right-short text-success"></i>support@crownasia.io</a></li>
                     </ul>
                 </div>
             </div>
@@ -95,7 +94,7 @@ $status = $_GET['status'] ?? '';
                         <i class="bi bi-clock-history"></i>
                     </div>
                     <h3 class="contact-grid-title">Hours &amp; Windows</h3>
-                    <p class="contact-grid-text">
+                    <p class="contact-grid-text text-center">
                         <strong>Mon – Fri:</strong> 9:00 AM – 6:00 PM MST<br>
                         <span class="text-success fw-semibold"><i class="bi bi-lightning-charge-fill me-1"></i>24/7 Portal Ticket Monitoring</span><br>
                         <span class="small text-muted">Avg response within 24 business hrs</span>
@@ -110,7 +109,7 @@ $status = $_GET['status'] ?? '';
                         <i class="bi bi-shield-lock-fill"></i>
                     </div>
                     <h3 class="contact-grid-title">Investor Priority</h3>
-                    <p class="contact-grid-text mb-3">
+                    <p class="contact-grid-text text-center mb-3">
                         Direct ticket escalation for KYC, offering memorandums, and USDT deposit confirmations.
                     </p>
                     <a href="<?= $portal_login_url ?>" class="btn-green py-1 px-3 mt-auto" style="font-size: 12px;">

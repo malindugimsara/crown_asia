@@ -1241,6 +1241,11 @@ img { max-width: 100%; }
     color: var(--text-muted);
     line-height: 1.6;
     margin-bottom: 0;
+    text-align: center;
+}
+
+.contact-grid-card p {
+    text-align: center;
 }
 
 .contact-grid-list {
@@ -5547,3 +5552,316 @@ img { max-width: 100%; }
         text-align: center;
     }
 }
+
+/* ---------- Forex Institutional Analytics Dashboard Section ---------- */
+.fx-analytics-section {
+    position: relative;
+    padding: 100px 0;
+    background: #060B08;
+    overflow: hidden;
+}
+
+.fx-analytics-bg {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(29, 185, 84, 0.09) 0%, transparent 42%),
+        radial-gradient(circle at 90% 70%, rgba(15, 157, 88, 0.07) 0%, transparent 45%),
+        linear-gradient(to right, rgba(29, 185, 84, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(29, 185, 84, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 50px 50px, 50px 50px;
+    pointer-events: none;
+}
+
+.fx-kpi-card {
+    background: rgba(14, 22, 17, 0.75);
+    border: 1px solid rgba(29, 185, 84, 0.22);
+    border-radius: 16px;
+    padding: 22px 24px;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fx-kpi-card:hover {
+    border-color: rgba(29, 185, 84, 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45);
+}
+
+.fx-kpi-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: rgba(255, 255, 255, 0.65);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.fx-kpi-value {
+    font-size: 32px;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.fx-kpi-badge {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--green-bright);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.fx-terminal-card {
+    background: rgba(13, 20, 16, 0.85);
+    border: 1px solid rgba(29, 185, 84, 0.24);
+    border-radius: 22px;
+    padding: 30px;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.fx-terminal-card:hover {
+    border-color: rgba(29, 185, 84, 0.45);
+}
+
+.fx-chart-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.fx-chart-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 4px;
+}
+
+.fx-chart-subtitle {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0;
+}
+
+.fx-timeframe-group {
+    display: inline-flex;
+    background: rgba(6, 12, 9, 0.8);
+    border: 1px solid rgba(29, 185, 84, 0.28);
+    border-radius: 30px;
+    padding: 3px;
+}
+
+.fx-timeframe-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.fx-timeframe-btn:hover {
+    color: #FFFFFF;
+}
+
+.fx-timeframe-btn.active {
+    background: var(--green);
+    color: #FFFFFF;
+    box-shadow: 0 2px 10px rgba(29, 185, 84, 0.35);
+}
+
+.fx-chart-canvas-wrap {
+    position: relative;
+    width: 100%;
+    min-height: 290px;
+    flex-grow: 1;
+}
+
+.fx-chart-footer-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 768px) {
+    .fx-chart-footer-metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.fx-chart-metric-item {
+    text-align: center;
+}
+
+.fx-chart-metric-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.fx-chart-metric-val {
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+/* Doughnut Center Badge */
+.fx-doughnut-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+}
+
+.fx-doughnut-center-num {
+    font-size: 26px;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.1;
+    font-family: 'Poppins', sans-serif;
+}
+
+.fx-doughnut-center-lbl {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--green-bright);
+    letter-spacing: 0.8px;
+    font-weight: 700;
+}
+
+/* Currency List in Doughnut Card */
+.fx-currency-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+.fx-currency-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 12px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    margin-bottom: 6px;
+    font-size: 12.5px;
+    transition: background 0.2s ease;
+}
+
+.fx-currency-item:hover {
+    background: rgba(29, 185, 84, 0.08);
+}
+
+.fx-currency-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.fx-currency-name {
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.fx-currency-pct {
+    color: var(--green-bright);
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: 12px;
+}
+
+.fx-currency-spread {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+/* Session timeline badges */
+.fx-session-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.fx-session-pill {
+    font-size: 11.5px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.fx-session-pill.highlight {
+    background: rgba(29, 185, 84, 0.15);
+    border-color: rgba(29, 185, 84, 0.45);
+    color: var(--green-bright);
+    font-weight: 600;
+}
+
+/* Risk Comparison Matrix Items */
+.fx-compare-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 12.5px;
+}
+
+.fx-compare-label {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+.fx-compare-crown {
+    color: var(--green-bright);
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.fx-compare-retail {
+    color: #EF4444;
+    font-weight: 600;
+    text-decoration: line-through;
+    opacity: 0.85;
+}
+

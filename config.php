@@ -22,6 +22,6 @@ if (!isset($base_url)) {
     }
 }
 
-$portal_login_url    = $portal_login_url ?? ($base_url . 'admin/login.php');
-$portal_register_url = $portal_register_url ?? ($base_url . 'contact/');
+$portal_login_url    = 'https://crownasia.io/profile';
+$portal_register_url = 'https://crownasia.io/profile/sign-up.php?ref_code=CA000009';
 

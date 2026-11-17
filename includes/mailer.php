@@ -201,7 +201,7 @@ HTML;
         $sector   = htmlspecialchars($data['sector'] ?? 'Corporate Group');
         $datetime = date('F j, Y');
 
-        $portalUrl     = 'https://portal.crownasia.io';
+        $portalUrl     = 'https://crownasia.io/profile';
         $siteUrl       = 'https://crownasia.io';
         $opportunities = 'https://crownasia.io/investment-opportunities/';
 

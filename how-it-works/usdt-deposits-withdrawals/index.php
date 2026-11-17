@@ -26,7 +26,7 @@ include_once ROOT_PATH . 'header.php';
                     </p>
 
                     <div class="d-flex flex-wrap gap-3">
-                        <a href="<?= $portal_login_url ?>" target="_blank" rel="noopener" class="btn-green">Open Investor Portal <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                        <a href="https://crownasia.io/profile" target="_blank" rel="noopener" class="btn-green">Open Investor Portal <i class="bi bi-box-arrow-up-right ms-1"></i></a>
                         <a href="#fees-limits" class="btn-ghost">Fees &amp; Limits</a>
                     </div>
                 </div>
@@ -128,7 +128,7 @@ include_once ROOT_PATH . 'header.php';
                             <div class="step-circle-badge">1</div>
                             <div>
                                 <h6 class="fw-bold text-dark mb-1">Sign In &amp; Open Wallet Deposit</h6>
-                                <p class="small text-muted mb-0">Log in to the <a href="<?= $portal_login_url ?>" target="_blank" rel="noopener" class="text-success fw-semibold">Investor Portal</a> (ensure KYC verification is approved) and select <strong>Deposit USDT</strong>.</p>
+                                <p class="small text-muted mb-0">Log in to the <a href="https://crownasia.io/profile" target="_blank" rel="noopener" class="text-success fw-semibold">Investor Portal</a> (ensure KYC verification is approved) and select <strong>Deposit USDT</strong>.</p>
                             </div>
                         </div>
 
@@ -332,7 +332,7 @@ include_once ROOT_PATH . 'header.php';
                 <h2>Manage Your USDT <span>In the Investor Portal</span></h2>
                 <p>Sign in to access your verified deposit addresses, track on-chain confirmations, allocate into offerings, or request withdrawals.</p>
                 <div class="d-flex flex-wrap justify-content-center gap-3">
-                    <a href="<?= $portal_login_url ?>" target="_blank" rel="noopener" class="cta-btn-primary">
+                    <a href="https://crownasia.io/profile" target="_blank" rel="noopener" class="cta-btn-primary">
                         <i class="bi bi-box-arrow-in-right me-1"></i> Open Investor Portal
                     </a>
                     <a href="<?= $base_url ?>contact/" class="cta-btn-secondary">

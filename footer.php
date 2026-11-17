@@ -2,7 +2,7 @@
 require_once __DIR__ . '/config.php';
 
 $portal_login_url    = "https://crownasia.io/profile";
-$portal_register_url = "https://crownasia.io/profile/sign-up.php?ref_code=CA000009"
+$portal_register_url = "https://crownasia.io/profile/sign-up.php?ref_code=CA000009";
 ?>
 
 <footer class="footer-modern">
