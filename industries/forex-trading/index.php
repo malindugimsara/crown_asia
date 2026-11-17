@@ -353,15 +353,20 @@ include_once ROOT_PATH . 'header.php';
 
             <!-- Dashboard Bottom Action -->
             <div class="text-center mt-5" data-aos="fade-up">
-                <a href="<?= $portal_login_url ?>" target="_blank" rel="noopener" class="btn-green px-4 py-3">
-                    Access Institutional Investor Portal <i class="bi bi-box-arrow-up-right ms-1"></i>
+                <a href="<?= $portal_register_url ?>" target="_blank" rel="noopener" class="btn-green px-5 py-3">
+                    Register Now <i class="bi bi-box-arrow-up-right ms-1"></i>
                 </a>
-                <span class="d-block small text-white-50 mt-2">
+                <span class="d-block small text-white-50 mt-4">
                     <i class="bi bi-lock-fill text-success me-1"></i> Verified investors can monitor real-time positions and daily audited statements inside the portal.
                 </span>
             </div>
         </div>
     </section>
+
+    <!-- Section Divider Line -->
+    <div class="fx-section-divider"></div>
+
+    <!-- Markets and Strategy Section -->
     <section class="strategy-section-dark" id="strategy">
         <div class="strategy-grid-bg"></div>
         <div class="strategy-glow-blob top-right"></div>
