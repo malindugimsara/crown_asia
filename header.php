@@ -102,8 +102,17 @@ $canonical_url = $canonical_url ?? ('https://crownasia.io' . $clean_uri);
 
   <!-- Site Preloader -->
   <div id="preloader">
-    <div class="preloader-ring">
-      <img src="<?= $base_url ?>assets/images/logo/logo.png" alt="Crown Asia" width="60" height="60">
+    <div class="preloader-inner">
+      <div class="preloader-logo-wrap">
+        <img src="<?= $base_url ?>assets/images/logo/logo.png" alt="Crown Asia" width="96" height="96">
+      </div>
+      <div class="preloader-brand">
+        <div class="preloader-title">CROWN ASIA</div>
+        <div class="preloader-sub">INTERNATIONAL</div>
+      </div>
+      <div class="preloader-bar-wrap">
+        <div class="preloader-bar"></div>
+      </div>
     </div>
   </div>
 

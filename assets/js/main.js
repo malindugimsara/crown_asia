@@ -8,11 +8,15 @@
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // 1. Preloader & AOS Initialization
-    window.addEventListener('load', () => {
+    function dismissPreloader() {
         const preloader = document.getElementById('preloader');
-        if (preloader) {
+        if (preloader && !preloader.classList.contains('hide')) {
             preloader.classList.add('hide');
         }
+    }
+
+    window.addEventListener('load', () => {
+        dismissPreloader();
         if (typeof AOS !== 'undefined') {
             AOS.init({
                 duration: reduceMotion ? 0 : 800,
@@ -21,6 +25,9 @@
             });
         }
     });
+
+    // Safety fallback: ensure preloader dismisses within 1.8s even if network assets lag
+    setTimeout(dismissPreloader, 1800);
 
     // 2. Navigation & Scroll Indicators
     const navbar = document.getElementById('mainNav');
