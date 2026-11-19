@@ -84,7 +84,7 @@ include_once ROOT_PATH . 'header.php';
                             Funding, distributions, and redemptions settled in Tether (USDT) involve digital asset and network risks:
                         </p>
                         <ul class="risk-protocols-list">
-                            <li><i class="bi bi-check-circle-fill"></i><span><strong>Irreversible Transactions:</strong> Blockchain transfers cannot be reversed once broadcast. Sending USDT to an incorrect address or unsupported network (e.g., mismatched TRC20/ERC20/BEP20) may result in permanent loss.</span></li>
+                            <li><i class="bi bi-check-circle-fill"></i><span><strong>Irreversible Transactions:</strong> Blockchain transfers cannot be reversed once broadcast. Sending USDT to an incorrect address or unsupported network will result in permanent loss.</span></li>
                             <li><i class="bi bi-check-circle-fill"></i><span><strong>Stablecoin &amp; Network Risk:</strong> Temporary stablecoin peg deviations, third-party wallet compromises, or blockchain network congestion can affect settlement timing.</span></li>
                             <li><i class="bi bi-check-circle-fill"></i><span><strong>Wallet Custody Responsibility:</strong> Participants are solely responsible for securing their external wallet private keys and verifying destination addresses before withdrawal.</span></li>
                         </ul>

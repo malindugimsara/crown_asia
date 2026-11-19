@@ -23,7 +23,7 @@ include_once ROOT_PATH . 'header.php';
 
                     <h1 class="inner-hero-title">How Investing Works on<br><span class="accent">Crown Asia</span></h1>
                     <p class="inner-hero-lead mb-4">
-                        Our public platform provides full visibility into our eight industries, offering terms, and risk disclosures. Account registration, identity verification, USDT funding, investment confirmations, and withdrawals take place securely inside the Crown Asia Investor Portal.
+                        Our public platform provides full visibility into our eight industries, corporate governance, and institutional Forex trading investment desk. Account registration, identity verification, USDT (TRC20) funding, strategy allocations, and withdrawals take place securely inside the Crown Asia Investor Portal.
                     </p>
 
                     <div class="d-flex flex-wrap gap-3">
@@ -143,24 +143,24 @@ include_once ROOT_PATH . 'header.php';
                                     <div class="journey-step-num">03</div>
                                     <div>
                                         <span class="portal-action-pill mb-2"><i class="bi bi-check2-square"></i> Executed in Investor Portal</span>
-                                        <h3 class="mb-1" style="font-size: 22px;">Choose and Confirm an Investment</h3>
+                                        <h3 class="mb-1" style="font-size: 22px;">Allocate into the Forex Trading Strategy</h3>
                                     </div>
                                 </div>
                                 <p class="about-copy mb-3">
-                                    Browse approved offerings across Real Estate, Forex Trading, Agriculture, Certified Gemstones, and Technology. Review the offering memorandum, minimum USDT requirement, term duration, fee structure, and sector risks—then enter your allocation amount in the Investor Portal and digitally confirm your subscription.
+                                    Review Crown Asia's Institutional Forex Trading Strategy, verified performance parameters, risk controls, and allocate via the Investor Portal. Check the offering memorandum, minimum 100 USDT requirement, monthly payout intervals, and fee structure—then enter your allocation amount in the Investor Portal and digitally confirm your participation.
                                 </p>
                                 <div class="d-flex flex-wrap gap-3 small text-muted">
-                                    <span><i class="bi bi-check-circle-fill text-success me-1"></i> Clear Minimums &amp; Term Lengths</span>
-                                    <span><i class="bi bi-check-circle-fill text-success me-1"></i> Digital Subscription Agreement</span>
-                                    <span><i class="bi bi-check-circle-fill text-success me-1"></i> Multi-Sector Diversification</span>
+                                    <span><i class="bi bi-check-circle-fill text-success me-1"></i> Clear 100 USDT Minimum</span>
+                                    <span><i class="bi bi-check-circle-fill text-success me-1"></i> Digital Participation Agreement</span>
+                                    <span><i class="bi bi-check-circle-fill text-success me-1"></i> Algorithmic Risk Management</span>
                                 </div>
                             </div>
                             <div class="col-lg-4 text-lg-end">
                                 <div class="p-3 rounded-4 bg-light border text-start">
-                                    <div class="small fw-bold text-dark mb-1">Explore Open Offerings</div>
-                                    <p class="small text-muted mb-3">Compare active and upcoming offerings across Crown Asia's eight industries.</p>
+                                    <div class="small fw-bold text-dark mb-1">Explore Forex Offering</div>
+                                    <p class="small text-muted mb-3">Review terms, liquidity specs, and risk parameters for our active Forex strategy.</p>
                                     <a href="<?= $base_url ?>investment-opportunities/" class="btn-green py-2 px-3" style="font-size: 11.5px;">
-                                        Browse Opportunities <i class="bi bi-arrow-right ms-1"></i>
+                                        Browse Forex Opportunity <i class="bi bi-arrow-right ms-1"></i>
                                     </a>
                                 </div>
                             </div>
@@ -298,7 +298,7 @@ include_once ROOT_PATH . 'header.php';
                             </h2>
                             <div id="howCol4" class="accordion-collapse collapse" aria-labelledby="howFaq4" data-bs-parent="#howItWorksFAQ">
                                 <div class="accordion-body">
-                                    Redemption rules depend on the specific offering structure. Real-asset offerings (such as real estate or plantation cycles) follow fixed maturity schedules, while certain liquidity offerings provide periodic redemption windows with advance notice. Always review the Redemption Terms section on the offering's detail page before confirming.
+                                    Our institutional Forex liquidity strategy provides regular monthly redemption windows with advance notice as outlined in the offering memorandum. Always review the Redemption Terms section on the offering's detail page before confirming.
                                 </div>
                             </div>
                         </div>

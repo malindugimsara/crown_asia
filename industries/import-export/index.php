@@ -26,7 +26,7 @@ include_once ROOT_PATH . 'header.php';
 
                     <div class="d-flex flex-wrap gap-3">
                         <a href="#activities" class="btn-green">Explore Trade Sectors</a>
-                        <a href="<?= $portal_login_url ?>" target="_blank" rel="noopener" class="btn-ghost">Investor Portal <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                        <a href="<?= $base_url ?>contact/" class="btn-ghost">Inquire with Division</a>
                     </div>
                 </div>
 
@@ -308,19 +308,19 @@ include_once ROOT_PATH . 'header.php';
                 </div>
             </div>
 
-            <!-- Risk Disclosure Callout Banner -->
+            <!-- Corporate Division Banner -->
             <div class="mt-4 p-4 rounded-4 bg-white border d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3" data-aos="fade-up">
                 <div class="d-flex align-items-center gap-3">
                     <div class="activity-icon mb-0 flex-shrink-0" style="width:48px;height:48px;font-size:20px;">
                         <i class="bi bi-shield-check"></i>
                     </div>
                     <div>
-                        <h5 class="mb-1 text-dark" style="font-size:16px;">Verified Risk Disclosures &amp; Investor Eligibility</h5>
-                        <p class="small text-muted mb-0">Prior to funding, participants must complete verification and review full offering memoranda[cite: 6, 17].</p>
+                        <h5 class="mb-1 text-dark" style="font-size:16px;">Corporate Import-Export Division</h5>
+                        <p class="small text-muted mb-0">Crown Asia manages global trade corridors and supply chains funded through internal group capital and commercial trade facilities.</p>
                     </div>
                 </div>
                 <div>
-                    <a href="<?= $base_url ?>legal/risk-disclosure/" class="btn-ghost text-nowrap">Read Risk Disclosure <i class="bi bi-arrow-right ms-1"></i></a>
+                    <a href="<?= $base_url ?>about/" class="btn-ghost text-nowrap">About Holding Group <i class="bi bi-arrow-right ms-1"></i></a>
                 </div>
             </div>
         </div>
@@ -476,7 +476,7 @@ include_once ROOT_PATH . 'header.php';
                             </h2>
                             <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#tradeFAQ">
                                 <div class="accordion-body">
-                                    Approved participants can log in to the <a href="<?= $portal_login_url ?>" target="_blank" rel="noopener" class="text-success fw-semibold text-decoration-underline">Crown Asia Investor Portal</a> to review active trade financing offerings, verified export contracts, and audited disclosures[cite: 6, 17].
+                                    Our cross-border commerce and logistics operations function strictly as an internal commercial trading division funded through group corporate capital. Public investor capital allocations are deployed exclusively into our Institutional Forex Trading operations.
                                 </div>
                             </div>
                         </div>
@@ -486,26 +486,26 @@ include_once ROOT_PATH . 'header.php';
         </div>
     </section>
 
-    <!-- Explore Investment Opportunities Final CTA -->
+    <!-- Corporate Commercial Division Final CTA -->
     <section class="cta-section">
         <div class="cta-glow-blob"></div>
         <div class="container" data-aos="zoom-in">
             <div class="cta-card-luxury">
-                <span class="topic-badge-pill mb-3">INVESTMENT ACCESS</span>
-                <h2>Explore Approved <span>Investment Opportunities</span></h2>
-                <p>Access transparent, asset-backed investment opportunities across our eight strategic business sectors with seamless USDT funding[cite: 17].</p>
+                <span class="topic-badge-pill mb-3">CORPORATE DIVISION</span>
+                <h2>Crown Asia <span>Global Trade &amp; Logistics</span></h2>
+                <p>This division operates as an internal commercial business unit of Crown Asia LLC. Capital investment opportunities on our investor portal are exclusively focused on our Institutional Forex Trading desks.</p>
                 <div class="d-flex flex-wrap justify-content-center gap-3">
-                    <a href="<?= $base_url ?>investment-opportunities/" class="cta-btn-primary">
-                        <i class="bi bi-grid-fill me-1"></i> Browse All Offerings
+                    <a href="<?= $base_url ?>industries/forex-trading/" class="cta-btn-primary">
+                        <i class="bi bi-graph-up-arrow me-1"></i> Explore Forex Investment Desk
                     </a>
-                    <a href="<?= $portal_register_url ?>" target="_blank" rel="noopener" class="cta-btn-secondary">
-                        <i class="bi bi-person-plus-fill me-1"></i> Create Investor Account
+                    <a href="<?= $base_url ?>contact/" class="cta-btn-secondary">
+                        <i class="bi bi-envelope-fill me-1"></i> Trade &amp; Partner Inquiries
                     </a>
                 </div>
                 <div class="cta-trust-badges mt-4 d-flex flex-wrap justify-content-center gap-4">
                     <span><i class="bi bi-box-seam"></i> Value-Added Exports</span>
-                    <span><i class="bi bi-wallet2"></i> Instant USDT Settlement</span>
-                    <span><i class="bi bi-shield-check"></i> Insured Global Trade</span>
+                    <span><i class="bi bi-shield-check"></i> Corporate Equity Funded</span>
+                    <span><i class="bi bi-globe"></i> Insured Global Corridors</span>
                 </div>
             </div>
         </div>

@@ -49,7 +49,7 @@ $articles = [
         'image'     => 'assets/images/blog/blog-2.webp',
         'date'      => 'Nov 08, 2026',
         'read_time' => '5 min read',
-        'excerpt'   => 'How institutional stablecoin settlement via TRC20, ERC20, and BEP20 eliminates SWIFT correspondent delays, high foreign exchange friction, and weekend banking lockups.',
+        'excerpt'   => 'How institutional stablecoin settlement via TRC20 eliminates SWIFT correspondent delays, high foreign exchange friction, and weekend banking lockups.',
         'featured'  => false
     ],
     // 4. USDT & Settlement - Article 2
@@ -270,7 +270,7 @@ $grid_posts    = $articles; // Display all articles across categories
                         </div>
                         <div class="hero-summary-row">
                             <span class="text-white-50">Settlement Standard</span>
-                            <span class="text-white fw-semibold">USDT TRC20 / ERC20</span>
+                            <span class="text-white fw-semibold">USDT TRC20</span>
                         </div>
                         <div class="hero-summary-row">
                             <span class="text-white-50">Compliance Framework</span>

@@ -46,7 +46,7 @@ $articles = [
 
             <h2>3. Digital Settlement Rails & Liquidity Mechanisms</h2>
             <p>
-                Modern global finance relies heavily on transparent, borderless settlement. Platforms leveraging Tether (USDT) on proven blockchain protocols (such as TRC20 and ERC20) afford verifiable on-chain transaction audits, rapid settlement without multi-day banking intermediary holds, and seamless cross-border profit redemptions.
+                Modern global finance relies heavily on transparent, borderless settlement. Platforms leveraging Tether (USDT) on proven blockchain protocols (such as TRC20) afford verifiable on-chain transaction audits, rapid settlement without multi-day banking intermediary holds, and seamless cross-border profit redemptions.
             </p>
 
             <h2>4. Systematic Stress Testing and Hedging Controls</h2>
@@ -71,7 +71,7 @@ $articles = [
         'image'     => 'assets/images/blog/blog-2.webp',
         'date'      => 'November 08, 2026',
         'read_time' => '5 min read',
-        'excerpt'   => 'How institutional stablecoin settlement via TRC20, ERC20, and BEP20 eliminates SWIFT correspondent delays, high foreign exchange friction, and weekend banking lockups.',
+        'excerpt'   => 'How institutional stablecoin settlement via TRC20 eliminates SWIFT correspondent delays, high foreign exchange friction, and weekend banking lockups.',
         'content'   => '
             <p class="lead" style="font-size: 18px; color: #2B3830; line-height: 1.8; font-weight: 500;">
                 Traditional cross-border wire transfers have long been fraught with multi-day correspondent banking delays, steep currency conversion fees, and arbitrary compliance holds. Tether (USDT) has emerged as the premier institutional standard for seamless, borderless capital deployment.
@@ -79,7 +79,7 @@ $articles = [
 
             <h2>Why USDT is the Global Investment Standard</h2>
             <p>
-                By pegging 1:1 to the US Dollar and operating across high-throughput blockchains like TRC20 and ERC20, USDT provides predictable valuation with sub-minute settlement finality. Global investors can fund allocations, receive yield distributions, and execute redemptions 24 hours a day, 365 days a year.
+                By pegging 1:1 to the US Dollar and operating across high-throughput blockchains like TRC20 USDT provides predictable valuation with sub-minute settlement finality. Global investors can fund allocations, receive yield distributions, and execute redemptions 24 hours a day, 365 days a year.
             </p>
 
             <div class="blog-quote-box">

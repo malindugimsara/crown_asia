@@ -191,7 +191,7 @@ include_once ROOT_PATH . 'header.php';
                 <h3 class="section-title" style="font-size: 28px;">An American Conglomerate Anchored in Tangible Value</h3>
                 <div class="green-line"></div>
                 <p class="about-copy mb-3">
-                    Founded in 2022, <strong>Crown Asia LLC</strong> was established with a clear mandate: to redefine modern capital management by anchoring investments in tangible, real-economy business operations rather than volatile speculative vehicles.
+                    Founded in 2023, <strong>Crown Asia LLC</strong> was established with a clear mandate: to redefine modern capital management by anchoring investments in tangible, real-economy business operations rather than volatile speculative vehicles.
                 </p>
                 <p class="about-copy mb-0">
                     Headquartered in Albuquerque, New Mexico, we manage a strategic portfolio spanning financial liquidity, prime real estate, cross-border commerce, next-generation research, and sustainable agriculture. Each of our eight operating divisions is managed by domain specialists with proven operational track records and rigorous fiduciary oversight.
@@ -339,7 +339,7 @@ include_once ROOT_PATH . 'header.php';
                         <!-- Field 5 -->
                         <div class="verify-item">
                             <div class="verify-label">Year of Establishment</div>
-                            <div class="verify-val">2022</div>
+                            <div class="verify-val">2023</div>
                         </div>
 
                         <!-- Field 6 -->
@@ -361,8 +361,9 @@ include_once ROOT_PATH . 'header.php';
                         <!-- Field 8 -->
                         <div class="verify-item">
                             <div class="verify-label">Corporate Email &amp; Web</div>
-                            <div class="verify-val" style="font-size: 14px;">
-                                <a href="mailto:info@crownasia.io" class="text-success text-decoration-none">info@crownasia.io</a> &nbsp;|&nbsp;
+                            <div class="verify-val verify-val-contact">
+                                <a href="mailto:info@crownasia.io" class="text-success text-decoration-none">info@crownasia.io</a>
+                                <span class="verify-sep">|</span>
                                 <a href="https://crownasia.io" target="_blank" rel="noopener" class="text-white text-decoration-none">crownasia.io</a>
                             </div>
                         </div>
@@ -466,11 +467,11 @@ include_once ROOT_PATH . 'header.php';
         </div>
 
         <div class="timeline-track">
-            <!-- Milestone 2022 -->
+            <!-- Milestone 2023 -->
             <div class="row timeline-row align-items-center g-4" data-aos="fade-up">
                 <div class="col-lg-6 order-lg-1 order-2 text-lg-end">
                     <div class="timeline-card-box">
-                        <span class="timeline-year-tag">2022 • FOUNDATION</span>
+                        <span class="timeline-year-tag">2023 • FOUNDATION</span>
                         <h4>Corporate Formation &amp; Core Structuring</h4>
                         <p class="text-muted mb-0">
                             Crown Asia LLC formally incorporated in New Mexico, USA as a diversified limited liability company. Established foundational treasury reserves, state and IRS tax filings, and institutional banking relationships.
@@ -485,7 +486,7 @@ include_once ROOT_PATH . 'header.php';
                 <div class="timeline-node"><i class="bi bi-flag-fill"></i></div>
             </div>
 
-            <!-- Milestone 2023 -->
+            <!-- Milestone 2024 -->
             <div class="row timeline-row align-items-center g-4" data-aos="fade-up" data-aos-delay="80">
                 <div class="col-lg-6 order-lg-1 order-1 d-none d-lg-block text-end">
                     <div class="pe-4">
@@ -494,7 +495,7 @@ include_once ROOT_PATH . 'header.php';
                 </div>
                 <div class="col-lg-6 order-lg-2 order-2">
                     <div class="timeline-card-box">
-                        <span class="timeline-year-tag">2023 • EXPANSION</span>
+                        <span class="timeline-year-tag">2024 • EXPANSION &amp; DEPLOYMENT</span>
                         <h4>Institutional Forex Desk &amp; Real Estate Portfolio</h4>
                         <p class="text-muted mb-0">
                             Deployed our 24/5 algorithmic forex liquidity operations with prime ECN aggregation. Concurrently completed initial land acquisitions and strategic real estate projects in Dubai and key Asian growth corridors.
@@ -504,39 +505,20 @@ include_once ROOT_PATH . 'header.php';
                 <div class="timeline-node"><i class="bi bi-buildings"></i></div>
             </div>
 
-            <!-- Milestone 2024 -->
+            <!-- Milestone 2025 -->
             <div class="row timeline-row align-items-center g-4" data-aos="fade-up" data-aos-delay="160">
                 <div class="col-lg-6 order-lg-1 order-2 text-lg-end">
                     <div class="timeline-card-box">
-                        <span class="timeline-year-tag">2024 • DIVERSIFICATION</span>
-                        <h4>Research &amp; Development Lab &amp; Global Supply Chain</h4>
+                        <span class="timeline-year-tag">2025 • ECOSYSTEM SCALE &amp; R&amp;D</span>
+                        <h4>Digital Investor Platform &amp; Global Supply Chain</h4>
                         <p class="text-muted mb-0">
-                            Established specialized R&amp;D division focusing on IoT and commercial automation. Scaled international trading operations in agricultural commodities, spices, and export logistics connecting Asia with the West.
+                            Rolled out the high-security Investor Portal (<a href="<?= $portal_login_url ?>" target="_blank" rel="noopener" class="text-success text-decoration-none fw-semibold">crownasia.io/profile</a>), established specialized R&amp;D automation, and scaled trade corridors in certified gemstones, commodities, and plantation exports.
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-2 order-1 d-none d-lg-block">
                     <div class="ps-4">
-                        <span class="badge bg-success bg-opacity-10 text-success p-2 px-3 rounded-pill fw-semibold"><i class="bi bi-cpu me-1"></i> R&amp;D Lab &amp; Trade Corridors Active</span>
-                    </div>
-                </div>
-                <div class="timeline-node"><i class="bi bi-rocket-takeoff-fill"></i></div>
-            </div>
-
-            <!-- Milestone 2025 -->
-            <div class="row timeline-row align-items-center g-4" data-aos="fade-up" data-aos-delay="240">
-                <div class="col-lg-6 order-lg-1 order-1 d-none d-lg-block text-end">
-                    <div class="pe-4">
                         <span class="badge bg-success bg-opacity-10 text-success p-2 px-3 rounded-pill fw-semibold"><i class="bi bi-shield-check me-1"></i> Digital Investor Portal Deployed</span>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-2 order-2">
-                    <div class="timeline-card-box">
-                        <span class="timeline-year-tag">2025 • ECOSYSTEM SCALE</span>
-                        <h4>Investor Platform Launch &amp; Sustainable Resources</h4>
-                        <p class="text-muted mb-0">
-                            Rolled out the high-security Investor Portal (<a href="https://portal.crownasia.io" target="_blank" rel="noopener" class="text-success text-decoration-none fw-semibold">portal.crownasia.io</a>), integrated certified gemological sourcing, and expanded commercial agricultural plantation acreage.
-                        </p>
                     </div>
                 </div>
                 <div class="timeline-node"><i class="bi bi-laptop-fill"></i></div>

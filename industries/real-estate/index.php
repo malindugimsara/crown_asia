@@ -26,7 +26,7 @@ include_once ROOT_PATH . 'header.php';
 
                     <div class="d-flex flex-wrap gap-3">
                         <a href="#activities" class="btn-green">Explore Core Portfolio</a>
-                        <a href="<?= $portal_login_url ?>" target="_blank" rel="noopener" class="btn-ghost">Investor Portal <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                        <a href="<?= $base_url ?>contact/" class="btn-ghost">Inquire with Division</a>
                     </div>
                 </div>
 
@@ -315,19 +315,19 @@ include_once ROOT_PATH . 'header.php';
                 </div>
             </div>
 
-            <!-- Risk Disclosure Callout Banner -->
+            <!-- Corporate Division Banner -->
             <div class="mt-4 p-4 rounded-4 bg-white border d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3" data-aos="fade-up">
                 <div class="d-flex align-items-center gap-3">
                     <div class="activity-icon mb-0 flex-shrink-0" style="width:48px;height:48px;font-size:20px;">
                         <i class="bi bi-shield-check"></i>
                     </div>
                     <div>
-                        <h5 class="mb-1 text-dark" style="font-size:16px;">Verified Property Disclosures &amp; Investor Eligibility</h5>
-                        <p class="small text-muted mb-0">Prior to funding, participants must complete accreditation review and inspect detailed property prospectuses.</p>
+                        <h5 class="mb-1 text-dark" style="font-size:16px;">Corporate Balance Sheet Asset Division</h5>
+                        <p class="small text-muted mb-0">Crown Asia acquires and develops prime property assets utilizing internal holding company equity and treasury reserves.</p>
                     </div>
                 </div>
                 <div>
-                    <a href="<?= $base_url ?>legal/risk-disclosure/" class="btn-ghost text-nowrap">Read Risk Disclosure <i class="bi bi-arrow-right ms-1"></i></a>
+                    <a href="<?= $base_url ?>about/" class="btn-ghost text-nowrap">About Holding Group <i class="bi bi-arrow-right ms-1"></i></a>
                 </div>
             </div>
         </div>
@@ -450,12 +450,12 @@ include_once ROOT_PATH . 'header.php';
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="reHeadingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#reCollapseFour" aria-expanded="false" aria-controls="reCollapseFour">
-                                    Can international participants fund real estate syndications with cryptocurrency?
+                                    How are Crown Asia's real estate projects funded?
                                 </button>
                             </h2>
                             <div id="reCollapseFour" class="accordion-collapse collapse" aria-labelledby="reHeadingFour" data-bs-parent="#realEstateFAQ">
                                 <div class="accordion-body">
-                                    Yes. Through our compliant treasury infrastructure, global investors can fund their allocations seamlessly using USDT (ERC-20, TRC-20, and BEP-20 networks). Capital is recorded with institutional cryptographic proof and converted to asset-backed title deeds without traditional cross-border wire delays.
+                                    Crown Asia’s property developments and land acquisitions are funded directly through internal corporate equity and group treasury capital. External public investment opportunities on our platform are exclusively focused on our Institutional Forex Trading operations.
                                 </div>
                             </div>
                         </div>
@@ -478,12 +478,12 @@ include_once ROOT_PATH . 'header.php';
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="reHeadingSix">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#reCollapseSix" aria-expanded="false" aria-controls="reCollapseSix">
-                                    Where can investors inspect title deeds, progress reports, and audit certificates?
+                                    Can external investors participate directly in real estate syndications?
                                 </button>
                             </h2>
                             <div id="reCollapseSix" class="accordion-collapse collapse" aria-labelledby="reHeadingSix" data-bs-parent="#realEstateFAQ">
                                 <div class="accordion-body">
-                                    Verified participants can log in to the secure <a href="<?= $portal_login_url ?>" target="_blank" rel="noopener" class="text-success fw-semibold text-decoration-underline">Crown Asia Investor Portal</a> to download sovereign title deeds, engineering milestone photos, monthly occupancy audits, and independent valuation appraisals.
+                                    External retail and private investor capital is deployed exclusively into Crown Asia's quantitative Forex trading desks. Our real estate division operates strictly as an internal corporate balance sheet asset division.
                                 </div>
                             </div>
                         </div>
@@ -493,25 +493,25 @@ include_once ROOT_PATH . 'header.php';
         </div>
     </section>
 
-    <!-- Explore Investment Opportunities Final CTA -->
+    <!-- Corporate Commercial Division Final CTA -->
     <section class="cta-section">
         <div class="cta-glow-blob"></div>
         <div class="container" data-aos="zoom-in">
             <div class="cta-card-luxury">
-                <span class="topic-badge-pill mb-3">INVESTMENT ACCESS</span>
-                <h2>Explore Approved <span>Property Offerings</span></h2>
-                <p>Access transparent, asset-backed investment opportunities across our prime global real estate developments with seamless USDT funding.</p>
+                <span class="topic-badge-pill mb-3">CORPORATE DIVISION</span>
+                <h2>Crown Asia <span>Real Estate Portfolio</span></h2>
+                <p>This division operates as an internal commercial business asset of Crown Asia LLC. Investor allocations on our portal are exclusively deployed in our Institutional Forex Trading operations.</p>
                 <div class="d-flex flex-wrap justify-content-center gap-3">
-                    <a href="<?= $base_url ?>investment-opportunities/" class="cta-btn-primary">
-                        <i class="bi bi-buildings-fill me-1"></i> Browse Real Estate Offerings
+                    <a href="<?= $base_url ?>industries/forex-trading/" class="cta-btn-primary">
+                        <i class="bi bi-graph-up-arrow me-1"></i> Explore Forex Investment Desk
                     </a>
-                    <a href="<?= $portal_register_url ?>" target="_blank" rel="noopener" class="cta-btn-secondary">
-                        <i class="bi bi-person-plus-fill me-1"></i> Create Investor Account
+                    <a href="<?= $base_url ?>contact/" class="cta-btn-secondary">
+                        <i class="bi bi-envelope-fill me-1"></i> Corporate Property Inquiries
                     </a>
                 </div>
                 <div class="cta-trust-badges mt-4 d-flex flex-wrap justify-content-center gap-4">
-                    <span><i class="bi bi-shield-check"></i> Sovereign SPV Title Deeds</span>
-                    <span><i class="bi bi-wallet2"></i> Instant USDT Settlement</span>
+                    <span><i class="bi bi-shield-check"></i> 100% Group Equity Backed</span>
+                    <span><i class="bi bi-buildings"></i> Prime Metropolitan Hubs</span>
                     <span><i class="bi bi-lock-fill"></i> Institutional Asset Governance</span>
                 </div>
             </div>

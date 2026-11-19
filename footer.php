@@ -20,13 +20,13 @@ $portal_register_url = "https://crownasia.io/profile/sign-up.php?ref_code=CA0000
                         Crown Asia LLC &middot; Registered US Investment &amp; Business Group
                     </h6>
                     <p class="small text-white-50 mb-0">
-                        Transparent asset-backed offerings across 8 industries with secure USDT settlement.
+                        Diversified commercial enterprise with institutional Forex investment and USDT (TRC20) settlement.
                     </p>
                 </div>
             </div>
             <div class="d-flex flex-wrap gap-2 flex-shrink-0">
                 <a href="<?= $base_url ?>investment-opportunities/" class="btn-green py-2 px-4" style="font-size: 12px;">
-                    Explore Offerings
+                    Forex Offering
                 </a>
                 <a href="<?= $portal_login_url ?>" target="_blank" rel="noopener" class="btn-ghost py-2 px-4" style="font-size: 12px;">
                     Investor Portal <i class="bi bi-box-arrow-up-right ms-1"></i>

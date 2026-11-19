@@ -20,9 +20,9 @@ $portal_register_url = $portal_register_url ?? 'https://crownasia.io/profile/sig
                     <div class="hero-badge"><span class="dot"></span> 8 Strategic Sectors &middot; Live Investor Portal</div>
                     <h1>Building Prosperity Through <span class="accent">Diversified Investments</span></h1>
                     <div class="typed-wrap"><span id="typedText"></span><span class="typed-cursor"></span></div>
-                    <p class="lead-copy">Crown Asia LLC is a registered United States company offering structured, asset-backed investment opportunities across real estate, forex, technology, trade, gems, and agriculture with seamless USDT settlement.</p>
+                    <p class="lead-copy">Crown Asia LLC is a registered United States conglomerate managing a diversified 8-sector commercial enterprise, offering institutional algorithmic Forex Trading investment opportunities with seamless USDT (TRC20) settlement.</p>
                     <div class="d-flex flex-wrap gap-3">
-                        <a href="<?= $base_url ?>investment-opportunities/" class="btn-green">Explore Opportunities <i class="bi bi-arrow-right ms-1"></i></a>
+                        <a href="<?= $base_url ?>investment-opportunities/" class="btn-green">Explore Forex Offering <i class="bi bi-arrow-right ms-1"></i></a>
                         <a href="<?= $base_url ?>how-it-works/" class="btn-ghost">How Investing Works</a>
                     </div>
                 </div>
@@ -125,51 +125,19 @@ $portal_register_url = $portal_register_url ?? 'https://crownasia.io/profile/sig
         <div class="container">
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5 gap-3" data-aos="fade-up">
                 <div>
-                    <span class="topic-badge-pill light">ACTIVE ALLOCATIONS</span>
-                    <h2 class="section-title mb-2">Featured Investment Opportunities</h2>
-                    <p class="section-subtitle mb-0">Participate in approved, asset-backed offerings with transparent terms, clear risk disclosures, and direct USDT settlement.</p>
+                    <span class="topic-badge-pill light">ACTIVE INVESTMENT OPPORTUNITY</span>
+                    <h2 class="section-title mb-2">Institutional Forex Trading Strategy</h2>
+                    <p class="section-subtitle mb-0">Investor capital is deployed exclusively into Crown Asia's quantitative Foreign Exchange liquidity operations with audited execution and USDT (TRC20) settlement.</p>
                 </div>
                 <div class="flex-shrink-0">
-                    <a href="<?= $base_url ?>investment-opportunities/" class="btn-green">View All Offerings <i class="bi bi-grid-fill ms-1"></i></a>
+                    <a href="<?= $base_url ?>investment-opportunities/" class="btn-green">Explore Forex Details <i class="bi bi-arrow-right ms-1"></i></a>
                 </div>
             </div>
 
             <div class="row g-4">
-                <!-- Offering 1: Real Estate -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up">
-                    <div class="offering-card">
-                        <div class="offering-badge-wrap">
-                            <img src="<?= $base_url ?>assets/images/offerings/real-estate-pool.webp" alt="Priority Real Estate Development Fund" width="900" height="600" loading="lazy">
-                            <span class="offering-status-tag"><i class="bi bi-circle-fill me-1" style="font-size: 7px;"></i> Open for Allocation</span>
-                            <span class="offering-sector-tag">Real Estate</span>
-                        </div>
-                        <div class="offering-content">
-                            <h4>Priority Coastal &amp; Urban Real Estate Pool</h4>
-                            <p>Asset-backed property acquisition and development across high-growth corridors in Dubai, Sri Lanka, and the United States.</p>
-                            <div class="offering-grid-terms">
-                                <div class="offering-term-item">
-                                    <div class="label">Minimum</div>
-                                    <div class="val">1,000 USDT</div>
-                                </div>
-                                <div class="offering-term-item">
-                                    <div class="label">Currency</div>
-                                    <div class="val">USDT (TRC20/ERC20)</div>
-                                </div>
-                                <div class="offering-term-item">
-                                    <div class="label">Backing</div>
-                                    <div class="val text-success">Real Property Assets</div>
-                                </div>
-                            </div>
-                            <div class="mt-auto d-flex gap-2">
-                                <a href="<?= $base_url ?>investment-opportunities/" class="btn-green w-100 text-center py-2 px-3" style="font-size: 12px;">Review Offering Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Offering 2: Institutional Forex -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="80">
-                    <div class="offering-card">
+                <!-- Offering 1: G10 Quantitative Liquidity Strategy -->
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="offering-card h-100">
                         <div class="offering-badge-wrap">
                             <img src="<?= $base_url ?>assets/images/offerings/forex-liquidity.webp" alt="G10 Quantitative Liquidity Strategy" width="900" height="600" loading="lazy">
                             <span class="offering-status-tag"><i class="bi bi-circle-fill me-1" style="font-size: 7px;"></i> Open for Allocation</span>
@@ -177,57 +145,70 @@ $portal_register_url = $portal_register_url ?? 'https://crownasia.io/profile/sig
                         </div>
                         <div class="offering-content">
                             <h4>G10 Quantitative Liquidity Strategy</h4>
-                            <p>Disciplined foreign exchange execution across liquid G10 pairs utilizing Tier-1 bank liquidity and strict 1:10 max leverage controls.</p>
+                            <p>Disciplined algorithmic foreign exchange execution across liquid G10 currency pairs utilizing Tier-1 ECN liquidity and strict 1:10 max leverage controls.</p>
                             <div class="offering-grid-terms">
                                 <div class="offering-term-item">
                                     <div class="label">Minimum</div>
-                                    <div class="val">500 USDT</div>
+                                    <div class="val">100 USDT</div>
                                 </div>
                                 <div class="offering-term-item">
-                                    <div class="label">Currency</div>
-                                    <div class="val">USDT Multi-Network</div>
+                                    <div class="label">Settlement</div>
+                                    <div class="val">USDT (TRC20)</div>
                                 </div>
                                 <div class="offering-term-item">
                                     <div class="label">Risk Protocol</div>
-                                    <div class="val text-success">Capped Drawdown</div>
+                                    <div class="val text-success">Capped ATR Drawdown</div>
                                 </div>
                             </div>
                             <div class="mt-auto d-flex gap-2">
-                                <a href="<?= $base_url ?>investment-opportunities/" class="btn-green w-100 text-center py-2 px-3" style="font-size: 12px;">Review Offering Details</a>
+                                <a href="<?= $base_url ?>investment-opportunities/" class="btn-green w-100 text-center py-2 px-3" style="font-size: 12px;">Review Strategy Terms</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Offering 3: Agriculture & Value-Added Exports -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="160">
-                    <div class="offering-card">
+                <!-- Offering 2: Institutional Macro Alpha Desk -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="80">
+                    <div class="offering-card h-100">
                         <div class="offering-badge-wrap">
-                            <img src="<?= $base_url ?>assets/images/offerings/plantation-export.webp" alt="Agro-Processing & Export Facility" width="900" height="600" loading="lazy">
+                            <img src="<?= $base_url ?>assets/images/blog/blog-1.webp" alt="Institutional Macro Alpha Desk" width="900" height="600" loading="lazy">
                             <span class="offering-status-tag"><i class="bi bi-circle-fill me-1" style="font-size: 7px;"></i> Open for Allocation</span>
-                            <span class="offering-sector-tag">Agriculture &amp; Trade</span>
+                            <span class="offering-sector-tag">Forex Trading</span>
                         </div>
                         <div class="offering-content">
-                            <h4>Value-Added Plantation &amp; Export Cycle</h4>
-                            <p>Direct cultivation and value-added processing of organic coconut, Ceylon spices, and specialty crops for confirmed B2B export orders.</p>
+                            <h4>Institutional Macro Alpha Strategy</h4>
+                            <p>Global interest rate differential modeling and sovereign policy trend positioning across major currency venues with automated VaR risk contraction.</p>
                             <div class="offering-grid-terms">
                                 <div class="offering-term-item">
-                                    <div class="label">Minimum</div>
-                                    <div class="val">500 USDT</div>
+                                    <div class="label">Distributions</div>
+                                    <div class="val">Monthly (USDT)</div>
                                 </div>
                                 <div class="offering-term-item">
-                                    <div class="label">Currency</div>
-                                    <div class="val">USDT (TRC20/BEP20)</div>
+                                    <div class="label">Network</div>
+                                    <div class="val">TRON (TRC20)</div>
                                 </div>
                                 <div class="offering-term-item">
-                                    <div class="label">Backing</div>
-                                    <div class="val text-success">Estates &amp; PO Contracts</div>
+                                    <div class="label">Auditing</div>
+                                    <div class="val text-success">Daily On-Chain Logs</div>
                                 </div>
                             </div>
                             <div class="mt-auto d-flex gap-2">
-                                <a href="<?= $base_url ?>investment-opportunities/" class="btn-green w-100 text-center py-2 px-3" style="font-size: 12px;">Review Offering Details</a>
+                                <a href="<?= $base_url ?>industries/forex-trading/" class="btn-green w-100 text-center py-2 px-3" style="font-size: 12px;">View Live Metrics &amp; Chart</a>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Informational Clarity Note -->
+                <div class="col-12" data-aos="fade-up">
+                    <div class="p-3 rounded-4 bg-light border d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+                        <div class="d-flex align-items-center gap-3">
+                            <i class="bi bi-info-circle-fill text-success fs-4 flex-shrink-0"></i>
+                            <span class="small text-muted">
+                                <strong>Corporate Note:</strong> Crown Asia LLC operates 8 diversified commercial business units. Direct investor participation on our platform is exclusively deployed into our <strong>Forex Trading Operations</strong>. Other sectors are funded through internal corporate equity.
+                            </span>
+                        </div>
+                        <a href="<?= $base_url ?>industries/" class="btn btn-outline-secondary btn-sm flex-shrink-0 px-3 py-2 text-nowrap rounded-pill" style="font-size: 12px;">Browse 8 Commercial Sectors</a>
                     </div>
                 </div>
             </div>
@@ -290,9 +271,9 @@ $portal_register_url = $portal_register_url ?? 'https://crownasia.io/profile/sig
                                 <i class="bi bi-layers-fill"></i>
                             </div>
                         </div>
-                        <h3 class="journey-card-title">SELECT AN<br>OFFERING</h3>
+                        <h3 class="journey-card-title">ALLOCATE TO<br>FOREX DESK</h3>
                         <p class="journey-card-desc">
-                            Review offering memoranda, terms, and risk disclosures across our eight sectors and confirm your allocation.
+                            Review offering terms, verified performance parameters, and risk disclosures for our Forex strategy and confirm your USDT allocation.
                         </p>
                     </div>
 
@@ -528,13 +509,13 @@ $portal_register_url = $portal_register_url ?? 'https://crownasia.io/profile/sig
                             </div>
                             <div class="about-frame"></div>
                             
-                            <!-- Floating Since 2022 Badge -->
+                            <!-- Floating Since 2023 Badge -->
                             <div class="since-badge">
                                 <div class="since-icon-wrap">
                                     <i class="bi bi-shield-fill-check"></i>
                                 </div>
                                 <div class="since-text">
-                                    <div class="yr">2022</div>
+                                    <div class="yr">2023</div>
                                     <div class="lb">Operating Since</div>
                                 </div>
                             </div>
@@ -825,12 +806,12 @@ $portal_register_url = $portal_register_url ?? 'https://crownasia.io/profile/sig
         <div class="cta-glow-blob"></div>
         <div class="container" data-aos="zoom-in">
             <div class="cta-card-luxury">
-                <span class="topic-badge-pill mb-3">START INVESTING</span>
+                <span class="topic-badge-pill mb-3">INSTITUTIONAL FOREX ALLOCATION</span>
                 <h2>Ready to <span>Grow Together?</span></h2>
-                <p>Explore approved investment opportunities across eight strategic industries or create your verified investor account today.</p>
+                <p>Explore our institutional algorithmic Forex Trading investment desk or create your verified investor account today.</p>
                 <div class="d-flex flex-wrap justify-content-center gap-3">
                     <a href="<?= $base_url ?>investment-opportunities/" class="cta-btn-primary">
-                        <i class="bi bi-grid-fill me-1"></i> Explore Offerings
+                        <i class="bi bi-graph-up-arrow me-1"></i> Explore Forex Offering
                     </a>
                     <a href="<?= $portal_register_url ?>" target="_blank" rel="noopener" class="cta-btn-secondary">
                         <i class="bi bi-person-plus-fill me-1"></i> Register Now

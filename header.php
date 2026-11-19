@@ -55,6 +55,7 @@ $canonical_url = $canonical_url ?? ('https://crownasia.io' . $clean_uri);
       "logo": "https://crownasia.io/assets/images/logo/logo.png",
       "image": "https://crownasia.io/assets/images/logo/logo.png",
       "description": "Crown Asia LLC is a diversified US investment management company based in Albuquerque, New Mexico, operating across eight strategic commercial sectors with transparent USDT settlement.",
+      "foundingDate": "2023",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "10242 Coors Bypass Blvd. N.W.",

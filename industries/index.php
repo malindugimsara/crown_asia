@@ -180,14 +180,14 @@ $sectors = [
 
             <!-- Bottom CTA Strip -->
             <div class="mt-5 p-4 p-md-5 rounded-4 text-center" style="background: linear-gradient(135deg, #060B08 0%, #0E1812 100%); border: 1px solid rgba(29, 185, 84, 0.35); box-shadow: 0 15px 40px rgba(0,0,0,0.3);" data-aos="fade-up">
-                <span class="topic-badge-pill dark mb-3">CROSS-SECTOR DEPLOYMENT</span>
-                <h3 class="text-white mb-2" style="font-family: 'Poppins', sans-serif; font-size: 26px; font-weight: 700;">Explore Asset-Backed Offerings</h3>
+                <span class="topic-badge-pill dark mb-3">INSTITUTIONAL INVESTOR DESK</span>
+                <h3 class="text-white mb-2" style="font-family: 'Poppins', sans-serif; font-size: 26px; font-weight: 700;">Explore Forex Investment Desk</h3>
                 <p class="text-white-50 mx-auto mb-4" style="max-width: 580px; font-size: 14px;">
-                    Review minimum allocations, maturity horizons, and distribution schedules across our eight operating divisions.
+                    While Crown Asia maintains 8 commercial divisions, public investor capital is exclusively allocated into our high-liquidity Institutional Forex Trading operations with USDT (TRC20) settlement.
                 </p>
                 <div class="d-flex flex-wrap justify-content-center gap-3">
-                    <a href="<?= $base_url ?>investment-opportunities/" class="btn-green">Browse Offerings <i class="bi bi-layers ms-1"></i></a>
-                    <a href="<?= $base_url ?>how-it-works/" class="btn-ghost">How Investing Works <i class="bi bi-arrow-right ms-1"></i></a>
+                    <a href="<?= $base_url ?>investment-opportunities/" class="btn-green">Explore Forex Offering <i class="bi bi-graph-up-arrow ms-1"></i></a>
+                    <a href="<?= $portal_register_url ?>" target="_blank" rel="noopener" class="btn-ghost">Register to Invest <i class="bi bi-person-plus ms-1"></i></a>
                 </div>
             </div>
         </div>

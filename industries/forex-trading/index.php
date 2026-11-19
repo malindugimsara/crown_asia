@@ -779,20 +779,20 @@ include_once ROOT_PATH . 'header.php';
         <div class="cta-glow-blob"></div>
         <div class="container" data-aos="zoom-in">
             <div class="cta-card-luxury">
-                <span class="topic-badge-pill mb-3">INVESTMENT ACCESS</span>
-                <h2>Explore Approved <span>Investment Opportunities</span></h2>
-                <p>Access transparent, asset-backed investment opportunities across our eight strategic business sectors with seamless USDT funding.</p>
+                <span class="topic-badge-pill mb-3">INSTITUTIONAL FOREX DESK</span>
+                <h2>Invest in Quantitative <span>Forex Trading</span></h2>
+                <p>Deploy capital with Crown Asia's verified algorithmic currency desk featuring strict risk parameters, daily audited reporting, and seamless USDT (TRC20) settlement.</p>
                 <div class="d-flex flex-wrap justify-content-center gap-3">
-                    <a href="<?= $base_url ?>investment-opportunities/" class="cta-btn-primary">
-                        <i class="bi bi-grid-fill me-1"></i> Browse All Offerings
+                    <a href="<?= $portal_register_url ?>" target="_blank" rel="noopener" class="cta-btn-primary">
+                        <i class="bi bi-person-plus-fill me-1"></i> Register to Invest
                     </a>
-                    <a href="<?= $portal_register_url ?>" target="_blank" rel="noopener" class="cta-btn-secondary">
-                        <i class="bi bi-person-plus-fill me-1"></i> Create Investor Account
+                    <a href="<?= $base_url ?>investment-opportunities/" class="cta-btn-secondary">
+                        <i class="bi bi-file-earmark-text me-1"></i> Review Strategy Offering
                     </a>
                 </div>
                 <div class="cta-trust-badges mt-4 d-flex flex-wrap justify-content-center gap-4">
                     <span><i class="bi bi-shield-check"></i> Multi-Venue Liquidity</span>
-                    <span><i class="bi bi-wallet2"></i> Instant USDT Settlement</span>
+                    <span><i class="bi bi-wallet2"></i> USDT (TRC20) Settlement</span>
                     <span><i class="bi bi-lock-fill"></i> Institutional Risk Governance</span>
                 </div>
             </div>

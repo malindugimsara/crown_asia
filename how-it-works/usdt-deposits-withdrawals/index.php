@@ -2,7 +2,7 @@
 require_once dirname(__DIR__, 2) . '/config.php';
 
 $page_title = "USDT Deposits & Withdrawals | Crown Asia LLC";
-$page_desc  = "Complete guide to USDT funding on Crown Asia: confirmed supported networks, deposit and withdrawal steps, fees, limits, processing times, and transaction support.";
+$page_desc  = "Complete guide to USDT (TRC20) funding on Crown Asia: official TRON network instructions, deposit and withdrawal steps, fees, limits, processing times, and transaction support.";
 include_once ROOT_PATH . 'header.php';
 ?>
 
@@ -22,7 +22,7 @@ include_once ROOT_PATH . 'header.php';
                     <div class="topic-badge-pill dark mb-3">TREASURY &amp; SETTLEMENT GUIDE</div>
                     <h1 class="inner-hero-title">USDT Deposits &amp;<br><span class="accent">Withdrawals Guide</span></h1>
                     <p class="inner-hero-lead mb-4">
-                        Crown Asia utilizes Tether (USDT) for fast, borderless, and transparent capital settlement. Review confirmed supported networks, step-by-step transfer instructions, processing windows, and transaction verification help below.
+                        Crown Asia utilizes Tether (USDT) on the TRON network (TRC20) for fast, borderless, and transparent capital settlement. Review official network specifications, step-by-step transfer instructions, processing windows, and transaction verification help below.
                     </p>
 
                     <div class="d-flex flex-wrap gap-3">
@@ -38,13 +38,13 @@ include_once ROOT_PATH . 'header.php';
                             <i class="bi bi-exclamation-triangle-fill fs-5"></i>
                             <span class="small fw-bold text-uppercase" style="letter-spacing: 1px;">Important Network Rule</span>
                         </div>
-                        <h4 class="text-white mb-3" style="font-size: 19px;">Always Match Your Blockchain Network</h4>
+                        <h4 class="text-white mb-3" style="font-size: 19px;">Exclusively USDT (TRC20)</h4>
                         <p class="small text-white-50 mb-3" style="line-height: 1.7;">
-                            Sending USDT over an unsupported network or mismatched chain (for example, sending ERC20 tokens to a TRC20 address) can result in permanent, irreversible loss of funds.
+                            Only send USDT via the <strong>TRON (TRC20)</strong> network. Sending via non-supported networks will result in permanent, irreversible loss of funds.
                         </p>
                         <div class="p-3 rounded-3" style="background: rgba(29, 185, 84, 0.1); border: 1px solid rgba(29, 185, 84, 0.3);">
                             <div class="small text-white fw-semibold mb-1"><i class="bi bi-check-circle-fill text-success me-1"></i> Verification Checklist</div>
-                            <div class="small text-white-50">Always confirm the active network and wallet address directly inside your Investor Portal deposit screen before initiating every transfer.</div>
+                            <div class="small text-white-50">Always ensure your transfer address begins with a "T" (TRON Base58 address) and verify details inside your Investor Portal deposit screen before sending.</div>
                         </div>
                     </div>
                 </div>
@@ -52,60 +52,51 @@ include_once ROOT_PATH . 'header.php';
         </div>
     </section>
 
-    <!-- 2. Confirmed Supported Networks -->
+    <!-- 2. Confirmed Supported Network -->
     <section class="section section-white" id="supported-networks">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <span class="topic-badge-pill light">BLOCKCHAIN RAILS</span>
-                <h2 class="section-title">Confirmed Supported Networks</h2>
-                <p class="section-subtitle mx-auto">Only transfer <strong>USDT (Tether)</strong> using the confirmed networks listed inside your Investor Portal wallet interface.</p>
+                <span class="topic-badge-pill light">BLOCKCHAIN RAIL</span>
+                <h2 class="section-title">Official Supported Network</h2>
+                <p class="section-subtitle mx-auto">All treasury inbound funding and outbound distributions are processed exclusively via the <strong>TRON (TRC20)</strong> blockchain rail.</p>
             </div>
 
-            <div class="row g-4">
-                <!-- Network 1: TRC20 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up">
-                    <div class="activity-card">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <div class="activity-icon mb-0"><i class="bi bi-lightning-charge-fill"></i></div>
-                            <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 rounded-pill px-3 py-1">Recommended</span>
+            <div class="row justify-content-center">
+                <!-- Network: TRC20 -->
+                <div class="col-lg-8" data-aos="fade-up">
+                    <div class="activity-card border-success border-opacity-25 p-4 p-md-5">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-2">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="activity-icon mb-0"><i class="bi bi-lightning-charge-fill"></i></div>
+                                <div>
+                                    <h3 class="mb-0 text-dark">TRON Blockchain (TRC20)</h3>
+                                    <span class="text-muted small">Official Primary Settlement Standard</span>
+                                </div>
+                            </div>
+                            <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 rounded-pill px-3 py-2 fw-semibold">
+                                <i class="bi bi-shield-check me-1"></i> Exclusively Supported
+                            </span>
                         </div>
-                        <h4>TRON Network (TRC20)</h4>
-                        <p class="mb-3">Low transaction fees and rapid block finality, ideal for standard investor deposits and routine distribution withdrawals.</p>
-                        <div class="small text-muted border-top pt-3">
-                            <div class="d-flex justify-content-between mb-1"><span>Token Standard:</span><strong class="text-dark">USDT-TRC20</strong></div>
-                            <div class="d-flex justify-content-between"><span>Required Confirmations:</span><strong class="text-dark">20 Blocks (~1–3 Mins)</strong></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Network 2: BEP20 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="80">
-                    <div class="activity-card">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <div class="activity-icon mb-0"><i class="bi bi-layers-fill"></i></div>
-                            <span class="badge bg-dark text-white rounded-pill px-3 py-1">Confirmed</span>
-                        </div>
-                        <h4>BNB Smart Chain (BEP20)</h4>
-                        <p class="mb-3">Fast confirmation speed and low gas overhead for participants managing allocations via EVM-compatible wallets.</p>
-                        <div class="small text-muted border-top pt-3">
-                            <div class="d-flex justify-content-between mb-1"><span>Token Standard:</span><strong class="text-dark">USDT-BEP20</strong></div>
-                            <div class="d-flex justify-content-between"><span>Required Confirmations:</span><strong class="text-dark">15 Blocks (~1–2 Mins)</strong></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Network 3: ERC20 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="160">
-                    <div class="activity-card">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <div class="activity-icon mb-0"><i class="bi bi-shield-fill-check"></i></div>
-                            <span class="badge bg-dark text-white rounded-pill px-3 py-1">Confirmed</span>
-                        </div>
-                        <h4>Ethereum Network (ERC20)</h4>
-                        <p class="mb-3">Institutional-grade Ethereum settlement rail suitable for larger allocations from institutional custody or exchange accounts.</p>
-                        <div class="small text-muted border-top pt-3">
-                            <div class="d-flex justify-content-between mb-1"><span>Token Standard:</span><strong class="text-dark">USDT-ERC20</strong></div>
-                            <div class="d-flex justify-content-between"><span>Required Confirmations:</span><strong class="text-dark">12 Blocks (~3–8 Mins)</strong></div>
+                        <p class="lead fs-6 text-muted mb-4">
+                            Crown Asia utilizes <strong>USDT-TRC20</strong> on the TRON network as our single standardized settlement rail. Offering near-instant block finality, predictable sub-dollar network transfer fees, and institutional smart contract transparency, TRC20 guarantees friction-free capital deployment for global investors.
+                        </p>
+                        <div class="row g-3 border-top pt-4">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="small text-muted mb-1">Token Standard</div>
+                                <strong class="text-dark d-block">USDT-TRC20</strong>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="small text-muted mb-1">Confirmations</div>
+                                <strong class="text-dark d-block">20 Blocks (~1–3 Mins)</strong>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="small text-muted mb-1">Address Format</div>
+                                <strong class="text-dark d-block">Starts with "T" (Base58)</strong>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="small text-muted mb-1">Explorer</div>
+                                <strong class="text-dark d-block"><a href="https://tronscan.org" target="_blank" rel="noopener" class="text-success text-decoration-none">Tronscan.org <i class="bi bi-box-arrow-up-right small"></i></a></strong>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -135,8 +126,8 @@ include_once ROOT_PATH . 'header.php';
                         <div class="step-sequence-item">
                             <div class="step-circle-badge">2</div>
                             <div>
-                                <h6 class="fw-bold text-dark mb-1">Select Confirmed Network</h6>
-                                <p class="small text-muted mb-0">Choose your preferred supported network (TRC20, BEP20, or ERC20) to display the corresponding QR code and wallet address.</p>
+                                <h6 class="fw-bold text-dark mb-1">Verify USDT-TRC20 Network</h6>
+                                <p class="small text-muted mb-0">Confirm the official <strong>USDT (TRC20)</strong> network selection to display your dedicated portal deposit QR code and TRON wallet address.</p>
                             </div>
                         </div>
 
@@ -144,7 +135,7 @@ include_once ROOT_PATH . 'header.php';
                             <div class="step-circle-badge">3</div>
                             <div>
                                 <h6 class="fw-bold text-dark mb-1">Transfer USDT from Your Wallet</h6>
-                                <p class="small text-muted mb-0">Paste the exact portal deposit address into your external wallet or exchange, double-check the network match, and broadcast the transfer.</p>
+                                <p class="small text-muted mb-0">Paste the exact portal deposit address into your external wallet or exchange, double-check that the network is TRC20, and broadcast the transfer.</p>
                             </div>
                         </div>
 
@@ -152,7 +143,7 @@ include_once ROOT_PATH . 'header.php';
                             <div class="step-circle-badge">4</div>
                             <div>
                                 <h6 class="fw-bold text-dark mb-1">On-Chain Confirmation &amp; Balance Credit</h6>
-                                <p class="small text-muted mb-0">Once required block confirmations complete, your deposit status updates from <em>Confirming</em> to <em>Completed</em> and your portal USDT balance becomes available for allocation.</p>
+                                <p class="small text-muted mb-0">Once 20 block confirmations complete, your deposit status updates from <em>Confirming</em> to <em>Completed</em> and your portal USDT balance becomes available for allocation.</p>
                             </div>
                         </div>
                     </div>
@@ -168,8 +159,8 @@ include_once ROOT_PATH . 'header.php';
                         <div class="step-sequence-item">
                             <div class="step-circle-badge">1</div>
                             <div>
-                                <h6 class="fw-bold text-dark mb-1">Verify Destination Wallet &amp; Network</h6>
-                                <p class="small text-muted mb-0">Ensure your external receiving wallet supports USDT on the exact network you select for withdrawal.</p>
+                                <h6 class="fw-bold text-dark mb-1">Verify TRC20 Destination Address</h6>
+                                <p class="small text-muted mb-0">Ensure your external receiving wallet or exchange supports <strong>USDT-TRC20</strong> (address must begin with "T").</p>
                             </div>
                         </div>
 
@@ -177,7 +168,7 @@ include_once ROOT_PATH . 'header.php';
                             <div class="step-circle-badge">2</div>
                             <div>
                                 <h6 class="fw-bold text-dark mb-1">Submit Withdrawal Request in Portal</h6>
-                                <p class="small text-muted mb-0">Open <strong>Withdraw USDT</strong> in the Investor Portal, enter the withdrawal amount, paste your destination address, and confirm via 2FA security verification.</p>
+                                <p class="small text-muted mb-0">Open <strong>Withdraw USDT</strong> in the Investor Portal, enter the withdrawal amount, paste your destination TRC20 address, and confirm via 2FA security verification.</p>
                             </div>
                         </div>
 
@@ -223,7 +214,7 @@ include_once ROOT_PATH . 'header.php';
                             <thead>
                                 <tr>
                                     <th>Transaction Type</th>
-                                    <th>Supported Networks</th>
+                                    <th>Supported Network</th>
                                     <th>Minimum / Limits</th>
                                     <th>Platform Fee</th>
                                     <th>Estimated Processing Time</th>
@@ -232,23 +223,16 @@ include_once ROOT_PATH . 'header.php';
                             <tbody>
                                 <tr>
                                     <td><strong>USDT Deposit</strong></td>
-                                    <td>TRC20 · BEP20 · ERC20</td>
+                                    <td><span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1">TRON (TRC20)</span></td>
                                     <td>Min: <strong>50 USDT</strong><br><span class="small text-muted">No upper deposit cap</span></td>
                                     <td><span class="badge bg-success bg-opacity-10 text-success">0% Platform Fee</span><br><span class="small text-muted">(Sender pays network gas)</span></td>
-                                    <td><strong>2 – 15 Minutes</strong><br><span class="small text-muted">Automatic after block confirmations</span></td>
+                                    <td><strong>2 – 15 Minutes</strong><br><span class="small text-muted">Automatic after 20 block confirmations</span></td>
                                 </tr>
                                 <tr>
-                                    <td><strong>USDT Withdrawal (TRC20 / BEP20)</strong></td>
-                                    <td>TRON (TRC20) · BSC (BEP20)</td>
+                                    <td><strong>USDT Withdrawal</strong></td>
+                                    <td><span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1">TRON (TRC20)</span></td>
                                     <td>Min: <strong>50 USDT</strong><br><span class="small text-muted">Max: Per verified tier</span></td>
                                     <td><strong>Flat Network Fee</strong><br><span class="small text-muted">(Displayed prior to confirmation)</span></td>
-                                    <td><strong>24 – 48 Business Hours</strong><br><span class="small text-muted">Following security approval</span></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>USDT Withdrawal (ERC20)</strong></td>
-                                    <td>Ethereum (ERC20)</td>
-                                    <td>Min: <strong>250 USDT</strong><br><span class="small text-muted">Max: Per verified tier</span></td>
-                                    <td><strong>Dynamic Ethereum Gas</strong><br><span class="small text-muted">(Displayed prior to confirmation)</span></td>
                                     <td><strong>24 – 48 Business Hours</strong><br><span class="small text-muted">Following security approval</span></td>
                                 </tr>
                             </tbody>
@@ -279,11 +263,11 @@ include_once ROOT_PATH . 'header.php';
                             <h4>Deposit Not Credited Yet?</h4>
                         </div>
                         <p class="risk-card-desc">
-                            Check your transaction hash (TxID) on the relevant block explorer (Tronscan, BscScan, or Etherscan) to confirm the transfer has reached the required block confirmations and was sent to your exact portal address.
+                            Check your transaction hash (TxID) on the official TRON block explorer (<a href="https://tronscan.org" target="_blank" rel="noopener" class="text-success text-decoration-none">Tronscan.org</a>) to confirm the transfer has reached 20 block confirmations and was sent to your exact portal TRC20 address.
                         </p>
                         <div class="risk-metric-tag">
                             <span class="label">First Step</span>
-                            <span class="value text-success">Verify TxID on Explorer</span>
+                            <span class="value text-success">Verify TxID on Tronscan</span>
                         </div>
                     </div>
                 </div>
@@ -295,7 +279,7 @@ include_once ROOT_PATH . 'header.php';
                             <h4>Sent Below Minimum or Wrong Chain?</h4>
                         </div>
                         <p class="risk-card-desc">
-                            Deposits sent below the minimum threshold or via an unsupported network cannot be credited automatically. Open a priority treasury ticket inside the Investor Portal with your full TxID for manual review where technically recoverable.
+                            Deposits sent below the minimum 50 USDT threshold or via unsupported networks cannot be credited automatically. Open a priority treasury ticket inside the Investor Portal with your full TxID for assistance.
                         </p>
                         <div class="risk-metric-tag">
                             <span class="label">Escalation</span>
@@ -319,6 +303,9 @@ include_once ROOT_PATH . 'header.php';
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
             </div>
         </div>
     </section>

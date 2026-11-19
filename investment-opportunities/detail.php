@@ -1,8 +1,12 @@
 <?php
 require_once dirname(__DIR__) . '/config.php';
 
-// Get slug from URL (Default: priority-real-estate-pool)
-$slug = isset($_GET['slug']) ? preg_replace('/[^a-z0-9\-]/', '', strtolower($_GET['slug'])) : 'priority-real-estate-pool';
+// Get slug from URL (Default: g10-quantitative-liquidity)
+$slug = isset($_GET['slug']) ? preg_replace('/[^a-z0-9\-]/', '', strtolower($_GET['slug'])) : 'g10-quantitative-liquidity';
+if ($slug !== 'g10-quantitative-liquidity') {
+    header('Location: ' . $base_url . 'investment-opportunities/g10-quantitative-liquidity/', true, 301);
+    exit;
+}
 
 // Offerings Data Repository
 $offerings = [
@@ -17,7 +21,7 @@ $offerings = [
         'issuer'        => 'Crown Asia LLC (New Mexico, USA)',
         'structure'     => 'Asset-Backed Participation Note',
         'minimum'       => '100 USDT',
-        'currency'      => 'USDT  ERC20',
+        'currency'      => 'USDT (TRC20)',
         'eligibility'   => 'KYC-Verified Eligible Investors',
         'distributions' => 'Quarterly in USDT',
         'mgmt_fee'      => '1.5% Annual Administration Fee',
@@ -84,7 +88,7 @@ $offerings = [
         'issuer'        => 'Crown Asia LLC (New Mexico, USA)',
         'structure'     => 'Managed Liquidity Strategy Note',
         'minimum'       => '100 USDT',
-        'currency'      => 'USDT  ERC20',
+        'currency'      => 'USDT (TRC20)',
         'eligibility'   => 'KYC-Verified Eligible Investors',
         'distributions' => 'Monthly in USDT',
         'mgmt_fee'      => '1.0% Annual Management Fee',
@@ -405,8 +409,8 @@ include_once ROOT_PATH . 'header.php';
                         </div>
                         <div class="col-sm-6">
                             <div class="p-3 rounded-3 border bg-light">
-                                <div class="small text-uppercase text-muted fw-semibold">Supported USDT Networks</div>
-                                <div class="fw-bold text-dark mt-1">TRC20 (Tron) · ERC20 · BEP20</div>
+                                <div class="small text-uppercase text-muted fw-semibold">Supported USDT Network</div>
+                                <div class="fw-bold text-dark mt-1">TRON (TRC20)</div>
                             </div>
                         </div>
                         <div class="col-sm-6">

@@ -22,7 +22,7 @@ $faqs = [
     [
         'category' => 'USDT & Funding',
         'q' => 'Why does Crown Asia use USDT for investor funding and distributions?',
-        'a' => 'Tether (USDT) operates on high-throughput blockchain networks (TRC20, ERC20, and BEP20) pegged 1:1 to the US Dollar. By utilizing USDT, we eliminate multi-day correspondent banking delays, international wire friction, excessive FX conversion fees, and weekend bank lockouts. Investors benefit from borderless, cryptographic transaction verification and sub-minute settlement finality.'
+        'a' => 'Tether (USDT) operates on high-throughput blockchain networks (TRC20) pegged 1:1 to the US Dollar. By utilizing USDT, we eliminate multi-day correspondent banking delays, international wire friction, excessive FX conversion fees, and weekend bank lockouts. Investors benefit from borderless, cryptographic transaction verification and sub-minute settlement finality.'
     ],
     [
         'category' => 'USDT & Funding',
@@ -32,12 +32,12 @@ $faqs = [
     [
         'category' => 'Offerings & Returns',
         'q' => 'What is the minimum investment requirement to participate?',
-        'a' => 'Minimum participation thresholds vary by specific offering and sector. Entry-level opportunities in our Agriculture and E-Commerce tranches begin at 500 USDT, while Institutional Quantitative Forex and Priority Real Estate Pools typically carry minimums of 1,000 to 2,500 USDT. Full details are published transparently on each offering memorandum.'
+        'a' => 'Public investor capital allocation is exclusively deployed into our Institutional Quantitative Forex Liquidity Strategy with an accessible minimum threshold starting at 100 USDT. Full details, target yield schedules, and risk parameters are published transparently on the offering memorandum.'
     ],
     [
         'category' => 'Offerings & Returns',
         'q' => 'How are profit distributions calculated and paid out?',
-        'a' => 'Distributions are determined by the specific terms of each participation note. Fixed-yield and asset-backed notes generally disburse distributions on a monthly or quarterly basis directly in USDT to your portal wallet. You may choose to withdraw your distributions to your personal external wallet or reallocate them toward new open offerings.'
+        'a' => 'Profit distributions from our Institutional Forex Strategy are calculated based on net audited performance and disbursed on a monthly basis directly in USDT (TRC20) to your portal wallet. You may choose to withdraw your distributions to your personal external TRC20 wallet or compound them inside the strategy.'
     ],
     [
         'category' => 'Verification & KYC',
@@ -52,7 +52,7 @@ $faqs = [
     [
         'category' => 'Risk & Security',
         'q' => 'How does Crown Asia protect investor capital against market risk?',
-        'a' => 'We deploy a rigorous capital preservation framework. In our trading operations (Forex and Commodities), strict automated stop-loss limits (capped at &le; 2% daily risk), segregated liquidity accounts, and algorithmic hedging are strictly enforced. In hard asset divisions (Real Estate and Agriculture), principal is collateralized by verified title deeds, physical commodities in insured vaults, or binding B2B export purchase agreements.'
+        'a' => 'We deploy a rigorous capital preservation framework. In our Institutional Forex trading desks, strict automated stop-loss limits (capped at &le; 2% daily risk), hard ATR volatility boundaries, segregated Tier-1 liquidity accounts, and algorithmic hedging are strictly enforced to preserve capital across all sovereign rate shock events.'
     ],
     [
         'category' => 'Risk & Security',
@@ -85,7 +85,7 @@ $faqs = [
                         Frequently Asked <br><span class="accent">Questions &amp; Answers</span>
                     </h1>
                     <p class="inner-hero-lead mb-4">
-                        Review comprehensive answers to common inquiries regarding our New Mexico LLC charter, multi-network USDT settlement, minimum thresholds, and risk governance.
+                        Review comprehensive answers to common inquiries regarding our New Mexico LLC charter, USDT (TRC20) settlement, minimum thresholds, and risk governance.
                     </p>
 
                     <div class="d-flex flex-wrap gap-3">
